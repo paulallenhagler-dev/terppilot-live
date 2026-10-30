@@ -1,0 +1,30 @@
+name: Diagnose Head Change COA text layout
+on:
+  push:
+    paths:
+      - '.github/workflows/headchange-pdf-diagnostic.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  layout:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pymupdf requests
+      - name: Show exact PDF text/token layout for parser repair
+        run: |
+          python - <<'PY'
+          import requests, fitz
+          u='https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/c025104f-c3c0-4a2b-905f-fe69fa8eecd7.pdf'
+          r=requests.get(u,timeout=35); r.raise_for_status()
+          d=fitz.open(stream=r.content,filetype='pdf')
+          for i in (0,8):
+              p=d[i]
+              print('PAGE',i,'UNSORTED:',repr(p.get_text('text',sort=False)[:5000]))
+              print('PAGE',i,'SORTED:',repr(p.get_text('text',sort=True)[:5000]))
+              print('PAGE',i,'WORDS:',repr(p.get_text('words',sort=True)[:40]))
+          PY
