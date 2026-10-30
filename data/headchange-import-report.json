@@ -1,5 +1,5 @@
 {
-  "retrieved_at": "2026-10-30T14:18:42.889474+00:00",
+  "retrieved_at": "2026-10-30T14:33:46.949531+00:00",
   "discovered": 553,
   "imported": 553,
   "with_original_pdf": 549,
@@ -7,5 +7,5 @@
   "reconciled_profiles": 529,
   "missing_or_partial": 24,
   "errors": [],
-  "elapsed_seconds": 293.95
+  "elapsed_seconds": 289.64
 }
