@@ -68,6 +68,24 @@ def main() -> None:
     if len(PATTERN.findall(src)) != 1:
         raise RuntimeError("Inline Head Change catalog marker not found exactly once.")
     new_src = PATTERN.sub(lambda m: generate(records), src)
+    # Keep homepage totals synchronized with the validated records.
+    calculated_stats = {
+        "statRecords": 688 + len(records),
+        "statFull": 671 + sum(p.get("coverage") == "full" for p in records),
+        "statCanna": 688 + sum(bool(p.get("cannabinoid_verified")) for p in records),
+    }
+    for element_id, value in calculated_stats.items():
+        pattern = r'(<strong id="' + re.escape(element_id) + r'">)\d+(</strong>)'
+        new_src, count = re.subn(
+            pattern, lambda match: match.group(1) + str(value) + match.group(2),
+            new_src,
+        )
+        if count != 1:
+            raise RuntimeError("Could not update homepage statistic " + element_id)
+    new_src = new_src.replace(
+        "<span>Reconciled terpene profiles</span>",
+        "<span>Detailed terpene profiles</span>",
+    )
     if "PRODUCTS.push(...(window.HEADCHANGE_RECORDS || []))" not in new_src:
         raise RuntimeError("TerpPilot catalog merge not found.")
     TARGET.write_text(new_src, encoding="utf-8")
