@@ -1,14 +1,26 @@
 {
-  "retrieved_at": "2026-10-30T15:05:55.068716+00:00",
+  "retrieved_at": "2026-10-30T15:13:46.559748+00:00",
   "catalog_entries": 553,
   "pdfs_linked": 549,
   "pdfs_parsed": 549,
   "pdf_download_or_parse_errors": {},
-  "cannabinoid_panels_verified": 0,
-  "terp_panels_verified_from_pdf": 0,
-  "terp_panels_full_or_reconciled": 529,
-  "terp_panels_partial": 24,
+  "cannabinoid_panels_verified": 498,
+  "terp_panels_verified_from_pdf": 487,
+  "terp_panels_full_or_reconciled": 533,
+  "terp_panels_partial": 20,
   "audit_flags": [
+    {
+      "product": "AL XD OG · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 6.05,
+      "coa_sum": 4.38
+    },
+    {
+      "product": "AL XD OG · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 5.77,
+      "coa_sum": 4.32
+    },
     {
       "product": "Beltzzz · Live Badder",
       "reason": "no_original_pdf"
@@ -22,6 +34,12 @@
       "reason": "terp_profile_incomplete"
     },
     {
+      "product": "Chem 51 · Live Rosin Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 7.4,
+      "coa_sum": 3.68
+    },
+    {
       "product": "ChemChi 2.0 · Live Badder",
       "reason": "terp_profile_incomplete"
     },
@@ -30,8 +48,52 @@
       "reason": "terp_profile_incomplete"
     },
     {
-      "product": "Citrus Ripper · Mini Hash Hole",
-      "reason": "terp_profile_incomplete"
+      "product": "Chem Dawg · Live Rosin Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 5.03,
+      "coa_sum": 2.84
+    },
+    {
+      "product": "ChemisTree · Live Rosin Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 5.56,
+      "coa_sum": 3.43
+    },
+    {
+      "product": "Citrus Slap · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 3.84,
+      "coa_sum": 2.94
+    },
+    {
+      "product": "Citrus Slap · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 3.46,
+      "coa_sum": 2.67
+    },
+    {
+      "product": "Clem-Jenkins · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": null,
+      "coa_sum": 2.924
+    },
+    {
+      "product": "Compound Zentrest · Sauce Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 8.06,
+      "coa_sum": 5.16
+    },
+    {
+      "product": "Compound Zentrest · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 7.91,
+      "coa_sum": 5.05
+    },
+    {
+      "product": "Compound Zentrest · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 7.43,
+      "coa_sum": 4.73
     },
     {
       "product": "Dabatomic · Live Badder",
@@ -42,19 +104,29 @@
       "reason": "terp_profile_incomplete"
     },
     {
-      "product": "Day Dreamz · Mini Hash Hole",
-      "reason": "terp_profile_incomplete"
+      "product": "Durban Boogaloo · Live Rosin",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 3.71,
+      "coa_sum": 2.4
     },
     {
       "product": "Family Affair · Live Badder",
       "reason": "terp_profile_incomplete"
     },
     {
-      "product": "Fresh Produce · Sauce Cart",
-      "reason": "terp_profile_incomplete"
+      "product": "Forbidden Fanta · Live Resin AIO",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 6.4,
+      "coa_sum": 4.9
     },
     {
-      "product": "Fresh Produce #24 · Live Rosin Cart",
+      "product": "Forbidden Fanta · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 4.86,
+      "coa_sum": 3.64
+    },
+    {
+      "product": "Fresh Produce · Sauce Cart",
       "reason": "terp_profile_incomplete"
     },
     {
@@ -64,6 +136,36 @@
     {
       "product": "Funky Jelly · Sauce Cart",
       "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Garlic Breath · Live Rosin",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 7.37,
+      "coa_sum": 3.33
+    },
+    {
+      "product": "Gobstopper Gas · Sauce Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 6.98,
+      "coa_sum": 5.13
+    },
+    {
+      "product": "Grape Escape · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 5.96,
+      "coa_sum": 4.51
+    },
+    {
+      "product": "Grape Escape · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 4.71,
+      "coa_sum": 3.58
+    },
+    {
+      "product": "Grape Scott! · Sauce Cart",
+      "reason": "thc_discrepancy",
+      "website_thc": 71.2,
+      "coa_thc": 79.8123
     },
     {
       "product": "Grape Scott! · Sauce Cart",
@@ -82,6 +184,30 @@
       "reason": "terp_profile_incomplete"
     },
     {
+      "product": "Modified Grapes · Live Rosin",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 6.67,
+      "coa_sum": 4.7
+    },
+    {
+      "product": "Nollie Kush · Sauce Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 7.19,
+      "coa_sum": 5.85
+    },
+    {
+      "product": "Nollie Kush · Live Resin AIO",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 7.19,
+      "coa_sum": 5.85
+    },
+    {
+      "product": "Orange Brain Freeze · Sauce Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": null,
+      "coa_sum": 3.68
+    },
+    {
       "product": "Orange Velvet (4.0) · Sauce Cart",
       "reason": "terp_profile_incomplete"
     },
@@ -98,20 +224,142 @@
       "reason": "terp_profile_incomplete"
     },
     {
-      "product": "Red Vestido · Live Badder",
-      "reason": "terp_profile_incomplete"
+      "product": "Quartz Killa · Live Rosin",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 3.99,
+      "coa_sum": 2.69
+    },
+    {
+      "product": "Queen Tea · Sauce Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 5.87,
+      "coa_sum": 4.14
+    },
+    {
+      "product": "Queen Tea · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 4.27,
+      "coa_sum": 3.08
+    },
+    {
+      "product": "Queen Tea · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 4.77,
+      "coa_sum": 3.61
+    },
+    {
+      "product": "Queen Tea · Live Resin AIO",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 4.77,
+      "coa_sum": 3.61
+    },
+    {
+      "product": "Rainbow Push Pop · Live Resin AIO",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 8.033,
+      "coa_sum": 7.224
+    },
+    {
+      "product": "Rainbow Push Pop · Sauce Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 7.903,
+      "coa_sum": 7.101
+    },
+    {
+      "product": "Rainbow Push Pop + Too Much Starburst · Live Rosin",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 5.51,
+      "coa_sum": 3.7
+    },
+    {
+      "product": "Rainbow Resin Rush · Sauce Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 6.07,
+      "coa_sum": 4.77
+    },
+    {
+      "product": "Sesh Breath · Mini Hash Hole",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 1.58,
+      "coa_sum": 1.34
+    },
+    {
+      "product": "Stankfoot · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 5.45,
+      "coa_sum": 5.21
+    },
+    {
+      "product": "Stankfoot · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 3.52,
+      "coa_sum": 3.16
+    },
+    {
+      "product": "Stoned Fruit · Mini Hash Hole",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 1.68,
+      "coa_sum": 1.47
     },
     {
       "product": "Sundae Skool · Sauce Cart",
       "reason": "terp_profile_incomplete"
     },
     {
+      "product": "Sunset Slaps · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 6.54,
+      "coa_sum": 4.47
+    },
+    {
+      "product": "Sunset Slaps · Sauce Cart",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 7.39,
+      "coa_sum": 4.95
+    },
+    {
       "product": "Super-Chello · Sauce Cart",
       "reason": "terp_profile_incomplete"
     },
     {
+      "product": "Terpzilla · Mini Hash Hole",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 2.26,
+      "coa_sum": 1.62
+    },
+    {
+      "product": "Triangle Kush · Live Rosin",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 5.75,
+      "coa_sum": 3.82
+    },
+    {
       "product": "Trop Cream Paint Job · Sauce Cart",
       "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Trop Drop N' Roll · Mini Hash Hole",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 2.57,
+      "coa_sum": 1.85
+    },
+    {
+      "product": "Tropical Zerb · Mini Hash Hole",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 1.23,
+      "coa_sum": 0.87
+    },
+    {
+      "product": "Trop Juice · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 6.44,
+      "coa_sum": 5.57
+    },
+    {
+      "product": "Trop Juice · Live Sugar",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": 6.56,
+      "coa_sum": 5.72
     },
     {
       "product": "Zoo Trip · Sauce Cart",
