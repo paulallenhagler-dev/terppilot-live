@@ -1,10 +1,10 @@
 {
-  "retrieved_at": "2026-10-30T15:13:46.559748+00:00",
+  "retrieved_at": "2026-10-30T15:20:16.642578+00:00",
   "catalog_entries": 553,
   "pdfs_linked": 549,
   "pdfs_parsed": 549,
   "pdf_download_or_parse_errors": {},
-  "cannabinoid_panels_verified": 498,
+  "cannabinoid_panels_verified": 506,
   "terp_panels_verified_from_pdf": 487,
   "terp_panels_full_or_reconciled": 533,
   "terp_panels_partial": 20,
@@ -163,12 +163,6 @@
     },
     {
       "product": "Grape Scott! · Sauce Cart",
-      "reason": "thc_discrepancy",
-      "website_thc": 71.2,
-      "coa_thc": 79.8123
-    },
-    {
-      "product": "Grape Scott! · Sauce Cart",
       "reason": "terp_profile_incomplete"
     },
     {
@@ -316,6 +310,12 @@
       "reason": "terp_panel_not_reconciled",
       "coa_total": 7.39,
       "coa_sum": 4.95
+    },
+    {
+      "product": "Super-Chello · Sauce Cart",
+      "reason": "thc_discrepancy",
+      "website_thc": 82.8,
+      "coa_thc": 86.0375
     },
     {
       "product": "Super-Chello · Sauce Cart",
