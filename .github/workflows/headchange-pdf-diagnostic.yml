@@ -19,7 +19,7 @@ jobs:
         run: |
           python - <<'PY'
           import requests, fitz
-          u='https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/0a476f34-79ab-476a-8a50-7bd184a7b86f.pdf'
+          u='https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/a88f3aa9-5cc2-4f40-8d99-c03742542f9d.pdf'
           r=requests.get(u,timeout=35); r.raise_for_status()
           d=fitz.open(stream=r.content,filetype='pdf')
           for i in (0,):
