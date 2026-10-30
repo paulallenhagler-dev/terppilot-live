@@ -248,12 +248,43 @@ def extract_panels(pdf_bytes: bytes) -> dict:
                 # columns and reject nonsensical values.
                 if not 0 <= percent <= 100:
                     continue
-                if percent > 0 and not 7.5 <= mass/percent <= 12.5:
+                # Depending on package/serving size, the second column
+                # is typically 0.05x, 0.1x or 10x the concentration.
+                # Only reject impossible mass scaling, not a cart size.
+                if percent > 0 and not 0.01 <= mass/percent <= 20:
                     continue
                 first_pass[key] = percent
-            if len(first_pass) >= 5 and isinstance(first_pass.get("THCA"),float) and isinstance(first_pass.get("D9THC"),float):
+            if len(first_pass) >= 5 and (
+                isinstance(first_pass.get("THCA"),float) or
+                isinstance(first_pass.get("D9THC"),float)
+            ):
                 cannas = first_pass
                 found_canna = True
+    # GCA Labs January 2023 reports include CAS numbers between
+    # cannabinoid name and concentration. Extract the percent column,
+    # not the later mg/g mass column.
+    if not cannas and "GCA Labs" in first_page_text:
+        gca_rows = {}
+        gca_pattern = re.compile(
+            r"^\s*(THCa|Δ9-THC|Δ8-THC|THCVa|THCV|CBDa|CBD|CBDVa|CBDV|CBN|CBGa|CBG|CBC)\s+"
+            r"[0-9-]+\s+[0-9.]+\s+(ND|NR|<LOQ|[0-9]+(?:\.[0-9]+)?)\s+(?:ND|NR|<LOQ|[0-9.]+)\b",
+            re.IGNORECASE,
+        )
+        for original_row in doc[0].get_text("text",sort=True).splitlines():
+            row = normalize_line(original_row)
+            match = gca_pattern.match(row)
+            if not match:
+                continue
+            key = normalize_canna(match.group(1))
+            val = match.group(2).upper()
+            if key and (val in STATUSES or re.fullmatch(r"[0-9]+(?:\.[0-9]+)?",val)):
+                gca_rows[key] = val if val in STATUSES else float(val)
+        if len(gca_rows)>=5 and (
+            isinstance(gca_rows.get("THCA"),float) or
+            isinstance(gca_rows.get("D9THC"),float)
+        ):
+            cannas = gca_rows
+            found_canna = True
     # Reported THC from analytes, never from an unlabeled serving mass.
     thc = None
     if isinstance(cannas.get("THCA"), float) or isinstance(cannas.get("D9THC"), float):
