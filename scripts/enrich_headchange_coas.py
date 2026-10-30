@@ -53,6 +53,9 @@ BAD_HEADERS = ("Analyte", "Date Tested", "SOP/", "T otal", "Total ",
 def normalize_line(line: str) -> str:
     line = re.sub(r"(?<=\b[A-Za-z])\s+(?=[a-z]{3,})", " ", line) if False else line
     line = line.replace("\x00", "fi").replace("\ufb01", "fi")
+    # Some 2022 Confident Cannabis PDF fonts expose Greek glyphs as
+    # long-s (beta), z-caron (alpha), and b-stroke (gamma).
+    line = line.replace("ſ-", "β-").replace("ž-", "α-").replace("ƀ-", "γ-")
     line = re.sub(r"\bT\s+erpenes\b", "Terpenes", line, flags=re.I)
     line = re.sub(r"\bT\s+otal\b", "Total", line, flags=re.I)
     line = re.sub(r"\bT\s+ested\b", "Tested", line, flags=re.I)
@@ -285,6 +288,48 @@ def extract_panels(pdf_bytes: bytes) -> dict:
         ):
             cannas = gca_rows
             found_canna = True
+    # Recover an older CloudTen/Confident terpene total using native
+    # PDF order when a side-by-side Primary Aromas box interrupts
+    # the sorted reading order. The two Total figures are mg/g and %.
+    if terp_total is None and found_terp and len(terps)>=3:
+        for page in doc:
+            native = " ".join(page.get_text("text",sort=False).split())
+            if not re.search(r"\bT\s?erpenes\b",native,re.I):
+                continue
+            m = re.search(
+                r"\bT\s?erpenes\b.*?\bT\s?otal\s+([0-9]+(?:\.[0-9]+)?)\s+"
+                r"([0-9]+(?:\.[0-9]+)?)\s+Primary Aromas",
+                native,re.I|re.S,
+            )
+            if m:
+                recovered_total = float(m.group(2))
+                if 0 < recovered_total <= 40:
+                    terp_total = recovered_total
+                    break
+
+    # Fleur de Lis sometimes prints generic aggregate analytes after
+    # isomer-specific analytes. The sorted layout drops the three
+    # generic rows into a different column. Add them ONLY when the
+    # original PDF total and recovered analytes reconcile.
+    if terp_total is not None and found_terp and abs(sum(terps.values())-terp_total)>max(0.12,terp_total*.025):
+        candidates = {}
+        for page in doc:
+            native = " ".join(page.get_text("text",sort=False).split())
+            if "Fleur de Lis" not in native or not re.search(r"\bT\s?erpenes\b",native,re.I):
+                continue
+            for key,pattern in (
+                ("Nerolidol",r"(?<![\w-])Nerolidol"),
+                ("Ocimene",r"(?<![\w-])Ocimene"),
+                ("Terpineol",r"(?<![\w-])T\s?erpineol"),
+            ):
+                if key in terps or any(k.endswith("-"+key) for k in terps):
+                    continue
+                m = re.search(pattern+r"\s+[0-9.]+\s+[0-9.]+\s+([0-9.]+)\s+[0-9.]+",native,re.I)
+                if m:
+                    v = float(m.group(1))
+                    if 0 < v < 10: candidates[key]=v
+        if candidates and abs(sum(terps.values())+sum(candidates.values())-terp_total)<=max(.12,terp_total*.025):
+            terps.update(candidates)
     # Reported THC from analytes, never from an unlabeled serving mass.
     thc = None
     if isinstance(cannas.get("THCA"), float) or isinstance(cannas.get("D9THC"), float):
