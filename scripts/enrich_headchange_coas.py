@@ -85,15 +85,19 @@ def normalize_terp(name: str) -> str:
 
 
 def parse_row(line: str) -> tuple[str, list[str]] | None:
-    # Keep a trailing contiguous run of numeric/status tokens, preserving
-    # multiword analyte names and older Confident/LIMS table variants.
+    # PyMuPDF sorted text can place a right-hand "Primary Aromas" label
+    # after a valid left-hand table row; capture the FIRST numeric run.
     tokens = line.strip().split()
-    j = len(tokens)
-    while j and DNUM.fullmatch(tokens[j-1]):
-        j -= 1
-    if not j or j == len(tokens):
+    start = next((i for i in range(1,len(tokens)) if DNUM.fullmatch(tokens[i])
+                  and not DNUM.fullmatch(tokens[i-1])),None)
+    if start is None:
         return None
-    return " ".join(tokens[:j]), tokens[j:]
+    end = start
+    while end < len(tokens) and DNUM.fullmatch(tokens[end]):
+        end += 1
+    if end-start < 2:
+        return None
+    return " ".join(tokens[:start]), tokens[start:end]
 
 
 def percent_from_row(values: list[str], table: str, header: str):
@@ -125,7 +129,7 @@ def extract_panels(pdf_bytes: bytes) -> dict:
     doc = fitz.open(stream=pdf_bytes, filetype="pdf")
     if len(doc) < 1 or len(doc) > 50:
         raise ValueError("Unexpected PDF page count")
-    text = "\n".join(page.get_text("text", sort=False) for page in doc)
+    text = "\n".join(page.get_text("text", sort=True) for page in doc)
     lines = [normalize_line(x) for x in text.splitlines()]
     lines = [x for x in lines if x]
     front = " ".join(lines[:140])
@@ -153,12 +157,12 @@ def extract_panels(pdf_bytes: bytes) -> dict:
     found_terp = False
     for i, line in enumerate(lines):
         lower = line.lower()
-        if lower in ("cannabinoids", "cannabinoids complete") or lower.startswith("cannabinoids complete"):
+        if lower == "cannabinoids" or lower.startswith("cannabinoids complete") or lower.startswith("cannabinoids pass"):
             mode = "canna"
             found_canna = True
             header = " ".join(lines[i:i+5])
             continue
-        if lower == "terpenes" or lower.startswith("terpenes complete"):
+        if lower == "terpenes" or lower.startswith("terpenes complete") or lower.startswith("terpenes primary aromas"):
             mode = "terp"
             found_terp = True
             header = " ".join(lines[i:i+6])
@@ -299,7 +303,7 @@ def main():
         raise RuntimeError("Refusing to enrich incomplete catalog")
     cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
     urls = list(dict.fromkeys(p["coa_url"] for p in products if p.get("coa_url")))
-    todo = [u for u in urls if u not in cache]
+    todo = [u for u in urls if u not in cache or (cache[u].get("has_cannabinoid_section") and not cache[u].get("cannabinoids") and not cache[u].get("terps"))]
     errors = {}
     if todo:
         with cf.ThreadPoolExecutor(max_workers=6) as pool:
@@ -331,8 +335,8 @@ def main():
         encoding="utf-8")
     print(json.dumps({k:v for k,v in report.items() if k not in ("audit_flags","pdf_download_or_parse_errors")}
                      |{"audit_flags_count":len(audit),"pdf_errors_count":len(errors)},indent=2),flush=True)
-    if len(cache) < 200:
-        raise RuntimeError("Too few COAs extracted, review pipeline before deployment")
+    if len(cache) < 200 or report["cannabinoid_panels_verified"] < 250 or report["terp_panels_verified_from_pdf"] < 150:
+        raise RuntimeError("Insufficient independently extracted panels; refusing publication")
 
 
 if __name__=="__main__":
