@@ -1,11 +1,11 @@
 {
-  "retrieved_at": "2026-10-30T15:49:38.344766+00:00",
+  "retrieved_at": "2026-10-30T15:55:49.356404+00:00",
   "catalog_entries": 553,
   "pdfs_linked": 549,
   "pdfs_parsed": 549,
   "pdf_download_or_parse_errors": {},
   "cannabinoid_panels_verified": 549,
-  "terp_panels_verified_from_pdf": 528,
+  "terp_panels_verified_from_pdf": 530,
   "terp_panels_full_or_reconciled": 533,
   "terp_panels_partial": 20,
   "audit_flags": [
@@ -28,12 +28,6 @@
     {
       "product": "ChemChi 3.0 · Sauce Cart",
       "reason": "terp_profile_incomplete"
-    },
-    {
-      "product": "Clem-Jenkins · Live Sugar",
-      "reason": "terp_panel_not_reconciled",
-      "coa_total": 7.261,
-      "coa_sum": 6.386
     },
     {
       "product": "Dabatomic · Live Badder",
@@ -86,12 +80,6 @@
       "reason": "thc_discrepancy",
       "website_thc": 78.5,
       "coa_thc": 75.8864
-    },
-    {
-      "product": "Orange Brain Freeze · Sauce Cart",
-      "reason": "terp_panel_not_reconciled",
-      "coa_total": 9.625,
-      "coa_sum": 7.76
     },
     {
       "product": "Orange Velvet (4.0) · Sauce Cart",
