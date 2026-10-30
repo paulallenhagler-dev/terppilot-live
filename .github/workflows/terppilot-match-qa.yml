@@ -1,0 +1,60 @@
+name: Repair TerpPilot partial-profile comparisons
+on:
+  push:
+    paths:
+      - ".github/workflows/terppilot-match-qa.yml"
+permissions:
+  contents: write
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prevent similarity scores from incomplete profiles
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          f=Path("index.html")
+          s=f.read_text(encoding="utf-8")
+          changes=[
+          (
+          "function recommendations(p){let r=PRODUCTS.filter(x=>x.id!==p.id&&(state.matchSame?x.category===p.category:true)&&(x.coverage==='full'||p.coverage==='partial')).map(x=>({p:x,s:score(p,x)}));r.sort((a,b)=>b.s-a.s);return r.slice(0,12)}",
+          "function recommendations(p){if(p.coverage!=='full'||Object.keys(p.terps).length<3)return [];let r=PRODUCTS.filter(x=>x.id!==p.id&&(state.matchSame?x.category===p.category:true)&&x.coverage==='full'&&Object.keys(x.terps).length>=3).map(x=>({p:x,s:score(p,x)}));r.sort((a,b)=>b.s-a.s);return r.slice(0,12)}"
+          ),
+          (
+          '''<div class="match-list">${rec.map(x=>matchCard(x,p)).join('')}</div>''',
+          '''<div class="match-list">${rec.length?rec.map(x=>matchCard(x,p)).join(''):'<div class="chem-notice">No reliable terpene match score is available for this partial panel. Missing measurements are unknown, not zero. Open the source COA for what is available.</div>'}</div>'''
+          ),
+          (
+          "if(!a||!b){setView('matches');return}let sc=score(a,b)",
+          "if(!a||!b||a.coverage!=='full'||b.coverage!=='full'){setView('matches');return}let sc=score(a,b)"
+          ),
+          (
+          "p.brand==='Head Change'?'HEAD CHANGE PHARMACOPEIA':p.cannabinoids?'✓ CANNABINOIDS VERIFIED':'CANNABINOID PANEL PENDING'",
+          "p.brand==='Head Change'?(p.cannabinoid_verified?'✓ COA CANNABINOIDS VERIFIED':'PHARMACOPEIA / PARTIAL COA'):p.cannabinoids?'✓ CANNABINOIDS VERIFIED':'CANNABINOID PANEL PENDING'"
+          ),
+          (
+          'id="statFull">1200</strong>',
+          'id="statFull">1204</strong>'
+          ),
+          (
+          'id="statCanna">688</strong>',
+          'id="statCanna">1186</strong>'
+          ),
+          ]
+          for old,new in changes:
+              if s.count(old)!=1:
+                  raise SystemExit("Expected exactly one occurrence of "+old[:90]+", found "+str(s.count(old)))
+              s=s.replace(old,new)
+          f.write_text(s,encoding="utf-8")
+          print("Repaired incomplete-panel matches, labels and HTML fallback counters")
+          PY
+      - name: Commit reviewed UI safeguards
+        run: |
+          git config user.name "terppilot-qa-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html
+          if ! git diff --cached --quiet; then
+            git commit -m "Exclude partial terpene panels from similarity rankings"
+            git push
+          fi
