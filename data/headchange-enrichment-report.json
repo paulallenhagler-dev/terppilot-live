@@ -1,0 +1,121 @@
+{
+  "retrieved_at": "2026-10-30T15:05:55.068716+00:00",
+  "catalog_entries": 553,
+  "pdfs_linked": 549,
+  "pdfs_parsed": 549,
+  "pdf_download_or_parse_errors": {},
+  "cannabinoid_panels_verified": 0,
+  "terp_panels_verified_from_pdf": 0,
+  "terp_panels_full_or_reconciled": 529,
+  "terp_panels_partial": 24,
+  "audit_flags": [
+    {
+      "product": "Beltzzz · Live Badder",
+      "reason": "no_original_pdf"
+    },
+    {
+      "product": "Cardinal Cream Cough · Live Sugar",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Cardinal Cream Cough · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "ChemChi 2.0 · Live Badder",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "ChemChi 3.0 · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Citrus Ripper · Mini Hash Hole",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Dabatomic · Live Badder",
+      "reason": "no_original_pdf"
+    },
+    {
+      "product": "Daily Bread · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Day Dreamz · Mini Hash Hole",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Family Affair · Live Badder",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Fresh Produce · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Fresh Produce #24 · Live Rosin Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Fruit Snackz · Live Badder",
+      "reason": "no_original_pdf"
+    },
+    {
+      "product": "Funky Jelly · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Grape Scott! · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Grease Trap · Sauce Cart",
+      "reason": "no_original_pdf"
+    },
+    {
+      "product": "Hawaiian JellyRoll · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Mexican Chocolate Cake · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Orange Velvet (4.0) · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Purkle-Pie · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Purple Donkey Sauce · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Purple Zookies · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Red Vestido · Live Badder",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Sundae Skool · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Super-Chello · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Trop Cream Paint Job · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Zoo Trip · Sauce Cart",
+      "reason": "terp_profile_incomplete"
+    }
+  ]
+}
