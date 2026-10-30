@@ -1,0 +1,32 @@
+name: Recover legacy Head Change cannabinoid panels
+on:
+  push:
+    paths:
+      - ".github/workflows/headchange-legacy-enrichment.yml"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  legacy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 12
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install extraction dependencies
+        run: pip install pymupdf requests
+      - name: Recover historical cannabinoid tables and validate
+        run: python -m scripts.repair_legacy_headchange
+      - name: Embed the corrected source profiles
+        run: python scripts/embed_headchange.py
+      - name: Commit recovered reports
+        run: |
+          git config user.name "terppilot-legacy-qa-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add headchange.js index.html data/headchange-catalog.json data/headchange-coa-cache.json data/headchange-enrichment-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Recover original cannabinoids from legacy Head Change reports"
+            git push
+          fi
