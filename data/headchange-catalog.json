@@ -1,6 +1,6 @@
 {
   "source": "https://headchange710.com/pharmacopeia/a-z",
-  "retrieved_at": "2026-10-30T15:43:40.538938+00:00",
+  "retrieved_at": "2026-10-30T15:49:36.750642+00:00",
   "entry_count": 553,
   "records": [
     {
@@ -21814,26 +21814,27 @@
       "description": "Rainbow Push Pop opens with loud fruit candy shell and creamy rainbow sherbet before melting into layers of tropical citrus, sweet cream, and a soft candy funk.",
       "thc": 75.7955,
       "tac": 79.3,
-      "total": 8.0,
+      "total": 8.033,
       "terps": {
-        "β-Caryophyllene": 2.3,
-        "Limonene": 1.8,
-        "Linalool": 1.5,
-        "α-Humulene": 0.5,
-        "Nerolidol": 0.4,
-        "β-Myrcene": 0.4,
-        "α-Pinene": 0.2,
-        "Terpineol": 0.2,
-        "α-Bisabolol": 0.2,
-        "Ocimene": 0.2,
-        "Fenchol": 0.1,
-        "β-Pinene": 0.1
+        "β-Caryophyllene": 2.298,
+        "Limonene": 1.835,
+        "Linalool": 1.451,
+        "α-Humulene": 0.51,
+        "β-Myrcene": 0.392,
+        "α-Pinene": 0.225,
+        "α-Bisabolol": 0.185,
+        "Fenchol": 0.149,
+        "β-Pinene": 0.11,
+        "Valencene": 0.069,
+        "Nerolidol": 0.437,
+        "Ocimene": 0.175,
+        "Terpineol": 0.196
       },
       "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/7b061b5f-ec9b-4139-b172-9aaa79341bf8.pdf",
       "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/7b061b5f-ec9b-4139-b172-9aaa79341bf8.pdf",
       "landing_url": "https://headchange710.com/pharmacopeia/rainbow-push-pop-6",
       "coverage": "full",
-      "data_quality": "pharmacopeia-indexed-with-coa",
+      "data_quality": "original-coa-quantitative",
       "cannabinoids": {
         "THCA": 2.15,
         "D9THC": 73.91,
@@ -21852,7 +21853,7 @@
       "coa_extraction": "original_pdf_parsed",
       "coa_pages": 5,
       "cannabinoid_verified": true,
-      "terp_verified": false
+      "terp_verified": true
     },
     {
       "id": 100399,
@@ -21868,26 +21869,27 @@
       "description": "Rainbow Push Pop opens with loud fruit candy shell and creamy rainbow sherbet before melting into layers of tropical citrus, sweet cream, and a soft candy funk.",
       "thc": 75.7168,
       "tac": 79.2,
-      "total": 7.9,
+      "total": 7.903,
       "terps": {
-        "β-Caryophyllene": 2.3,
-        "Limonene": 1.8,
-        "Linalool": 1.4,
-        "α-Humulene": 0.5,
-        "Nerolidol": 0.4,
-        "β-Myrcene": 0.4,
-        "α-Pinene": 0.2,
-        "Terpineol": 0.2,
-        "α-Bisabolol": 0.2,
-        "Ocimene": 0.2,
-        "Fenchol": 0.1,
-        "β-Pinene": 0.1
+        "β-Caryophyllene": 2.263,
+        "Limonene": 1.798,
+        "Linalool": 1.442,
+        "α-Humulene": 0.505,
+        "β-Myrcene": 0.379,
+        "α-Pinene": 0.217,
+        "α-Bisabolol": 0.183,
+        "Fenchol": 0.14,
+        "β-Pinene": 0.105,
+        "Valencene": 0.069,
+        "Nerolidol": 0.431,
+        "Ocimene": 0.18,
+        "Terpineol": 0.191
       },
       "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/b3c6fc5b-0997-4775-8363-e8f9f810a005.pdf",
       "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/b3c6fc5b-0997-4775-8363-e8f9f810a005.pdf",
       "landing_url": "https://headchange710.com/pharmacopeia/rainbow-push-pop-7",
       "coverage": "full",
-      "data_quality": "pharmacopeia-indexed-with-coa",
+      "data_quality": "original-coa-quantitative",
       "cannabinoids": {
         "THCA": 2.14,
         "D9THC": 73.84,
@@ -21906,7 +21908,7 @@
       "coa_extraction": "original_pdf_parsed",
       "coa_pages": 5,
       "cannabinoid_verified": true,
-      "terp_verified": false
+      "terp_verified": true
     },
     {
       "id": 100400,

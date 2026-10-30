@@ -1,11 +1,11 @@
 {
-  "retrieved_at": "2026-10-30T15:43:46.378355+00:00",
+  "retrieved_at": "2026-10-30T15:49:38.344766+00:00",
   "catalog_entries": 553,
   "pdfs_linked": 549,
   "pdfs_parsed": 549,
   "pdf_download_or_parse_errors": {},
   "cannabinoid_panels_verified": 549,
-  "terp_panels_verified_from_pdf": 526,
+  "terp_panels_verified_from_pdf": 528,
   "terp_panels_full_or_reconciled": 533,
   "terp_panels_partial": 20,
   "audit_flags": [
@@ -32,8 +32,8 @@
     {
       "product": "Clem-Jenkins · Live Sugar",
       "reason": "terp_panel_not_reconciled",
-      "coa_total": null,
-      "coa_sum": 2.924
+      "coa_total": 7.261,
+      "coa_sum": 6.386
     },
     {
       "product": "Dabatomic · Live Badder",
@@ -90,8 +90,8 @@
     {
       "product": "Orange Brain Freeze · Sauce Cart",
       "reason": "terp_panel_not_reconciled",
-      "coa_total": null,
-      "coa_sum": 3.68
+      "coa_total": 9.625,
+      "coa_sum": 7.76
     },
     {
       "product": "Orange Velvet (4.0) · Sauce Cart",
@@ -114,18 +114,6 @@
       "reason": "thc_discrepancy",
       "website_thc": 77.1,
       "coa_thc": 70.1793
-    },
-    {
-      "product": "Rainbow Push Pop · Live Resin AIO",
-      "reason": "terp_panel_not_reconciled",
-      "coa_total": 8.033,
-      "coa_sum": 7.224
-    },
-    {
-      "product": "Rainbow Push Pop · Sauce Cart",
-      "reason": "terp_panel_not_reconciled",
-      "coa_total": 7.903,
-      "coa_sum": 7.101
     },
     {
       "product": "Rainbow Resin Rush · Sauce Cart",
