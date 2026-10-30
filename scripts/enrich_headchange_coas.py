@@ -212,6 +212,48 @@ def extract_panels(pdf_bytes: bytes) -> dict:
                             if any(prefix in k and abs(n-val) < 0.003 for k,n in terps.items()):
                                 continue
                         terps[key] = val
+    # ContiCorp (2026) prints two cannabinoid analyte columns side by side.
+    # PyMuPDF sort=True merges the columns into one row, so the general
+    # parser cannot reliably identify them. Its native text order is:
+    # [analyte name, % by mass, mg/serving] for each analyte, first column
+    # then second. Read ONLY this validated format, and use the % column.
+    first_page_text = doc[0].get_text("text", sort=False)
+    if "ConcentrationConcentration" in first_page_text and "Cannabinoids" in first_page_text:
+        raw = [normalize_line(z) for z in first_page_text.splitlines()]
+        try:
+            section_start = raw.index("Cannabinoids")
+        except ValueError:
+            section_start = -1
+        if section_start >= 0:
+            first_pass = {}
+            status_tokens = STATUSES | {"NR", "ND"}
+            for k in range(section_start+1, len(raw)-2):
+                if raw[k].startswith(("Total Δ9-THC =", "Total THC =", "Instrument:", "Mycotoxins")):
+                    break
+                key = normalize_canna(raw[k])
+                if not key:
+                    continue
+                a, b = raw[k+1].upper(), raw[k+2].upper()
+                if not (DNUM.fullmatch(a) and DNUM.fullmatch(b)):
+                    continue
+                if a in status_tokens:
+                    first_pass[key] = a
+                    continue
+                try:
+                    percent, mass = float(a), float(b)
+                except ValueError:
+                    continue
+                # The mass column is mg per serving, usually 10x the
+                # percentage number for these COAs. Guard against shifted
+                # columns and reject nonsensical values.
+                if not 0 <= percent <= 100:
+                    continue
+                if percent > 0 and not 7.5 <= mass/percent <= 12.5:
+                    continue
+                first_pass[key] = percent
+            if len(first_pass) >= 5 and isinstance(first_pass.get("THCA"),float) and isinstance(first_pass.get("D9THC"),float):
+                cannas = first_pass
+                found_canna = True
     # Reported THC from analytes, never from an unlabeled serving mass.
     thc = None
     if isinstance(cannas.get("THCA"), float) or isinstance(cannas.get("D9THC"), float):
@@ -309,7 +351,8 @@ def main():
     todo = [u for u in urls if
             u not in cache
             or (cache[u].get("has_cannabinoid_section") and not cache[u].get("cannabinoids") and not cache[u].get("terps"))
-            or (cache[u].get("has_terp_section") and cache[u].get("terps") and not cache[u].get("terp_reconciled"))]
+            or (cache[u].get("has_terp_section") and cache[u].get("terps") and not cache[u].get("terp_reconciled"))
+            or (not cache[u].get("has_cannabinoid_section") and not cache[u].get("cannabinoids"))]
     errors = {}
     if todo:
         with cf.ThreadPoolExecutor(max_workers=6) as pool:
