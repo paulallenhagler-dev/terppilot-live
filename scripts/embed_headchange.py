@@ -32,6 +32,10 @@ def generate(records: list[dict]) -> str:
             p["thc"], p["tac"], p["total"], p["terps"],
             p["coa_url"], p["landing_url"].removeprefix(BASE),
             1 if p["coverage"] == "full" else 0,
+            p.get("date",""),p.get("cannabinoids"),
+            1 if p.get("terp_verified") else 0,
+            1 if p.get("cannabinoid_verified") else 0,
+            p.get("data_quality","pharmacopeia-unverified"),
         ]
         for p in records
     ]
@@ -45,13 +49,13 @@ def generate(records: list[dict]) -> str:
         + "const format=HEADCHANGE_FORMATS[d[1]],"
         + "url='https://headchange710.com/pharmacopeia/'+d[11],pdf=d[10];"
         + "return {id:100001+i,brand:'Head Change',name:d[0]+' · '+format,"
-        + "batch:d[2]||'Unlisted',date:'',"
+        + "batch:d[2]||'Unlisted',date:d[13]||'',"
         + "category:/Cart|AIO/.test(format)?'Vape':format==='Mini Hash Hole'?'Infused Flower':'Concentrate',"
         + "format,dominance:'',genetics:d[3],notes:d[4],description:d[5],"
         + "thc:d[6],tac:d[7],total:d[8],terps:d[9],source:pdf||url,"
         + "coa_url:pdf,landing_url:url,coverage:d[12]?'full':'partial',"
-        + "data_quality:pdf?'pharmacopeia-listed-coa':'pharmacopeia-no-pdf',"
-        + "cannabinoids:null}});\n</script>"
+        + "data_quality:d[17],terp_verified:!!d[15],cannabinoid_verified:!!d[16],"
+        + "cannabinoids:d[14]||null}});\n</script>"
     )
 
 
