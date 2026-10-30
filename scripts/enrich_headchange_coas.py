@@ -40,6 +40,9 @@ ALIASES = {
     "beta-Pinene": "β-Pinene",
     "alpha-Bisabolol": "α-Bisabolol",
     "delta-Limonene": "Limonene",
+    "δ-Limonene": "Limonene",
+    "Δ-Limonene": "Limonene",
+    "D-Limonene": "Limonene",
 }
 BAD_HEADERS = ("Analyte", "Date Tested", "SOP/", "T otal", "Total ",
                "Primary Aromas", "Notes:", "Result", "Con\x00dent",
@@ -197,7 +200,7 @@ def extract_panels(pdf_bytes: bytes) -> dict:
                     mode = ""
                 else:
                     key = normalize_terp(name)
-                    if not re.match(r"^[A-Za-zαβγΔ][A-Za-zαβγΔ0-9\- ]{1,40}$", key):
+                    if not re.match(r"^[A-Za-zαβγδΔ][A-Za-zαβγδΔ0-9\- ]{1,40}$", key):
                         continue
                     val = percent_from_row(vals, "terp", header)
                     if isinstance(val, float):
@@ -303,7 +306,10 @@ def main():
         raise RuntimeError("Refusing to enrich incomplete catalog")
     cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
     urls = list(dict.fromkeys(p["coa_url"] for p in products if p.get("coa_url")))
-    todo = [u for u in urls if u not in cache or (cache[u].get("has_cannabinoid_section") and not cache[u].get("cannabinoids") and not cache[u].get("terps"))]
+    todo = [u for u in urls if
+            u not in cache
+            or (cache[u].get("has_cannabinoid_section") and not cache[u].get("cannabinoids") and not cache[u].get("terps"))
+            or (cache[u].get("has_terp_section") and cache[u].get("terps") and not cache[u].get("terp_reconciled"))]
     errors = {}
     if todo:
         with cf.ThreadPoolExecutor(max_workers=6) as pool:
