@@ -171,6 +171,32 @@
     .take-panel .take-metrics{margin-top:15px}
     .studio-field select:invalid{color:#a4b4a5}
     @media(max-width:740px){.take-read{grid-template-columns:1fr}.take-topic{padding:16px}}
+
+    /* Readable, mobile-first visual spectrum. Markers indicate descriptive heuristics,
+       not numeric effects predictions; missing data has no inferred marker. */
+    .take-read{grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr)}
+    .experience-panel{padding:18px;background:rgba(9,20,13,.46);border:1px solid #3c6046;border-radius:13px;min-width:0}
+    .experience-heading{display:flex;align-items:center;gap:11px;margin-bottom:18px}
+    .experience-heading-icon{height:33px;width:33px;border-radius:10px;background:#29452e;border:1px solid #60815b;display:grid;place-items:center;color:#cafaad;font-size:21px;flex-shrink:0}
+    .experience-heading strong{display:block;color:#caf4ac;font-size:13px}
+    .experience-heading small{display:block;color:#9bb8a0;font-size:10px;line-height:1.5;margin-top:4px}
+    .experience-axis{margin-top:20px}
+    .experience-axis-top{display:flex;align-items:baseline;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-bottom:10px}
+    .experience-axis-top strong{font-size:11px;color:#dbe9d8;font-weight:750}
+    .experience-axis-top span{font-size:10px;color:#afd29e;font-family:var(--mono)}
+    .experience-track{position:relative;height:15px;border-radius:99px;border:1px solid #536c54;margin:0 7px 0 0;box-shadow:inset 0 1px 3px #0005}
+    .experience-style{background:linear-gradient(90deg,#587a8d 0%,#719e8e 35%,#40614c 50%,#8ba858 70%,#c4c66a 100%)}
+    .experience-thc{background:linear-gradient(90deg,#263d32,#54855c 45%,#a4bd6f 75%,#d2c67c)}
+    .experience-pin{position:absolute;top:50%;width:22px;height:30px;transform:translate(-50%,-50%);border:2px solid #e4f7dc;border-radius:7px;background:#122018;box-shadow:0 1px 12px #0009;display:grid;place-items:center}
+    .experience-pin-dot{width:7px;height:7px;border-radius:50%;background:#bcf475}
+    .experience-axis-missing .experience-track{background:repeating-linear-gradient(135deg,#263a2b,#263a2b 12px,#1c3023 12px,#1c3023 24px)}
+    .experience-unknown{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);font:750 12px var(--mono);color:#c1d1c0}
+    .experience-labels{display:flex;justify-content:space-between;color:#a5bfa9;font-size:10px;gap:8px;margin-top:11px}
+    .experience-context{font-size:10px;line-height:1.65;color:#9db4a0;margin-top:20px}
+    .experience-context strong{color:#c6ddbb}
+    .experience-cannabinoids{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
+    .experience-cannabinoid{padding:5px 8px;border:1px solid #4a664f;background:#203227;border-radius:6px;color:#b5d59e;font:650 10px var(--mono)}
+    @media(max-width:980px){.take-read{grid-template-columns:1fr}.experience-panel{padding:16px}}
   </style>
 </head>
 <body>
@@ -492,55 +518,57 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
       else if(ocimene/total>0.16&&!pair.includes('herbal'))taste+=' Ocimene adds a plausible sweet-green herbal accent.';
       if(p.coverage!=='full')taste+=' The terpene panel is incomplete, so that read is provisional.';
     }
-    const c=p.cannabinoids||{};
+    return {taste};
+  }
+  /* Distinguish measured THC concentration from an explicitly unvalidated
+     aromatic effect-style heuristic; do not render unknown as neutral. */
+  function takeSpectrum(p){
+    const terps=p.terps||{},get=k=>Number.isFinite(Number(terps[k]))?Math.max(0,Number(terps[k])):0;
+    const recognized=Object.keys(terps).filter(n=>TERPENE_META[n]&&get(n)>0);
+    const measurable=p.coverage==='full'&&recognized.length>=3;
+    const bright=0.9*get('Limonene')+get('Terpinolene')+
+      0.75*(get('α-Pinene')+get('β-Pinene'))+
+      0.55*(get('Ocimene')+get('Trans-Ocimene')+get('Cis-Ocimene')+get('β-Ocimene'));
+    const settled=get('β-Myrcene')+0.85*get('Linalool')+
+      0.5*(get('Nerolidol II')+get('Trans-Nerolidol')+get('Cis-Nerolidol'))+
+      0.35*get('α-Bisabolol');
+    const known=measurable&&(bright+settled)>=0.18;
+    const tendency=known?(bright-settled)/(bright+settled):null;
+    // Restrict the display to broad bands; small differences should look undetermined.
+    const pos=known?Math.max(24,Math.min(76,50+tendency*24)):null;
+    const direction=!known?'Not enough data':pos>60?'Brighter-leaning pattern':pos<40?'More mellow-leaning pattern':'Mixed / no clear lean';
+    const can=p.cannabinoids||{};
     const thc=typeof p.thc==='number'&&Number.isFinite(p.thc)?p.thc:
-      typeof c.TOTAL_THC==='number'?c.TOTAL_THC:null;
-    const cbd=typeof c.TOTAL_CBD==='number'?c.TOTAL_CBD:
-      (typeof c.CBD==='number'?c.CBD:null);
-    const cbn=typeof c.CBN==='number'?c.CBN:null;
-    const cbg=typeof c.CBG==='number'?c.CBG:null;
-    const thcForward=thc!==null&&thc>=3;
-    const cbdRelevant=cbd!==null&&(cbd>=2||thcForward&&cbd/thc>=0.12);
-    const minorNote=(cbn!==null&&cbn>=0.10)?
-      'There is measurable CBN, but that alone is not a reliable reason to expect sleepiness.':
-      (cbg!==null&&cbg>=1.5)?
-      'CBG is present at a notable level, although we cannot infer a specific mood or energy effect from it.':
-      '';
-    const kind=p.category==='Flower'||p.category==='Pre-roll'?'flower':
-      p.category==='Vape'?'vape':'concentrate';
-    let thcRead;
-    if(thc===null)thcRead='I cannot give you a credible strength estimate here because a usable total-THC result is missing.';
-    else if(thc<1&&cbd!==null&&cbd>=5)thcRead='With very little THC and much more CBD, I would expect far less THC-type intoxication than a typical high-THC product. That does not guarantee any particular relaxation or therapeutic effect.';
-    else if(thc>=65&&kind!=='flower')thcRead='This is a high-THC '+kind+', so the strongest expectation is a pronounced THC experience, not a reliably “up” or “down” effect. It could feel euphoric or mentally intense, and the amount used will make a big difference.';
-    else if(thc>=23&&kind==='flower')thcRead='This is a fairly strong THC-forward flower on paper. I would expect a noticeable high, with potential euphoria and altered perception, but also the possibility of anxiety or feeling overwhelmed at higher intake.';
-    else if(thc>=15&&kind==='flower')thcRead='This is a clearly THC-forward flower. The likely experience includes intoxication and mood or sensory changes; whether that settles into relaxation or feels more mentally active is not established by these terpenes.';
-    else if(thc>=40)thcRead='The THC concentration points to a substantial intoxicating experience. Dose and tolerance matter more to the strength of the high than the aromatic character suggests.';
-    else if(thcForward)thcRead='There is enough measured THC to expect intoxication, but the intensity depends heavily on the amount used and individual tolerance.';
-    else thcRead='The reported THC is relatively low, so I would expect less THC-driven intensity than a high-potency batch, all else equal.';
-    if(thcForward&&cbdRelevant)thcRead+=' It also contains meaningful CBD alongside the THC, giving it a different cannabinoid balance; that is not a guarantee of a smoother high.';
-    else if(thcForward&&cbd!==null&&cbd<0.5)thcRead+=' There is very little measured CBD to balance the cannabinoid profile.';
-    if(minorNote)thcRead+=' '+minorNote;
-    if(valid){
-      const a=top?.[0],b=next?.[0],signature=[a,b].filter(Boolean);
-      if(signature.includes('citrus')&&(signature.includes('pine')||signature.includes('herbal')))
-        thcRead+=' If you are shopping for a brighter, more lively kind of profile, this is the aromatic direction people often mean. It does not prove the high itself will be energizing or clear-headed.';
-      else if(signature.includes('earthy')&&(signature.includes('floral')||signature.includes('wood')))
-        thcRead+=' The deeper herbal and softer notes fit the kind of profile some people reach for when winding down, though the lab numbers do not predict sleepiness or body relaxation.';
-      else if(signature.includes('earthy')&&signature.includes('spice'))
-        thcRead+=' The earthy and spicy character gives this a grounded, heavier aromatic impression. That is not proof of a sedating or body-heavy high.';
-      else if(signature.includes('citrus')&&signature.includes('spice'))
-        thcRead+=' It reads bright but peppery on the aromatic side. I would not automatically call that stimulating or relaxing: THC and your response to it will decide far more.';
-      else if(signature.includes('floral'))
-        thcRead+=' That softer floral aroma may sound mellow, but it cannot establish that the high will be calming.';
-      else if(signature.includes('pine'))
-        thcRead+=' It has a bright, crisp aromatic profile, but pinene content does not establish better focus or a lighter high.';
-      else if(signature.includes('herbal'))
-        thcRead+=' That herbal, terpinolene-style aroma can seem lively on paper, but there is no dependable terpene formula for predicting energy or creativity.';
-      else
-        thcRead+=' The aroma leans '+(a==='spice'?'peppery and dry':a==='wood'?'woody and herbal':a==='fresh'?'fresh and botanical':'earthy and herbal')+', but those notes are not a dependable guide to the mood of the high.';
-    }else if(thc===null)thcRead+=' Aroma notes alone cannot supply a dependable substitute.';
-    feel=thcRead;
-    return {taste,feel};
+      typeof can.TOTAL_THC==='number'&&Number.isFinite(can.TOTAL_THC)?can.TOTAL_THC:null;
+    const flower=p.category==='Flower'||p.category==='Pre-roll';
+    const max=flower?35:90;
+    const potency=thc!==null?Math.max(0,Math.min(100,100*thc/max)):null;
+    const scoreQuality=known?'very low — exploratory only':'unavailable';
+    return {known,pos,direction,potency,thc,flower,max,scoreQuality,bright,settled};
+  }
+  function takeMeter({title,left,right,position,center='50',valueText='',kind='style'}){
+    const valid=position!==null&&Number.isFinite(position);
+    const label=valid?valueText:'Not established from this COA';
+    return '<div class="experience-axis '+(!valid?'experience-axis-missing':'')+'">'+
+      '<div class="experience-axis-top"><strong>'+esc(title)+'</strong><span>'+esc(label)+'</span></div>'+
+      '<div class="experience-track '+(kind==='thc'?'experience-thc':'experience-style')+'" role="img" aria-label="'+esc(title+': '+(valid?valueText:'not established'))+'">'+
+      (valid?'<span class="experience-pin" style="left:'+position.toFixed(1)+'%"><span class="experience-pin-dot"></span></span>':'<span class="experience-unknown">?</span>')+
+      '</div><div class="experience-labels"><span>'+esc(left)+'</span><span>'+esc(right)+'</span></div></div>';
+  }
+  function experiencePanel(p){
+    const x=takeSpectrum(p),c=p.cannabinoids||{};
+    const format=x.flower?'flower / pre-roll':'extract / vape';
+    const cIndicators=[['CBD','TOTAL_CBD',2],['CBN','CBN',0.1],['CBG','CBG',1.5]]
+      .filter(([n,key,min])=>typeof c[key]==='number'&&c[key]>=min)
+      .map(([n,key])=>'<span class="experience-cannabinoid">'+n+' '+num(c[key],2)+'% measured</span>').join('');
+    return '<section class="experience-panel" aria-label="Lab-informed experience spectrum">'+
+      '<div class="experience-heading"><span class="experience-heading-icon" aria-hidden="true">◉</span><div><strong>What the high might feel like</strong><small>Visual guide to the measured chemistry — not a promised effect</small></div></div>'+
+      takeMeter({title:'Likely style · experimental',left:'More mellow',right:'More lively',position:x.pos,valueText:x.direction,kind:'style'})+
+      takeMeter({title:'THC concentration · measured',left:'Lower within format',right:'Higher within format',position:x.potency,valueText:x.thc!==null?num(x.thc,2)+'% THC':'Not reported',kind:'thc'})+
+      '<div class="experience-context">'+
+        '<div><strong>How to read this:</strong> The first position is a low-confidence terpene-based hypothesis, not a clinically validated predictor of energy, relaxation or body effects. The second is measured THC by mass, scaled for '+format+' (0–'+x.max+'%); it is <strong>not</strong> your dose or a prediction of how intoxicated you will feel.</div>'+
+        (cIndicators?'<div class="experience-cannabinoids">'+cIndicators+'</div>':'')+
+      '</div></section>';
   }
   function takePanel(p){
     const {items,total,families}=familyData(p),read=terpPilotTake(p);
@@ -550,7 +578,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     const extras=['TOTAL_THC','TOTAL_CBD','CBN','CBG','THCV'].filter(k=>typeof can[k]==='number'&&can[k]>0).map(k=>k+' '+num(can[k],3)+'%').join(' · ');
     return '<section class="take-panel"><div class="take-lead"><span class="take-symbol" aria-hidden="true">✦</span><div class="take-label">TerpPilot’s Take <span style="color:#8dbf8b">/ THE CHEMISTRY, IN PLAIN ENGLISH</span></div></div>'+
       '<div class="take-read"><div class="take-topic"><div class="take-topic-label"><span aria-hidden="true">🌿</span> What it should taste like</div><p>'+esc(read.taste)+'</p></div>'+
-      '<div class="take-topic"><div class="take-topic-label"><span aria-hidden="true">◉</span> What to expect from the high</div><p>'+esc(read.feel)+'</p></div></div>'+
+      experiencePanel(p)+'</div>'+
       '<div class="take-metrics">'+tags+'</div>'+
       '<details class="take-details"><summary>Why we think this · measured batch evidence</summary><div style="margin-top:10px">Identified terpenes: '+(signals||'not available')+(extras?'<div style="margin-top:7px">Reported cannabinoids: '+esc(extras)+'</div>':'')+'<div style="margin-top:7px">Identified terpene sum: '+num(total,3)+'%. Reported total: '+(p.total==null?'not available':num(p.total,3)+'%')+'.</div></div></details>'+
       '<div class="take-foot">Flavor is a hypothesis from measured aroma-related compounds, not a tasting test. THC can cause euphoria, anxiety and changes in perception; terpenes alone cannot reliably predict a specific subjective or medical effect. These are historical batch reports.</div></section>';
