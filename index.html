@@ -563,7 +563,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
       .map(([n,key])=>'<span class="experience-cannabinoid">'+n+' '+num(c[key],2)+'% measured</span>').join('');
     return '<section class="experience-panel" aria-label="Lab-informed experience spectrum">'+
       '<div class="experience-heading"><span class="experience-heading-icon" aria-hidden="true">◉</span><div><strong>What the high might feel like</strong><small>Visual guide to the measured chemistry — not a promised effect</small></div></div>'+
-      takeMeter({title:'Likely style · experimental',left:'More mellow',right:'More lively',position:x.pos,valueText:x.direction,kind:'style'})+
+      takeMeter({title:'Terpene Profile Tendency',left:'More mellow',right:'More lively',position:x.pos,valueText:x.direction,kind:'style'})+
       takeMeter({title:'THC concentration · measured',left:'Lower within format',right:'Higher within format',position:x.potency,valueText:x.thc!==null?num(x.thc,2)+'% THC':'Not reported',kind:'thc'})+
       '<div class="experience-context">'+
         '<div><strong>How to read this:</strong> The first position is a low-confidence terpene-based hypothesis, not a clinically validated predictor of energy, relaxation or body effects. The second is measured THC by mass, scaled for '+format+' (0–'+x.max+'%); it is <strong>not</strong> your dose or a prediction of how intoxicated you will feel.</div>'+
