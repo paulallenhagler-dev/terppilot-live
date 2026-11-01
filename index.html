@@ -161,6 +161,16 @@
     @media(max-width:940px){.vibe-grid,.aroma-grid,.terp-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.door-tab{gap:8px;padding:10px}.door-icon{width:36px;height:36px;font-size:20px}}
     @media(max-width:680px){.discovery{padding:18px}.discovery-mark{display:none}.door-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.door-tab{display:block;min-height:112px;text-align:center;padding:10px 6px}.door-icon{margin:0 auto 8px;width:38px;height:38px}.door-tab .door-title{font-size:12px}.door-tab small{font-size:10px}.vibe-grid,.aroma-grid,.terp-library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.vibe-tile,.aroma-tile{display:block;padding:10px;min-height:111px}.pick-icon,.aroma-tile .pick-icon{width:34px;height:34px;margin-bottom:7px;font-size:17px}.pick-title{font-size:12px}.pick-desc{font-size:10px}.pick-check{display:none}.studio-grid{grid-template-columns:1fr}.library-header{display:block}.terp-search{margin-top:9px;max-width:none}.terp-entry{padding:9px;min-height:76px}.terp-symbol{width:27px;height:27px;flex-basis:27px;font-size:15px}.take-panel{padding:18px}}
     @media(max-width:360px){.vibe-grid,.aroma-grid,.terp-library-grid{grid-template-columns:1fr}.vibe-tile,.aroma-tile{display:flex;min-height:68px}.pick-icon,.aroma-tile .pick-icon{margin:0 9px 0 0}}
+
+    /* Clear narrative separation between sensory prediction and cannabinoid experience. */
+    .take-read{display:grid;grid-template-columns:1fr 1fr;gap:13px;margin-top:18px}
+    .take-topic{min-width:0;padding:18px;background:rgba(9,20,13,.46);border:1px solid #3c6046;border-radius:13px}
+    .take-topic-label{display:flex;align-items:center;gap:8px;color:#caf4ac;font-size:12px;font-weight:770;letter-spacing:.1px}
+    .take-topic-label span{font-size:17px}
+    .take-topic p{margin:12px 0 0;line-height:1.77;font-size:13px;color:#e1ede1;max-width:none}
+    .take-panel .take-metrics{margin-top:15px}
+    .studio-field select:invalid{color:#a4b4a5}
+    @media(max-width:740px){.take-read{grid-template-columns:1fr}.take-topic{padding:16px}}
   </style>
 </head>
 <body>
@@ -212,10 +222,10 @@
       <div class="discovery-note"><span class="note-icon">ⓘ</span><span>Aroma is more complicated than terpene percentages: volatile sulfur compounds and other chemicals can strongly affect gas, skunk and fruit notes. We won't pretend the available data predicts those exactly.</span></div>
     </div>
     <div class="door-panel" id="door-studio" role="tabpanel">
-      <p class="door-panel-lead">All recognizable terpene analytes indexed in the catalog are available in the selectors below—not just the usual five or ten.</p>
+      <p class="door-panel-lead">Choose one terpene, two terpenes, or leave both blank to browse without a chemical match filter. Each selector starts empty.</p>
       <div class="studio-grid">
-        <label class="studio-field">Primary terpene <select id="studioPrimary" aria-label="Primary terpene"><option value="Limonene">Limonene</option></select></label>
-        <label class="studio-field">Secondary terpene <select id="studioSecondary" aria-label="Secondary terpene"><option value="Linalool">Linalool</option></select></label>
+        <label class="studio-field">Primary terpene <select id="studioPrimary" aria-label="Primary terpene"><option value="">— No preference —</option></select></label>
+        <label class="studio-field">Secondary terpene <select id="studioSecondary" aria-label="Secondary terpene"><option value="">— No preference —</option></select></label>
         <label class="studio-field">Format <select id="studioFormat"><option value="all">All formats</option><option value="Flower">Flower</option><option value="Concentrate">Concentrate</option><option value="Vape">Vape</option><option value="Infused Flower">Infused Flower</option><option value="Pre-roll">Pre-roll</option></select></label>
       </div>
       <label class="studio-range">Minimum total terpenes <input type="range" id="studioMin" min="0" max="15" step="0.25" value="0"><strong id="studioMinValue">0.00%</strong></label>
@@ -367,8 +377,8 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     }
     if(state.discovery==='studio'){
       const a=document.querySelector('#studioPrimary').value,b=document.querySelector('#studioSecondary').value;
-      if(!a)return null;
-      const out={};out[a]=1;if(b&&b!==a&&b!=='none')out[b]=0.7;
+      if(!a&&!b)return null;
+      const out={};if(a)out[a]=1;if(b&&b!==a)out[b]=a?0.7:1;
       return out;
     }
     return null;
@@ -386,17 +396,17 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     return pa>0&&ta>0?Math.round(100*dot/Math.sqrt(pa*ta)):null;
   }
   function discoveryEligible(p){
+    if(state.discovery==='studio'){
+      if(p.total==null||Number(p.total)<Number(document.querySelector('#studioMin').value))return false;
+      const fmt=document.querySelector('#studioFormat').value;
+      if(fmt!=='all'&&p.category!==fmt)return false;
+    }
     if(!currentTargets())return true;
     const sc=profileScore(p);if(sc===null||sc<24)return false;
     if(state.discovery==='aroma'&&state.aromas.length>1){
       const total=Number(p.total)||Object.values(p.terps||{}).reduce((a,b)=>a+(Number(b)||0),0);
       for(const a of state.aromas){const strength=Object.keys(AROMA_TARGETS[a]).reduce((sum,n)=>sum+(Number(p.terps?.[n])||0),0);
         if(strength<Math.max(0.025,total*0.012))return false;}
-    }
-    if(state.discovery==='studio'){
-      if(p.total==null||Number(p.total)<Number(document.querySelector('#studioMin').value))return false;
-      const fmt=document.querySelector('#studioFormat').value;
-      if(fmt!=='all'&&p.category!==fmt)return false;
     }
     return true;
   }
@@ -420,64 +430,132 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
       (t?' · driven by '+t[0]:'')+'.';
   }
 
+
+  /* TerpPilot Take: two natural-language reads drawn from the measured batch, never generic strain lore.
+     Sensory character is a prediction from aroma-associated terpenes. Experiential character is
+     grounded in measured cannabinoids and clinical uncertainty, not invented terpene-effect rules. */
+  const FLAVOR_LEADS={
+    citrus:'This looks bright and citrus-forward, with a sharper herbal character rather than obvious candy sweetness.',
+    pine:'I would expect a crisp, resinous pine character, clean and a little sharp rather than soft or sugary.',
+    floral:'This looks more floral and aromatic than heavy or earthy, with a softer edge to the smell.',
+    spice:'I would expect a dry, peppery spice character, with a more savory herbal side than a fruit-heavy one.',
+    earthy:'This points toward a distinctly earthy, musky herbal profile—more natural funk than sweetness.',
+    herbal:'This should have a noticeable herbal funk, with a slightly sweet-green edge rather than straight citrus.',
+    wood:'The aroma looks woody and dry, with an herbal undertone instead of obvious fruit sweetness.',
+    fresh:'This looks cool and botanical, with fresh herbal notes rather than a heavy sweet profile.'
+  };
+  const FLAVOR_LAYERS={
+    citrus:'A citrus bite should cut through underneath.',
+    pine:'The pine compounds should add a crisp resinous edge.',
+    floral:'The floral components may round off some of the sharper notes.',
+    spice:'Expect peppery spice underneath, giving it a drier finish.',
+    earthy:'There should be an earthy, herbal weight behind the brighter notes.',
+    herbal:'There is a greener, slightly funky herbal layer as well.',
+    wood:'A dry woody undertone should give the profile some depth.',
+    fresh:'A cool, camphor-like herbal edge may show up behind it.'
+  };
   function terpPilotTake(p){
     const {items,total,families}=familyData(p);
-    if(items.length<2||total<=0)return 'The lab record does not contain enough identified terpene measurements to support a useful sensory assessment. TerpPilot will not fill those gaps with guesses.';
-    if(!families.length)return 'The reported terpene measurements have too little characterized aroma information for a meaningful batch-level assessment.';
-    const first=items[0],second=items[1],third=items[2];
-    const primaryFamily=families[0][0],secondaryFamily=families[1]?.[0];
-    const word=f=>FAMILY_DESC[f]||'herbal';
-    const firstShare=first[1]/total,secondShare=second[1]/total,nearlyEqual=Math.abs(first[1]-second[1])/first[1]<0.18;
-    const lines=[],freq=(n)=>num(n,3)+'%',fmt=n=>n[0]+' ('+freq(n[1])+')';
-    if(nearlyEqual&&TERPENE_META[first[0]]?.[2]!==TERPENE_META[second[0]]?.[2]){
-      lines.push('There are two genuine leads here: '+fmt(first)+' and '+fmt(second)+'. They are close enough that I would not call this a one-note profile. On paper, expect '+word(primaryFamily)+(secondaryFamily?' alongside '+word(secondaryFamily):'')+', with neither completely burying the other.');
-    }else if(firstShare>0.54){
-      lines.push(first[0]+' dominates this batch at '+freq(first[1])+'—about '+Math.round(firstShare*100)+'% of the identified terpene total. That points toward a distinctly '+word(primaryFamily)+' base rather than a balanced mix.');
-    }else if(firstShare>0.37){
-      lines.push('The main aromatic signal here is '+word(primaryFamily)+', driven by '+fmt(first)+'. It has a clear lead, but the secondary compounds are substantial enough to change the overall character.');
+    const top=families[0],next=families[1],third=families[2];
+    const valid=items.length>=2&&total>0&&!!top;
+    const classified=(name)=>Number(p.terps?.[name]||0);
+    let taste,feel;
+    if(!valid){
+      taste='The available lab data is too thin to make a useful flavor prediction. I would rather leave this open than invent a tasting note.';
     }else{
-      lines.push('This batch has a fairly layered profile rather than one overwhelming terpene. The strongest measurable directions are '+word(primaryFamily)+(secondaryFamily?' and '+word(secondaryFamily):'')+'. I would expect both to register rather than just the first name on the lab sheet.');
+      const dominant=top[0],runner=next?.[0];
+      const near=next&&next[1]/top[1]>=0.70;
+      const pair=[dominant,runner].filter(Boolean);
+      const citrusSpice=pair.includes('citrus')&&pair.includes('spice');
+      const citrusPine=pair.includes('citrus')&&pair.includes('pine');
+      const herbalCitrus=pair.includes('citrus')&&pair.includes('herbal');
+      const earthySpice=pair.includes('earthy')&&pair.includes('spice');
+      const floralCitrus=pair.includes('floral')&&pair.includes('citrus');
+      const pineHerbal=pair.includes('pine')&&pair.includes('herbal');
+      if(near&&citrusSpice) taste='I would expect a punch of citrus with a fairly dry, peppery backbone. Neither side owns the whole profile, so this looks sharper and more savory than a sweet citrus strain.';
+      else if(near&&citrusPine) taste='This should sit right between sharp citrus and crisp pine resin, with a fresh, slightly herbal finish. The pine is prominent enough that I would not expect a one-dimensional lemon profile.';
+      else if(near&&herbalCitrus) taste='This looks like a bright citrus profile wrapped in noticeable herbal funk. Expect something lively and aromatic, with the greener notes keeping it from feeling like straightforward sweet fruit.';
+      else if(near&&earthySpice) taste='This is firmly in the earthy, peppery lane, with a musky herbal base and a dry spicy edge. I would not expect much obvious sweetness here.';
+      else if(near&&floralCitrus) taste='There is a close split between bright citrus and softer floral notes, which should make for a fragrant rather than aggressively sharp profile. The mix looks aromatic without needing any invented dessert flavors.';
+      else if(near&&pineHerbal) taste='I would expect crisp pine resin sitting over a greener herbal funk. It looks sharp and botanical rather than sweet, with both sides playing a real part.';
+      else taste=FLAVOR_LEADS[dominant]||'This has an identifiable aromatic direction, though the full flavor cannot be read directly from the panel.';
+      if(!near&&runner) taste+=' '+FLAVOR_LAYERS[runner];
+      if(third&&third[1]/total>=0.11&&!pair.includes(third[0])) {
+        const detail={citrus:'A little citrus brightness',pine:'A crisp resinous edge',floral:'Some floral softness',spice:'A peppery kick',earthy:'A deeper earthy note',herbal:'A greener herbal edge',wood:'A touch of dry wood',fresh:'A cooler botanical note'}[third[0]];
+        if(detail) taste+=' '+detail+' may come through on the finish.';
+      }
+      const terpinolene=classified('Terpinolene'),pinene=classified('α-Pinene')+classified('β-Pinene'),
+        caryo=classified('β-Caryophyllene'),ocimene=classified('Ocimene')+classified('Trans-Ocimene')+classified('Cis-Ocimene')+classified('β-Ocimene');
+      if(terpinolene/total>0.24&&dominant!=='herbal'&&runner!=='herbal')taste+=' The terpinolene level suggests a bit of herbal funk beyond the obvious lead notes.';
+      else if(pinene/total>0.17&&!pair.includes('pine'))taste+=' The combined pinenes suggest an extra resinous snap.';
+      else if(caryo/total>0.19&&!pair.includes('spice'))taste+=' Caryophyllene may leave a subtle peppery edge.';
+      else if(ocimene/total>0.16&&!pair.includes('herbal'))taste+=' Ocimene adds a plausible sweet-green herbal accent.';
+      if(p.coverage!=='full')taste+=' The terpene panel is incomplete, so that read is provisional.';
     }
-    const leadNames=new Set([first[0],second[0]]);
-    if(!nearlyEqual||TERPENE_META[first[0]]?.[2]===TERPENE_META[second[0]]?.[2]){
-      const secondFamily=TERPENE_META[second[0]]?.[2],same=secondFamily===TERPENE_META[first[0]]?.[2];
-      if(secondFamily){
-        lines.push(fmt(second)+(same?' reinforces that '+word(secondFamily)+' character.':' introduces a '+word(secondFamily)+' counterpoint, so the aroma is unlikely to read as only '+word(primaryFamily)+'.'));
-      }else lines.push(fmt(second)+' is the next-largest measured compound, although its precise aroma contribution cannot be established from this panel alone.');
-    }
-    // Use substantive second- and third-tier compounds, not an arbitrary stock list.
-    const accents=items.slice(2,9).filter(([name,value])=>TERPENE_META[name]&&value/total>=0.045);
-    const familyUsed=new Set([TERPENE_META[first[0]]?.[2],TERPENE_META[second[0]]?.[2]]);
-    const accent=accents.find(([name])=>!familyUsed.has(TERPENE_META[name][2]))||accents[0];
-    if(accent){
-      const family=TERPENE_META[accent[0]][2];
-      const companion=accents.find(([name])=>name!==accent[0]&&TERPENE_META[name][2]===family);
-      const intro=family==='pine'?'a crisp resinous edge':family==='spice'?'a peppery, woody edge':family==='floral'?'a floral layer':family==='citrus'?'some citrus brightness':family==='earthy'?'a deeper earthy, herbal side':family==='herbal'?'a greener herbal note':family==='wood'?'some woody depth':'a cool, camphor-like note';
-      lines.push(fmt(accent)+(companion?' together with '+fmt(companion):'')+' supports '+intro+'. '+(accent[1]/total>0.13?'That is a meaningful part of the mix, not just a trace.':'It should add character without necessarily taking over.'));
-    }
-    // If the profile has an unusually concentrated second family, explain the ratio.
-    if(!nearlyEqual&&secondShare>0.27)
-      lines.push('The second terpene carries roughly '+Math.round(secondShare*100)+'% of the identified total, so reducing this batch to its top terpene would miss a big part of the chemistry.');
-    const can=p.cannabinoids||{};
-    if(typeof can.CBN==='number'&&can.CBN>=0.10)
-      lines.push('CBN is also measured at '+freq(can.CBN)+'. That is worth noting, but it does not establish that the product will be sedating.');
-    else if(typeof can.TOTAL_CBD==='number'&&can.TOTAL_CBD>=1)
-      lines.push('The lab also reports '+num(can.TOTAL_CBD,2)+'% total CBD, an important cannabinoid distinction separate from its aroma.');
-    else if(typeof can.CBG==='number'&&can.CBG>=1.5)
-      lines.push('CBG is reported at '+freq(can.CBG)+', a noteworthy secondary cannabinoid measurement; it does not by itself predict an effect.');
-    if(p.coverage!=='full')lines.push('This is a partial terpene panel, so unlisted analytes are unknown and the sensory read is less certain.');
-    const unexplained=Object.keys(p.terps||{}).filter(n=>!TERPENE_META[n]&&Number(p.terps[n])>0).length;
-    if(unexplained>=2)lines.push('Several source entries are not clean chemical analyte labels, so this take excludes them pending verification.');
-    return lines.join(' ');
+    const c=p.cannabinoids||{};
+    const thc=typeof p.thc==='number'&&Number.isFinite(p.thc)?p.thc:
+      typeof c.TOTAL_THC==='number'?c.TOTAL_THC:null;
+    const cbd=typeof c.TOTAL_CBD==='number'?c.TOTAL_CBD:
+      (typeof c.CBD==='number'?c.CBD:null);
+    const cbn=typeof c.CBN==='number'?c.CBN:null;
+    const cbg=typeof c.CBG==='number'?c.CBG:null;
+    const thcForward=thc!==null&&thc>=3;
+    const cbdRelevant=cbd!==null&&(cbd>=2||thcForward&&cbd/thc>=0.12);
+    const minorNote=(cbn!==null&&cbn>=0.10)?
+      'There is measurable CBN, but that alone is not a reliable reason to expect sleepiness.':
+      (cbg!==null&&cbg>=1.5)?
+      'CBG is present at a notable level, although we cannot infer a specific mood or energy effect from it.':
+      '';
+    const kind=p.category==='Flower'||p.category==='Pre-roll'?'flower':
+      p.category==='Vape'?'vape':'concentrate';
+    let thcRead;
+    if(thc===null)thcRead='I cannot give you a credible strength estimate here because a usable total-THC result is missing.';
+    else if(thc<1&&cbd!==null&&cbd>=5)thcRead='With very little THC and much more CBD, I would expect far less THC-type intoxication than a typical high-THC product. That does not guarantee any particular relaxation or therapeutic effect.';
+    else if(thc>=65&&kind!=='flower')thcRead='This is a high-THC '+kind+', so the strongest expectation is a pronounced THC experience, not a reliably “up” or “down” effect. It could feel euphoric or mentally intense, and the amount used will make a big difference.';
+    else if(thc>=23&&kind==='flower')thcRead='This is a fairly strong THC-forward flower on paper. I would expect a noticeable high, with potential euphoria and altered perception, but also the possibility of anxiety or feeling overwhelmed at higher intake.';
+    else if(thc>=15&&kind==='flower')thcRead='This is a clearly THC-forward flower. The likely experience includes intoxication and mood or sensory changes; whether that settles into relaxation or feels more mentally active is not established by these terpenes.';
+    else if(thc>=40)thcRead='The THC concentration points to a substantial intoxicating experience. Dose and tolerance matter more to the strength of the high than the aromatic character suggests.';
+    else if(thcForward)thcRead='There is enough measured THC to expect intoxication, but the intensity depends heavily on the amount used and individual tolerance.';
+    else thcRead='The reported THC is relatively low, so I would expect less THC-driven intensity than a high-potency batch, all else equal.';
+    if(thcForward&&cbdRelevant)thcRead+=' It also contains meaningful CBD alongside the THC, giving it a different cannabinoid balance; that is not a guarantee of a smoother high.';
+    else if(thcForward&&cbd!==null&&cbd<0.5)thcRead+=' There is very little measured CBD to balance the cannabinoid profile.';
+    if(minorNote)thcRead+=' '+minorNote;
+    if(valid){
+      const a=top?.[0],b=next?.[0],signature=[a,b].filter(Boolean);
+      if(signature.includes('citrus')&&(signature.includes('pine')||signature.includes('herbal')))
+        thcRead+=' If you are shopping for a brighter, more lively kind of profile, this is the aromatic direction people often mean. It does not prove the high itself will be energizing or clear-headed.';
+      else if(signature.includes('earthy')&&(signature.includes('floral')||signature.includes('wood')))
+        thcRead+=' The deeper herbal and softer notes fit the kind of profile some people reach for when winding down, though the lab numbers do not predict sleepiness or body relaxation.';
+      else if(signature.includes('earthy')&&signature.includes('spice'))
+        thcRead+=' The earthy and spicy character gives this a grounded, heavier aromatic impression. That is not proof of a sedating or body-heavy high.';
+      else if(signature.includes('citrus')&&signature.includes('spice'))
+        thcRead+=' It reads bright but peppery on the aromatic side. I would not automatically call that stimulating or relaxing: THC and your response to it will decide far more.';
+      else if(signature.includes('floral'))
+        thcRead+=' That softer floral aroma may sound mellow, but it cannot establish that the high will be calming.';
+      else if(signature.includes('pine'))
+        thcRead+=' It has a bright, crisp aromatic profile, but pinene content does not establish better focus or a lighter high.';
+      else if(signature.includes('herbal'))
+        thcRead+=' That herbal, terpinolene-style aroma can seem lively on paper, but there is no dependable terpene formula for predicting energy or creativity.';
+      else
+        thcRead+=' The aroma leans '+(a==='spice'?'peppery and dry':a==='wood'?'woody and herbal':a==='fresh'?'fresh and botanical':'earthy and herbal')+', but those notes are not a dependable guide to the mood of the high.';
+    }else if(thc===null)thcRead+=' Aroma notes alone cannot supply a dependable substitute.';
+    feel=thcRead;
+    return {taste,feel};
   }
   function takePanel(p){
-    const {items,total,families}=familyData(p);
+    const {items,total,families}=familyData(p),read=terpPilotTake(p);
     const tags=families.slice(0,3).map(([name])=>'<span class="take-metric">'+(FAMILY_GLYPHS[name]||'◈')+' '+esc(FAMILY_DESC[name])+'</span>').join('');
-    const signals=items.slice(0,6).map(([n,v])=>esc(n)+' '+num(v,3)+'%').join(' · ');
+    const signals=items.slice(0,8).map(([n,v])=>esc(n)+' '+num(v,3)+'%').join(' · ');
     const can=p.cannabinoids||{};
-    const extras=['CBN','CBG','TOTAL_CBD'].filter(k=>typeof can[k]==='number'&&can[k]>0).map(k=>k+' '+num(can[k],3)+'%').join(' · ');
-    return '<section class="take-panel"><div class="take-lead"><span class="take-symbol" aria-hidden="true">🔬</span><div class="take-label">TerpPilot’s Take <span style="color:#8dbf8b">/ ANALYSIS OF THIS BATCH</span></div></div><div class="take-metrics">'+tags+'</div><p>'+esc(terpPilotTake(p))+'</p><details class="take-details"><summary>Why we think this · measured evidence</summary><div style="margin-top:10px">Detected terpenes: '+signals+(extras?'<div style="margin-top:7px">Additional cannabinoids: '+esc(extras)+'</div>':'')+'<div style="margin-top:7px">Total measured terpene sum: '+num(total,3)+'%. Reported batch total: '+(p.total==null?'not available':num(p.total,3)+'%')+'.</div></div></details><div class="take-foot">Scientific interpretation, not a sampled tasting note. Other volatile compounds and processing can change actual smell or flavor; laboratory chemistry cannot establish personal effects.</div></section>';
+    const extras=['TOTAL_THC','TOTAL_CBD','CBN','CBG','THCV'].filter(k=>typeof can[k]==='number'&&can[k]>0).map(k=>k+' '+num(can[k],3)+'%').join(' · ');
+    return '<section class="take-panel"><div class="take-lead"><span class="take-symbol" aria-hidden="true">✦</span><div class="take-label">TerpPilot’s Take <span style="color:#8dbf8b">/ THE CHEMISTRY, IN PLAIN ENGLISH</span></div></div>'+
+      '<div class="take-read"><div class="take-topic"><div class="take-topic-label"><span aria-hidden="true">🌿</span> What it should taste like</div><p>'+esc(read.taste)+'</p></div>'+
+      '<div class="take-topic"><div class="take-topic-label"><span aria-hidden="true">◉</span> What to expect from the high</div><p>'+esc(read.feel)+'</p></div></div>'+
+      '<div class="take-metrics">'+tags+'</div>'+
+      '<details class="take-details"><summary>Why we think this · measured batch evidence</summary><div style="margin-top:10px">Identified terpenes: '+(signals||'not available')+(extras?'<div style="margin-top:7px">Reported cannabinoids: '+esc(extras)+'</div>':'')+'<div style="margin-top:7px">Identified terpene sum: '+num(total,3)+'%. Reported total: '+(p.total==null?'not available':num(p.total,3)+'%')+'.</div></div></details>'+
+      '<div class="take-foot">Flavor is a hypothesis from measured aroma-related compounds, not a tasting test. THC can cause euphoria, anxiety and changes in perception; terpenes alone cannot reliably predict a specific subjective or medical effect. These are historical batch reports.</div></section>';
   }
+
   function discoveryCardInfo(p){
     const s=profileScore(p),target=currentTargets(),top=tops(p).slice(0,2),chosen=target?
       Object.keys(target).filter(k=>Number(p.terps?.[k])>0).sort((a,b)=>(p.terps[b]||0)-(p.terps[a]||0)).slice(0,3):[];
@@ -513,7 +591,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     for(const x of document.querySelectorAll('[data-aroma]')){const on=state.discovery==='aroma'&&state.aromas.includes(x.dataset.aroma);x.classList.toggle('active',on);x.setAttribute('aria-pressed',String(on));}
     const phrase=state.discovery==='vibe'&&state.vibe?'✦ Exploring '+state.vibe+'-associated chemistry':
       state.discovery==='aroma'&&state.aromas.length?'✿ '+state.aromas.length+' aroma preference'+(state.aromas.length===1?'':'s')+' active':
-      state.discovery==='studio'?'⚗ Custom chemistry profile active':'Choose a preference to see matching batches.';
+      state.discovery==='studio'?(currentTargets()?'⚗ Custom chemistry profile active':'⚗ Select a terpene to match, or browse with both blank'):'Choose a preference to see matching batches.';
     document.querySelector('#discoveryStatus').textContent=phrase;
     document.querySelector('#studioMinValue').textContent=Number(document.querySelector('#studioMin').value).toFixed(2)+'%';
   }
@@ -522,10 +600,9 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     state.sort='name';document.querySelector('#sortOrder').value='name';syncDiscoveryUI();renderExplore();
   }
   const primary=document.querySelector('#studioPrimary'),secondary=document.querySelector('#studioSecondary');
-  primary.innerHTML=TERPENE_LABELS.map(n=>'<option value="'+esc(n)+'">'+esc(n)+'</option>').join('');
-  secondary.innerHTML='<option value="none">None — just primary</option>'+TERPENE_LABELS.map(n=>'<option value="'+esc(n)+'">'+esc(n)+'</option>').join('');
-  primary.value=TERPENE_LABELS.includes('Limonene')?'Limonene':TERPENE_LABELS[0];
-  secondary.value=TERPENE_LABELS.includes('Linalool')?'Linalool':'none';
+  primary.innerHTML='<option value="">— No preference —</option>'+TERPENE_LABELS.map(n=>'<option value="'+esc(n)+'">'+esc(n)+'</option>').join('');
+  secondary.innerHTML='<option value="">— No preference —</option>'+TERPENE_LABELS.map(n=>'<option value="'+esc(n)+'">'+esc(n)+'</option>').join('');
+  primary.value='';secondary.value='';
   for(const btn of document.querySelectorAll('[data-door]'))btn.addEventListener('click',()=>{
     state.door=btn.dataset.door;
     if(state.door==='studio')setDiscovery('studio');
@@ -550,7 +627,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
   document.querySelector('#libraryExpand').addEventListener('click',()=>{state.libraryExpanded=!state.libraryExpanded;renderTerpeneLibrary();});
   document.querySelector('#terpLibraryGrid').addEventListener('click',e=>{
     const btn=e.target.closest('[data-terp-choose]');if(!btn)return;
-    primary.value=btn.dataset.terpChoose;secondary.value='none';state.door='studio';setDiscovery('studio');
+    primary.value=btn.dataset.terpChoose;secondary.value='';state.door='studio';setDiscovery('studio');
     document.querySelector('#productsGrid').scrollIntoView({behavior:'smooth',block:'start'});
   });
   renderTerpeneLibrary();syncDiscoveryUI();
