@@ -88,6 +88,79 @@
     .take-panel p{color:#e0eddf;font-size:14px;line-height:1.8;margin:0}
     .take-foot{margin-top:13px;color:#8ca891;font-size:10px;line-height:1.55}
     @media(max-width:680px){.discovery{padding:17px;margin-bottom:26px}.door-row{gap:6px}.door-tab{min-height:74px;padding:10px;font-size:12px}.door-tab small{font-size:10px}.intent-chip{padding:10px 12px}.studio-grid{grid-template-columns:1fr}.studio-range input{width:55vw}}
+
+    /* Discovery v2: approachable chemistry-first interface */
+    .discovery{background:radial-gradient(circle at 92% -10%,rgba(149,219,113,.10),transparent 45%),linear-gradient(135deg,#192b21,#101a14 72%);padding:29px;border-color:#40634a}
+    .discovery-header{display:flex;justify-content:space-between;gap:18px;align-items:flex-start}
+    .discovery-header h2{font-size:clamp(27px,3.2vw,38px);margin:9px 0 10px;letter-spacing:-1.4px}
+    .discovery-mark{flex-shrink:0;display:flex;align-items:center;gap:8px;border:1px solid #506a50;background:#1d3527;border-radius:99px;padding:8px 12px;font:700 10px var(--mono);color:#c8f1aa}
+    .discovery-mark svg{width:15px;height:15px}
+    .door-row{gap:12px;margin:20px 0 8px}
+    .door-tab{display:flex;gap:13px;align-items:center;border-radius:16px;min-height:92px;padding:16px;transition:transform .15s,border-color .15s,background .15s}
+    .door-tab:hover{transform:translateY(-2px)}
+    .door-icon{display:grid;place-items:center;flex-shrink:0;width:42px;height:42px;border:1px solid #54714e;border-radius:12px;background:#243c2b;font-size:23px;line-height:1}
+    .door-tab.active .door-icon{background:#355a39;border-color:#89c46f}
+    .door-tab .door-copy{display:block}
+    .door-tab .door-title{display:block;font-size:15px}
+    .door-tab small{font-size:11px;line-height:1.5;margin-top:5px}
+    .door-panel{padding-top:17px}
+    .door-panel-lead{font-size:12px;color:#abc8ae;margin:0 0 14px;line-height:1.7}
+    .vibe-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+    .vibe-tile,.aroma-tile{display:flex;align-items:center;gap:12px;text-align:left;background:#18291f;border:1px solid #39543c;color:#e0ebdf;border-radius:14px;padding:14px;min-width:0;min-height:77px;transition:background .16s,border-color .16s,transform .16s}
+    .vibe-tile:hover,.aroma-tile:hover{transform:translateY(-2px);background:#21372a;border-color:#88b778}
+    .vibe-tile.active,.aroma-tile.active{background:#304c33;border-color:#a8e783;box-shadow:inset 0 0 0 1px #5d9757}
+    .pick-icon{display:grid;place-items:center;flex:0 0 42px;width:42px;height:42px;border-radius:12px;background:#283f2e;border:1px solid #45674b;font-size:21px;line-height:1}
+    .vibe-tile.active .pick-icon,.aroma-tile.active .pick-icon{background:#477248}
+    .pick-copy{min-width:0;flex:1}
+    .pick-title{display:block;font-size:13px;font-weight:750;line-height:1.4}
+    .pick-desc{display:block;font-size:10px;color:#a3b8a7;line-height:1.45;margin-top:4px}
+    .pick-check{font-size:17px;color:#bbea91;opacity:0}
+    .vibe-tile.active .pick-check,.aroma-tile.active .pick-check{opacity:1}
+    .aroma-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+    .aroma-tile{min-height:72px;padding:10px 12px}
+    .aroma-tile .pick-icon{width:36px;height:36px;flex-basis:36px;font-size:19px}
+    .discovery-note{display:flex;gap:9px;align-items:flex-start;color:#a5bca8;font-size:11px;line-height:1.65;margin:16px 0 0}
+    .discovery-note .note-icon{color:#a6df81;font-size:15px;line-height:1.4}
+    .studio-grid{grid-template-columns:repeat(3,minmax(0,1fr));margin:7px 0 10px}
+    .studio-field select:focus{border-color:#baf186}
+    .studio-field select{background:#17271c;border-radius:11px;height:47px}
+    .science-tip{display:flex;gap:10px;padding:13px 14px;border:1px solid #38513d;border-radius:11px;background:#17271c;color:#afc8b3;font-size:12px;line-height:1.6;margin:14px 0}
+    .library{margin-top:22px;border-top:1px solid #3b5842;padding-top:19px}
+    .library-header{display:flex;gap:10px;justify-content:space-between;align-items:end;flex-wrap:wrap}
+    .library-header h3{font-size:19px;letter-spacing:-.5px;margin:5px 0}
+    .library-header p{font-size:11px;line-height:1.6;color:#aac2ae;margin:4px 0}
+    .terp-search{height:45px;max-width:320px;width:100%;border-radius:10px;background:#101e16;border:1px solid #456349;color:#ecf5e9;padding:0 14px;font-size:12px}
+    .terp-library-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin-top:16px}
+    .terp-entry{display:flex;align-items:center;gap:9px;text-align:left;background:#14231a;border:1px solid #36513c;border-radius:11px;padding:11px;color:#ddebdc;min-height:72px}
+    .terp-entry:hover{border-color:#9ed988;background:#203426}
+    .terp-symbol{display:grid;place-items:center;flex:0 0 32px;width:32px;height:32px;background:#2a442f;border-radius:9px;font-size:17px}
+    .terp-entry-name{font-size:11px;font-weight:750;display:block;line-height:1.3}
+    .terp-entry-info{font-size:10px;color:#9bb5a1;display:block;margin-top:4px;line-height:1.4}
+    .library-footer{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-top:13px}
+    .library-toggle{border:1px solid #5e865b;color:#d3f5b8;background:#25402b;border-radius:9px;padding:10px 14px;font-size:12px;font-weight:750}
+    .library-toggle:hover{background:#315039}
+    .library-caption{font-size:10px;color:#8ea995;line-height:1.6}
+    .discovery-status{border-top:1px solid #36513a;padding-top:17px;margin-top:19px}
+    .filter-status{font:650 12px var(--sans);color:#d2f0c8}
+    .card-aroma{font-size:11px;color:#c2daba;margin-top:12px;display:flex;gap:6px;align-items:center}
+    .card-preview{margin:10px 0 1px;color:#a8c3ad;font-size:11px;line-height:1.55}
+    .card-kicker .format-badge{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:7px;background:#294230;font-size:13px;margin-right:3px}
+    .score-line{margin-top:11px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+    .match-meter{height:5px;background:#26382d;border-radius:9px;overflow:hidden;margin-top:7px}
+    .match-meter span{display:block;height:100%;border-radius:9px;background:linear-gradient(90deg,#609e76,#bcf475)}
+    .take-panel{padding:26px;background:radial-gradient(circle at right top,rgba(118,194,125,.09),transparent 45%),linear-gradient(140deg,#1d3323,#122017)}
+    .take-lead{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+    .take-symbol{width:32px;height:32px;display:inline-grid;place-items:center;border:1px solid #66855d;border-radius:9px;background:#2b4731;font-size:17px}
+    .take-panel .take-label{margin:0}
+    .take-panel p{margin-top:15px;max-width:910px;font-size:14px;line-height:1.85}
+    .take-metrics{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}
+    .take-metric{border:1px solid #3e5942;background:#18291e;border-radius:8px;padding:7px 10px;font:650 10px var(--mono);color:#bbd8b9}
+    .take-details{margin-top:16px;border-top:1px solid #395343;padding-top:13px;font:11px/1.7 var(--sans);color:#b5d0b6}
+    .take-details summary{cursor:pointer;color:#c7efaf;font-weight:700}
+    .take-foot{margin-top:12px}
+    @media(max-width:940px){.vibe-grid,.aroma-grid,.terp-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.door-tab{gap:8px;padding:10px}.door-icon{width:36px;height:36px;font-size:20px}}
+    @media(max-width:680px){.discovery{padding:18px}.discovery-mark{display:none}.door-row{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.door-tab{display:block;min-height:112px;text-align:center;padding:10px 6px}.door-icon{margin:0 auto 8px;width:38px;height:38px}.door-tab .door-title{font-size:12px}.door-tab small{font-size:10px}.vibe-grid,.aroma-grid,.terp-library-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:7px}.vibe-tile,.aroma-tile{display:block;padding:10px;min-height:111px}.pick-icon,.aroma-tile .pick-icon{width:34px;height:34px;margin-bottom:7px;font-size:17px}.pick-title{font-size:12px}.pick-desc{font-size:10px}.pick-check{display:none}.studio-grid{grid-template-columns:1fr}.library-header{display:block}.terp-search{margin-top:9px;max-width:none}.terp-entry{padding:9px;min-height:76px}.terp-symbol{width:27px;height:27px;flex-basis:27px;font-size:15px}.take-panel{padding:18px}}
+    @media(max-width:360px){.vibe-grid,.aroma-grid,.terp-library-grid{grid-template-columns:1fr}.vibe-tile,.aroma-tile{display:flex;min-height:68px}.pick-icon,.aroma-tile .pick-icon{margin:0 9px 0 0}}
   </style>
 </head>
 <body>
@@ -103,34 +176,61 @@
   <div class="stats"><div class="stat"><strong id="statRecords">1241</strong><span>Historical product profiles</span></div><div class="stat"><strong>3 <small>brands</small></strong><span>Vivid + Robust + Head Change</span></div><div class="stat"><strong id="statFull">1204</strong><span>Detailed terpene profiles</span></div><div class="stat"><strong id="statCanna">1237</strong><span>Verified cannabinoid panels</span></div></div>
 
   <section class="discovery" id="discovery" aria-label="Discover products by chemistry">
-    <div class="eyebrow">01 / FIND YOUR PROFILE</div><h2>What are you looking for?</h2>
-    <p class="discovery-intro">Start with a broad preference, explore aroma, or build a measured terpene profile. Open any result for its lab data and TerpPilot's Take.</p>
-    <div class="door-row" role="tablist" aria-label="Discovery method">
-      <button class="door-tab active" type="button" data-door="vibe" aria-selected="true">✦ The Vibe<small>Explore a direction</small></button>
-      <button class="door-tab" type="button" data-door="aroma" aria-selected="false">✿ The Flavor<small>Pick aroma notes</small></button>
-      <button class="door-tab" type="button" data-door="studio" aria-selected="false">≋ The Science<small>Dial in chemistry</small></button>
+    <div class="discovery-header"><div><div class="eyebrow">01 / YOUR CHEMISTRY COMPASS</div><h2>Find something that fits.</h2>
+    <p class="discovery-intro">Not sure what trans-nerolidol is? You don't need to be. Start with a direction, follow the aroma, or explore every measured terpene.</p></div>
+    <span class="discovery-mark" aria-label="Data-led exploration"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m9 15 2-7 4 5-6 2Z"/></svg>DATA-LED DISCOVERY</span></div>
+    <div class="door-row" role="tablist" aria-label="Ways to explore">
+      <button class="door-tab active" type="button" role="tab" data-door="vibe" aria-selected="true"><span class="door-icon" aria-hidden="true">🌙</span><span class="door-copy"><span class="door-title">The Vibe</span><small>Explore a general direction</small></span></button>
+      <button class="door-tab" type="button" role="tab" data-door="aroma" aria-selected="false"><span class="door-icon" aria-hidden="true">🍋</span><span class="door-copy"><span class="door-title">The Flavor</span><small>Find your aroma profile</small></span></button>
+      <button class="door-tab" type="button" role="tab" data-door="studio" aria-selected="false"><span class="door-icon" aria-hidden="true">⚗️</span><span class="door-copy"><span class="door-title">The Science</span><small>Build an exact fingerprint</small></span></button>
     </div>
-    <div class="door-panel active" id="door-vibe"><div class="intent-chips">
-      <button type="button" class="intent-chip" data-vibe="unwind">☾ Unwind / Evening</button>
-      <button type="button" class="intent-chip" data-vibe="focus">↗ Bright / Daytime</button>
-      <button type="button" class="intent-chip" data-vibe="creative">✳ Expressive / Creative</button>
-      <button type="button" class="intent-chip" data-vibe="calm">◌ Mellow / Grounded</button>
-    </div><p class="discovery-caution">These are exploratory chemistry groupings—not evidence a batch will cause sleep, focus, creativity, or anxiety relief.</p></div>
-    <div class="door-panel" id="door-aroma"><div class="intent-chips">
-      <button type="button" class="intent-chip" data-aroma="citrus">🍋 Citrus</button><button type="button" class="intent-chip" data-aroma="pine">🌲 Pine / Resin</button><button type="button" class="intent-chip" data-aroma="floral">✿ Floral</button><button type="button" class="intent-chip" data-aroma="spice">◈ Pepper / Spice</button><button type="button" class="intent-chip" data-aroma="earthy">● Earthy / Herbal</button>
-    </div><p class="discovery-caution">Select multiple notes. These are terpene-based aroma indicators; other compounds also shape actual cannabis aroma, especially gas and skunk notes.</p></div>
-    <div class="door-panel" id="door-studio">
-      <div class="studio-grid">
-        <label class="studio-field">Primary terpene<select id="studioPrimary"><option value="Limonene">Limonene</option><option value="β-Caryophyllene">β-Caryophyllene</option><option value="β-Myrcene">β-Myrcene</option><option value="Terpinolene">Terpinolene</option><option value="Linalool">Linalool</option><option value="α-Pinene">α-Pinene</option><option value="β-Pinene">β-Pinene</option><option value="α-Humulene">α-Humulene</option></select></label>
-        <label class="studio-field">Secondary terpene<select id="studioSecondary"><option value="Linalool">Linalool</option><option value="Limonene">Limonene</option><option value="β-Caryophyllene">β-Caryophyllene</option><option value="β-Myrcene">β-Myrcene</option><option value="Terpinolene">Terpinolene</option><option value="α-Pinene">α-Pinene</option><option value="β-Pinene">β-Pinene</option><option value="α-Humulene">α-Humulene</option></select></label>
-        <label class="studio-field">Format<select id="studioFormat"><option value="all">All formats</option><option value="Flower">Flower</option><option value="Concentrate">Concentrate</option><option value="Vape">Vape</option><option value="Infused Flower">Infused Flower</option></select></label>
+    <div class="door-panel active" id="door-vibe" role="tabpanel">
+      <p class="door-panel-lead">Pick a direction to explore. These are chemical profile groupings—not promises about how a product will make you feel.</p>
+      <div class="vibe-grid">
+        <button class="vibe-tile" type="button" data-vibe="unwind"><span class="pick-icon">🌙</span><span class="pick-copy"><span class="pick-title">Evening / Unwind</span><span class="pick-desc">Myrcene + linalool profiles</span></span><span class="pick-check">✓</span></button>
+        <button class="vibe-tile" type="button" data-vibe="focus"><span class="pick-icon">☀️</span><span class="pick-copy"><span class="pick-title">Bright / Daytime</span><span class="pick-desc">Citrus + pine-led chemistry</span></span><span class="pick-check">✓</span></button>
+        <button class="vibe-tile" type="button" data-vibe="creative"><span class="pick-icon">🎨</span><span class="pick-copy"><span class="pick-title">Expressive / Creative</span><span class="pick-desc">Terpinolene + citrus patterns</span></span><span class="pick-check">✓</span></button>
+        <button class="vibe-tile" type="button" data-vibe="calm"><span class="pick-icon">🧘</span><span class="pick-copy"><span class="pick-title">Mellow / Grounded</span><span class="pick-desc">Spice + floral profiles</span></span><span class="pick-check">✓</span></button>
+        <button class="vibe-tile" type="button" data-vibe="resin"><span class="pick-icon">🌲</span><span class="pick-copy"><span class="pick-title">Fresh / Resinous</span><span class="pick-desc">Pinene + herbal compounds</span></span><span class="pick-check">✓</span></button>
+        <button class="vibe-tile" type="button" data-vibe="rich"><span class="pick-icon">🌿</span><span class="pick-copy"><span class="pick-title">Rich / Earthy</span><span class="pick-desc">Earthy + woody chemistry</span></span><span class="pick-check">✓</span></button>
       </div>
-      <label class="studio-range">Minimum total terpenes <input type="range" id="studioMin" min="0" max="10" step="0.25" value="0"><strong id="studioMinValue">0.00%</strong></label>
-      <p class="discovery-caution">Ranking compares reported terpene ratios. It does not infer effects, safety, or quality.</p>
+      <div class="discovery-note"><span class="note-icon">ⓘ</span><span>We use these as ways to browse terpene combinations—not as evidence for sleep, creativity, focus or medical effects.</span></div>
     </div>
-    <div class="discovery-status"><span id="discoveryStatus" class="hint">Choose a preference to see matching batches.</span><button type="button" class="clear-choice" id="clearDiscovery">Clear chemistry filters</button></div>
+    <div class="door-panel" id="door-aroma" role="tabpanel">
+      <p class="door-panel-lead">Choose one or several aroma directions. The more you select, the more the match engine looks for their combined signature.</p>
+      <div class="aroma-grid">
+        <button class="aroma-tile" type="button" data-aroma="citrus"><span class="pick-icon">🍋</span><span class="pick-copy"><span class="pick-title">Citrus</span><span class="pick-desc">Limonene / valencene</span></span><span class="pick-check">✓</span></button>
+        <button class="aroma-tile" type="button" data-aroma="pine"><span class="pick-icon">🌲</span><span class="pick-copy"><span class="pick-title">Pine / Resin</span><span class="pick-desc">Pinene / carene</span></span><span class="pick-check">✓</span></button>
+        <button class="aroma-tile" type="button" data-aroma="floral"><span class="pick-icon">🌸</span><span class="pick-copy"><span class="pick-title">Floral</span><span class="pick-desc">Linalool / geraniol</span></span><span class="pick-check">✓</span></button>
+        <button class="aroma-tile" type="button" data-aroma="spice"><span class="pick-icon">🌶️</span><span class="pick-copy"><span class="pick-title">Pepper / Spice</span><span class="pick-desc">Caryophyllene / humulene</span></span><span class="pick-check">✓</span></button>
+        <button class="aroma-tile" type="button" data-aroma="earthy"><span class="pick-icon">🌿</span><span class="pick-copy"><span class="pick-title">Earthy / Herbal</span><span class="pick-desc">Myrcene / guaiol</span></span><span class="pick-check">✓</span></button>
+        <button class="aroma-tile" type="button" data-aroma="sweetherbal"><span class="pick-icon">🍃</span><span class="pick-copy"><span class="pick-title">Sweet / Green Herbal</span><span class="pick-desc">Ocimene / terpinolene</span></span><span class="pick-check">✓</span></button>
+        <button class="aroma-tile" type="button" data-aroma="wood"><span class="pick-icon">🪵</span><span class="pick-copy"><span class="pick-title">Woody / Dry</span><span class="pick-desc">Nerolidol / cedrol</span></span><span class="pick-check">✓</span></button>
+        <button class="aroma-tile" type="button" data-aroma="fresh"><span class="pick-icon">❄️</span><span class="pick-copy"><span class="pick-title">Cool / Fresh</span><span class="pick-desc">Eucalyptol / borneol</span></span><span class="pick-check">✓</span></button>
+        <button class="aroma-tile" type="button" data-aroma="hops"><span class="pick-icon">🌾</span><span class="pick-copy"><span class="pick-title">Hoppy / Herbal</span><span class="pick-desc">Humulene / terpinolene</span></span><span class="pick-check">✓</span></button>
+      </div>
+      <div class="discovery-note"><span class="note-icon">ⓘ</span><span>Aroma is more complicated than terpene percentages: volatile sulfur compounds and other chemicals can strongly affect gas, skunk and fruit notes. We won't pretend the available data predicts those exactly.</span></div>
+    </div>
+    <div class="door-panel" id="door-studio" role="tabpanel">
+      <p class="door-panel-lead">All recognizable terpene analytes indexed in the catalog are available in the selectors below—not just the usual five or ten.</p>
+      <div class="studio-grid">
+        <label class="studio-field">Primary terpene <select id="studioPrimary" aria-label="Primary terpene"><option value="Limonene">Limonene</option></select></label>
+        <label class="studio-field">Secondary terpene <select id="studioSecondary" aria-label="Secondary terpene"><option value="Linalool">Linalool</option></select></label>
+        <label class="studio-field">Format <select id="studioFormat"><option value="all">All formats</option><option value="Flower">Flower</option><option value="Concentrate">Concentrate</option><option value="Vape">Vape</option><option value="Infused Flower">Infused Flower</option><option value="Pre-roll">Pre-roll</option></select></label>
+      </div>
+      <label class="studio-range">Minimum total terpenes <input type="range" id="studioMin" min="0" max="15" step="0.25" value="0"><strong id="studioMinValue">0.00%</strong></label>
+      <div class="science-tip"><span aria-hidden="true">🧬</span><span>The match score compares measured terpene ratios against your requested profile. Higher doesn't mean stronger effects or objectively better cannabis.</span></div>
+      <div class="library" id="terpLibrary">
+        <div class="library-header"><div><div class="eyebrow">TERPENE FIELD GUIDE</div><h3>Know what you're selecting.</h3><p id="terpLibraryCount">Loading analytes…</p></div>
+        <input class="terp-search" type="search" id="terpSearch" placeholder="🔎 Search all terpenes…" aria-label="Search terpene names and aroma associations">
+        </div>
+        <div class="terp-library-grid" id="terpLibraryGrid"></div>
+        <div class="library-footer"><span class="library-caption">Each entry is linked to the number of indexed historical profiles containing that analyte. Labels with merged marketing adjectives are excluded as unverified chemical names.</span><button class="library-toggle" id="libraryExpand" type="button">Show all analytes ↓</button></div>
+      </div>
+    </div>
+    <div class="discovery-status"><span id="discoveryStatus" class="filter-status">Choose a preference to see matching batches.</span><button type="button" class="clear-choice" id="clearDiscovery">✕ Clear filters</button></div>
   </section>
-  <div class="head-row"><div><div class="eyebrow">02 / THE DATABASE</div><h2 class="section-title">Explore the catalog</h2><div class="section-sub">Browse historical profiles, with available original lab reports and source pages linked.</div></div></div>
+    <div class="head-row"><div><div class="eyebrow">02 / THE DATABASE</div><h2 class="section-title">Explore the catalog</h2><div class="section-sub">Browse historical profiles, with available original lab reports and source pages linked.</div></div></div>
   <div class="search-area"><div class="search-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="10.9" cy="10.9" r="6.9"/><path d="m16 16 5 5"/></svg><input type="search" id="query" placeholder="Search product, brand, batch, terpene…" aria-label="Search products" autocomplete="off"></div><select id="brandFilter" class="select" aria-label="Filter brand"><option value="all">All brands</option><option>Vivid</option><option>Robust</option><option>Head Change</option></select><select id="categoryFilter" class="select" aria-label="Filter product category"><option value="all">All formats</option><option>Flower</option><option>Concentrate</option><option>Vape</option><option>Infused Flower</option><option>Pre-roll</option></select><select id="sortOrder" class="select" aria-label="Sort products"><option value="name">Name A–Z</option><option value="terps">Highest terpenes</option><option value="date">Most recent COA</option><option value="thc">Highest THC</option></select></div>
   <div class="filter-meta"><span id="resultsMeta">Loading records…</span><span class="hint">Tap a product to inspect its fingerprint &amp; find matches ↗</span></div>
   <noscript><div class="notice" style="margin-bottom:20px">The interactive catalog requires JavaScript. Open this website in a normal Chrome, Edge, Firefox or Safari browser rather than an in-app HTML preview.</div></noscript><div class="grid" id="productsGrid"></div><div id="emptyExplore" class="empty hidden"><h3>No matching batches</h3><p>Try another product name, brand or filter.</p><button class="btn" id="resetFilters">Reset filters</button></div><button class="load-more hidden" id="loadMore">Show more batches ↓</button>
@@ -157,7 +257,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   for(const p of PRODUCTS)p.cannabinoids=(typeof CANNABINOID_PANELS==='object'?CANNABINOID_PANELS[p.id]:null)||p.cannabinoids||null;
   const byId=new Map(PRODUCTS.map(d=>[d.id,d]));
-  const state={view:'explore',query:'',brand:'all',category:'all',sort:'name',visible:24,selected:null,compare:null,matchSame:true,saved:new Set(),discovery:null,door:'vibe',vibe:null,aromas:[]};
+  const state={view:'explore',query:'',brand:'all',category:'all',sort:'name',visible:24,selected:null,compare:null,matchSame:true,saved:new Set(),discovery:null,door:'vibe',vibe:null,aromas:[],libraryExpanded:false};
   try{state.saved=new Set(JSON.parse(localStorage.getItem('terppilot.saved.v1')||'[]').filter(id=>byId.has(id)))}catch{}
   const num=(n,d=2)=>Number(n??0).toFixed(d);
   const fmtDate=iso=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(iso))return iso||'Unknown';let [y,m,d]=iso.split('-');return `${Number(m)}/${Number(d)}/${y}`;};
@@ -182,25 +282,83 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
   function favoritesUpdate(){let e=$('#savedCount');e.textContent=state.saved.size;e.style.display=state.saved.size?'inline':'none'}
   function toggleFav(id){if(state.saved.has(id)){state.saved.delete(id);toast('Removed from saved')}else{state.saved.add(id);toast('Saved to your shortlist')}try{localStorage.setItem('terppilot.saved.v1',JSON.stringify([...state.saved]))}catch{}favoritesUpdate();refresh()}
 
+
   const VIBE_TARGETS={
-    unwind:{'β-Myrcene':1,'Linalool':0.5,'β-Caryophyllene':0.5},
+    unwind:{'β-Myrcene':1,'Linalool':0.55,'β-Caryophyllene':0.5},
     focus:{'Limonene':0.85,'α-Pinene':0.65,'β-Pinene':0.65},
     creative:{'Terpinolene':1,'Limonene':0.65,'Trans-Ocimene':0.2},
-    calm:{'β-Caryophyllene':1,'Linalool':0.65,'β-Myrcene':0.4}
+    calm:{'β-Caryophyllene':1,'Linalool':0.65,'β-Myrcene':0.4},
+    resin:{'α-Pinene':1,'β-Pinene':0.8,'Terpinolene':0.35},
+    rich:{'β-Myrcene':1,'Guaiol':0.5,'α-Humulene':0.5}
   };
   const AROMA_TARGETS={
-    citrus:{'Limonene':1},pine:{'α-Pinene':0.7,'β-Pinene':0.7},
-    floral:{'Linalool':1},spice:{'β-Caryophyllene':1,'α-Humulene':0.35},
-    earthy:{'β-Myrcene':1}
+    citrus:{'Limonene':1,'Valencene':0.4},
+    pine:{'α-Pinene':0.85,'β-Pinene':0.75,'Δ3-Carene':0.25,'Δ-Carene':0.25},
+    floral:{'Linalool':1,'Geraniol':0.25,'α-Bisabolol':0.25},
+    spice:{'β-Caryophyllene':1,'α-Humulene':0.45,'Caryophyllene Oxide':0.2},
+    earthy:{'β-Myrcene':1,'Guaiol':0.35},
+    sweetherbal:{'Terpinolene':1,'Trans-Ocimene':0.55,'Ocimene':0.45,'β-Ocimene':0.4},
+    wood:{'Nerolidol II':0.9,'Trans-Nerolidol':0.9,'Cedrol':0.35,'α-Cedrene':0.35},
+    fresh:{'Eucalyptol':1,'Borneol':0.7,'Fenchol':0.6},
+    hops:{'α-Humulene':1,'Terpinolene':0.4}
   };
-  const AROMA_NOTES={
-    'Limonene':'citrus','Terpinolene':'herbal and slightly sweet','β-Myrcene':'earthy and herbal',
-    'β-Caryophyllene':'peppery spice','Linalool':'floral','α-Pinene':'crisp pine resin',
-    'β-Pinene':'pine resin','α-Humulene':'woody spice','Trans-Ocimene':'sweet herbal',
-    'Ocimene':'sweet herbal','α-Bisabolol':'soft floral','Trans-Nerolidol':'woody and floral',
-    'Nerolidol II':'woody and floral','Caryophyllene Oxide':'woody spice',
-    'Fenchol':'fresh herbal','Borneol':'camphor-like herbal'
+  const TERPENE_META={
+    'Limonene':['🍋','Citrus','citrus'],
+    'Valencene':['🍊','Citrus / woody','citrus'],
+    'α-Pinene':['🌲','Pine / resin','pine'],
+    'β-Pinene':['🌲','Pine / resin','pine'],
+    'Δ3-Carene':['🌲','Pine / woody','pine'],
+    'Δ-Carene':['🌲','Pine / woody','pine'],
+    'Camphene':['🌲','Woody / herbal','pine'],
+    'Linalool':['🌸','Floral','floral'],
+    'Geraniol':['🌸','Floral / rosy','floral'],
+    'α-Bisabolol':['🌼','Soft floral / herbal','floral'],
+    'Geranyl Acetate':['🌼','Floral / fruity','floral'],
+    'β-Caryophyllene':['🌶️','Pepper / spice','spice'],
+    'α-Humulene':['🌾','Hoppy / woody spice','spice'],
+    'Caryophyllene Oxide':['🌶️','Woody / spice','spice'],
+    'β-Myrcene':['🌿','Earthy / herbal','earthy'],
+    'Guaiol':['🪵','Woody / earthy','wood'],
+    'Terpinolene':['🍃','Herbal / sweet','herbal'],
+    'Trans-Ocimene':['🍃','Sweet / green herbal','herbal'],
+    'Cis-Ocimene':['🍃','Sweet / green herbal','herbal'],
+    'β-Ocimene':['🍃','Sweet / green herbal','herbal'],
+    'Ocimene':['🍃','Sweet / green herbal','herbal'],
+    'α-Terpinene':['🍃','Herbal / resinous','herbal'],
+    'γ-Terpinene':['🍃','Herbal / citrus','herbal'],
+    'Terpineol':['🌱','Floral / herbal','floral'],
+    'α-Terpineol':['🌱','Floral / herbal','floral'],
+    'γ-Terpineol':['🌱','Floral / herbal','floral'],
+    'Trans-Nerolidol':['🪵','Woody / floral','wood'],
+    'Cis-Nerolidol':['🪵','Woody / floral','wood'],
+    'Nerolidol':['🪵','Woody / floral','wood'],
+    'Nerolidol II':['🪵','Woody / floral','wood'],
+    'Cedrol':['🪵','Woody / dry','wood'],
+    'α-Cedrene':['🪵','Woody / dry','wood'],
+    'Eucalyptol':['❄️','Cool / eucalyptus','fresh'],
+    'Borneol':['❄️','Cool / camphor','fresh'],
+    'Fenchol':['❄️','Herbal / camphor','fresh'],
+    'Isopulegol':['❄️','Minty / herbal','fresh'],
+    'p-Cymene':['🌿','Herbal / citrus','herbal'],
+    'α-Phellandrene':['🍃','Herbal / citrus','herbal']
   };
+  const TERPENE_LABELS=[...new Set(PRODUCTS.flatMap(p=>Object.keys(p.terps||{})))]
+    .filter(n=>Object.prototype.hasOwnProperty.call(TERPENE_META,n))
+    .sort((a,b)=>a.localeCompare(b));
+  const TERPENE_COUNTS=new Map(TERPENE_LABELS.map(n=>[n,PRODUCTS.filter(p=>Number(p.terps?.[n])>0).length]));
+  const FAMILY_DESC={
+    citrus:'citrus',pine:'pine resin',floral:'floral',spice:'peppery spice',
+    earthy:'earthy, herbal',herbal:'sweet-herbal',wood:'dry wood',fresh:'cool herbal'
+  };
+  const FAMILY_GLYPHS={citrus:'🍋',pine:'🌲',floral:'🌸',spice:'🌶️',earthy:'🌿',herbal:'🍃',wood:'🪵',fresh:'❄️'};
+  function familyData(p){
+    const f={},items=tops(p).filter(([name])=>Object.prototype.hasOwnProperty.call(TERPENE_META,name)),total=items.reduce((sum,x)=>sum+x[1],0);
+    for(const [name,value] of items){
+      const family=TERPENE_META[name]?.[2];
+      if(family)f[family]=(f[family]||0)+value;
+    }
+    return {items,total,families:Object.entries(f).sort((a,b)=>b[1]-a[1])};
+  }
   function currentTargets(){
     if(state.discovery==='vibe'&&state.vibe)return VIBE_TARGETS[state.vibe];
     if(state.discovery==='aroma'&&state.aromas.length){
@@ -209,7 +367,9 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     }
     if(state.discovery==='studio'){
       const a=document.querySelector('#studioPrimary').value,b=document.querySelector('#studioSecondary').value;
-      const out={};out[a]=1;out[b]=(out[b]||0)+0.7;return out;
+      if(!a)return null;
+      const out={};out[a]=1;if(b&&b!==a&&b!=='none')out[b]=0.7;
+      return out;
     }
     return null;
   }
@@ -217,7 +377,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     const target=currentTargets();
     if(!target||p.coverage!=='full'||!p.terps||Object.keys(p.terps).length<3)return null;
     let dot=0,pa=0,ta=0;
-    const keys=new Set([...Object.keys(target),...Object.keys(p.terps)]);
+    const keys=new Set([...Object.keys(target),...Object.keys(p.terps).filter(n=>TERPENE_META[n])]);
     for(const key of keys){
       const v=Number(p.terps[key]||0),t=Number(target[key]||0);
       if(!Number.isFinite(v)||!Number.isFinite(t))continue;
@@ -227,7 +387,12 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
   }
   function discoveryEligible(p){
     if(!currentTargets())return true;
-    if(p.coverage!=='full'||!p.terps||profileScore(p)===null||profileScore(p)<24)return false;
+    const sc=profileScore(p);if(sc===null||sc<24)return false;
+    if(state.discovery==='aroma'&&state.aromas.length>1){
+      const total=Number(p.total)||Object.values(p.terps||{}).reduce((a,b)=>a+(Number(b)||0),0);
+      for(const a of state.aromas){const strength=Object.keys(AROMA_TARGETS[a]).reduce((sum,n)=>sum+(Number(p.terps?.[n])||0),0);
+        if(strength<Math.max(0.025,total*0.012))return false;}
+    }
     if(state.discovery==='studio'){
       if(p.total==null||Number(p.total)<Number(document.querySelector('#studioMin').value))return false;
       const fmt=document.querySelector('#studioFormat').value;
@@ -235,83 +400,162 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     }
     return true;
   }
+  function formatGlyph(p){
+    if(p.category==='Flower')return '🌿';
+    if(p.category==='Vape')return '💨';
+    if(p.category==='Concentrate')return '💧';
+    if(p.category==='Pre-roll')return '◉';
+    return '◈';
+  }
+  function profileFlavor(p){
+    const {families}=familyData(p);
+    if(!families.length)return 'Aroma profile incomplete';
+    return families.slice(0,2).map(([n])=>(FAMILY_GLYPHS[n]||'◈')+' '+FAMILY_DESC[n]).join(' · ');
+  }
+  function profilePreview(p){
+    const {families}=familyData(p);
+    if(!families.length)return 'Partial data: inspect the source report.';
+    const a=families[0],b=families[1],t=tops(p)[0];
+    return (b?'Likely '+FAMILY_DESC[a[0]]+' with '+FAMILY_DESC[b[0]]+' support':'Mainly '+FAMILY_DESC[a[0]])+
+      (t?' · driven by '+t[0]:'')+'.';
+  }
+
   function terpPilotTake(p){
-    const t=tops(p),full=p.coverage==='full';
-    if(t.length<2)return 'This batch has too few reported terpene measurements for a specific aroma assessment. TerpPilot will not fill in the gaps.';
-    const first=t[0],second=t[1],third=t[2],profile=[];
-    const noun=k=>AROMA_NOTES[k]||null;
-    const n1=noun(first[0]),n2=noun(second[0]),n3=third?noun(third[0]):null;
-    profile.push(first[0]+' leads at '+num(first[1],3)+'%'+(n1?', pointing toward '+n1+' notes':' and is the largest measured terpene')+'.');
-    profile.push(second[0]+' ('+num(second[1],3)+'%)'+(n2?' adds a '+n2+' component':' is the next major constituent')+(third?', while '+third[0]+' ('+num(third[1],3)+'%)'+(n3?' may contribute '+n3+' character':' adds another measurable layer'):'')+'.');
-    const total=t.reduce((a,b)=>a+b[1],0);
-    if(total>0){
-      if(first[1]/total>=0.50)profile.push('The profile is strongly weighted toward its leading terpene rather than evenly distributed.');
-      else if(first[1]/total<0.3)profile.push('Its leading terpenes are relatively balanced rather than dominated by one compound.');
-      else profile.push('The secondary terpenes are substantial enough to matter alongside the lead.');
+    const {items,total,families}=familyData(p);
+    if(items.length<2||total<=0)return 'The lab record does not contain enough identified terpene measurements to support a useful sensory assessment. TerpPilot will not fill those gaps with guesses.';
+    if(!families.length)return 'The reported terpene measurements have too little characterized aroma information for a meaningful batch-level assessment.';
+    const first=items[0],second=items[1],third=items[2];
+    const primaryFamily=families[0][0],secondaryFamily=families[1]?.[0];
+    const word=f=>FAMILY_DESC[f]||'herbal';
+    const firstShare=first[1]/total,secondShare=second[1]/total,nearlyEqual=Math.abs(first[1]-second[1])/first[1]<0.18;
+    const lines=[],freq=(n)=>num(n,3)+'%',fmt=n=>n[0]+' ('+freq(n[1])+')';
+    if(nearlyEqual&&TERPENE_META[first[0]]?.[2]!==TERPENE_META[second[0]]?.[2]){
+      lines.push('There are two genuine leads here: '+fmt(first)+' and '+fmt(second)+'. They are close enough that I would not call this a one-note profile. On paper, expect '+word(primaryFamily)+(secondaryFamily?' alongside '+word(secondaryFamily):'')+', with neither completely burying the other.');
+    }else if(firstShare>0.54){
+      lines.push(first[0]+' dominates this batch at '+freq(first[1])+'—about '+Math.round(firstShare*100)+'% of the identified terpene total. That points toward a distinctly '+word(primaryFamily)+' base rather than a balanced mix.');
+    }else if(firstShare>0.37){
+      lines.push('The main aromatic signal here is '+word(primaryFamily)+', driven by '+fmt(first)+'. It has a clear lead, but the secondary compounds are substantial enough to change the overall character.');
+    }else{
+      lines.push('This batch has a fairly layered profile rather than one overwhelming terpene. The strongest measurable directions are '+word(primaryFamily)+(secondaryFamily?' and '+word(secondaryFamily):'')+'. I would expect both to register rather than just the first name on the lab sheet.');
     }
-    const can=p.cannabinoids||{},cbn=can.CBN,cbg=can.CBG;
-    if(typeof cbn==='number'&&cbn>=0.1)profile.push('CBN is measured at '+num(cbn,3)+'%; that alone does not establish a sedating effect.');
-    else if(typeof cbg==='number'&&cbg>=1)profile.push('CBG is also measurable at '+num(cbg,3)+'%, which distinguishes the cannabinoid profile.');
-    if(!full)profile.push('This is a partial terpene panel; unreported compounds remain unknown.');
-    return profile.join(' ');
+    const leadNames=new Set([first[0],second[0]]);
+    if(!nearlyEqual||TERPENE_META[first[0]]?.[2]===TERPENE_META[second[0]]?.[2]){
+      const secondFamily=TERPENE_META[second[0]]?.[2],same=secondFamily===TERPENE_META[first[0]]?.[2];
+      if(secondFamily){
+        lines.push(fmt(second)+(same?' reinforces that '+word(secondFamily)+' character.':' introduces a '+word(secondFamily)+' counterpoint, so the aroma is unlikely to read as only '+word(primaryFamily)+'.'));
+      }else lines.push(fmt(second)+' is the next-largest measured compound, although its precise aroma contribution cannot be established from this panel alone.');
+    }
+    // Use substantive second- and third-tier compounds, not an arbitrary stock list.
+    const accents=items.slice(2,9).filter(([name,value])=>TERPENE_META[name]&&value/total>=0.045);
+    const familyUsed=new Set([TERPENE_META[first[0]]?.[2],TERPENE_META[second[0]]?.[2]]);
+    const accent=accents.find(([name])=>!familyUsed.has(TERPENE_META[name][2]))||accents[0];
+    if(accent){
+      const family=TERPENE_META[accent[0]][2];
+      const companion=accents.find(([name])=>name!==accent[0]&&TERPENE_META[name][2]===family);
+      const intro=family==='pine'?'a crisp resinous edge':family==='spice'?'a peppery, woody edge':family==='floral'?'a floral layer':family==='citrus'?'some citrus brightness':family==='earthy'?'a deeper earthy, herbal side':family==='herbal'?'a greener herbal note':family==='wood'?'some woody depth':'a cool, camphor-like note';
+      lines.push(fmt(accent)+(companion?' together with '+fmt(companion):'')+' supports '+intro+'. '+(accent[1]/total>0.13?'That is a meaningful part of the mix, not just a trace.':'It should add character without necessarily taking over.'));
+    }
+    // If the profile has an unusually concentrated second family, explain the ratio.
+    if(!nearlyEqual&&secondShare>0.27)
+      lines.push('The second terpene carries roughly '+Math.round(secondShare*100)+'% of the identified total, so reducing this batch to its top terpene would miss a big part of the chemistry.');
+    const can=p.cannabinoids||{};
+    if(typeof can.CBN==='number'&&can.CBN>=0.10)
+      lines.push('CBN is also measured at '+freq(can.CBN)+'. That is worth noting, but it does not establish that the product will be sedating.');
+    else if(typeof can.TOTAL_CBD==='number'&&can.TOTAL_CBD>=1)
+      lines.push('The lab also reports '+num(can.TOTAL_CBD,2)+'% total CBD, an important cannabinoid distinction separate from its aroma.');
+    else if(typeof can.CBG==='number'&&can.CBG>=1.5)
+      lines.push('CBG is reported at '+freq(can.CBG)+', a noteworthy secondary cannabinoid measurement; it does not by itself predict an effect.');
+    if(p.coverage!=='full')lines.push('This is a partial terpene panel, so unlisted analytes are unknown and the sensory read is less certain.');
+    const unexplained=Object.keys(p.terps||{}).filter(n=>!TERPENE_META[n]&&Number(p.terps[n])>0).length;
+    if(unexplained>=2)lines.push('Several source entries are not clean chemical analyte labels, so this take excludes them pending verification.');
+    return lines.join(' ');
   }
   function takePanel(p){
-    return '<section class="take-panel"><div class="take-label">✦ TerpPilot’s Take / Batch assessment</div><p>'+esc(terpPilotTake(p))+'</p><div class="take-foot">Evidence-based interpretation of reported lab concentrations, not a tasted review or a verified prediction of effects. See the original COA for source measurements.</div></section>';
+    const {items,total,families}=familyData(p);
+    const tags=families.slice(0,3).map(([name])=>'<span class="take-metric">'+(FAMILY_GLYPHS[name]||'◈')+' '+esc(FAMILY_DESC[name])+'</span>').join('');
+    const signals=items.slice(0,6).map(([n,v])=>esc(n)+' '+num(v,3)+'%').join(' · ');
+    const can=p.cannabinoids||{};
+    const extras=['CBN','CBG','TOTAL_CBD'].filter(k=>typeof can[k]==='number'&&can[k]>0).map(k=>k+' '+num(can[k],3)+'%').join(' · ');
+    return '<section class="take-panel"><div class="take-lead"><span class="take-symbol" aria-hidden="true">🔬</span><div class="take-label">TerpPilot’s Take <span style="color:#8dbf8b">/ ANALYSIS OF THIS BATCH</span></div></div><div class="take-metrics">'+tags+'</div><p>'+esc(terpPilotTake(p))+'</p><details class="take-details"><summary>Why we think this · measured evidence</summary><div style="margin-top:10px">Detected terpenes: '+signals+(extras?'<div style="margin-top:7px">Additional cannabinoids: '+esc(extras)+'</div>':'')+'<div style="margin-top:7px">Total measured terpene sum: '+num(total,3)+'%. Reported batch total: '+(p.total==null?'not available':num(p.total,3)+'%')+'.</div></div></details><div class="take-foot">Scientific interpretation, not a sampled tasting note. Other volatile compounds and processing can change actual smell or flavor; laboratory chemistry cannot establish personal effects.</div></section>';
   }
   function discoveryCardInfo(p){
-    const s=profileScore(p),target=currentTargets();
-    const top=tops(p).slice(0,2);
-    const why=(target?Object.keys(target).filter(k=>Number((p.terps||{})[k])>0).sort((a,b)=>(p.terps[b]||0)-(p.terps[a]||0)).slice(0,3).map(k=>k+' '+num(p.terps[k],2)+'%'):top.map(x=>x[0]+' '+num(x[1],2)+'%')).join(' · ');
-    let html='';
-    if(target&&s!==null)html+='<div class="match-pill">'+s+'% chemical profile match</div>';
-    if(target)html+='<p class="card-why">Why: '+esc(why)+' · Measured terpenes; effects not predicted.</p>';
+    const s=profileScore(p),target=currentTargets(),top=tops(p).slice(0,2),chosen=target?
+      Object.keys(target).filter(k=>Number(p.terps?.[k])>0).sort((a,b)=>(p.terps[b]||0)-(p.terps[a]||0)).slice(0,3):[];
+    let html='<div class="card-aroma">'+esc(profileFlavor(p))+'</div><p class="card-preview">'+esc(profilePreview(p))+'</p>';
+    if(target&&s!==null){
+      html+='<div class="score-line"><span class="match-pill">◉ '+s+'% chemical match</span><span style="color:#86a68d;font:10px var(--mono)">PROFILE FIT</span></div><div class="match-meter"><span style="width:'+s+'%"></span></div>';
+      const why=chosen.length?chosen.map(k=>k+' '+num(p.terps[k],2)+'%').join(' · '):top.map(x=>x[0]+' '+num(x[1],2)+'%').join(' · ');
+      html+='<p class="card-why"><strong>Why:</strong> '+esc(why)+'</p>';
+    }
     const url=p.coa_url||(p.brand==='Head Change'?null:p.source);
-    if(/^https:\/\//.test(url||''))html+='<a class="card-source-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" data-external="1">View batch COA ↗</a>';
-    else if(/^https:\/\//.test(p.landing_url||''))html+='<a class="card-source-link" href="'+esc(p.landing_url)+'" target="_blank" rel="noopener noreferrer" data-external="1">View source profile ↗</a>';
+    if(/^https:\/\//.test(url||''))html+='<a class="card-source-link" href="'+esc(url)+'" target="_blank" rel="noopener noreferrer" data-external="1">↗ Original lab COA</a>';
+    else if(/^https:\/\//.test(p.landing_url||''))html+='<a class="card-source-link" href="'+esc(p.landing_url)+'" target="_blank" rel="noopener noreferrer" data-external="1">↗ Source product record</a>';
     return html;
+  }
+  function renderTerpeneLibrary(){
+    const input=document.querySelector('#terpSearch'),term=input.value.toLowerCase().trim();
+    const matches=TERPENE_LABELS.filter(n=>(n+' '+(TERPENE_META[n]?.[1]||'')).toLowerCase().includes(term));
+    const shown=(term||state.libraryExpanded)?matches:matches.slice(0,12);
+    document.querySelector('#terpLibraryGrid').innerHTML=shown.map(n=>{
+      const m=TERPENE_META[n],count=TERPENE_COUNTS.get(n);
+      return '<button type="button" class="terp-entry" data-terp-choose="'+esc(n)+'" title="Use '+esc(n)+' as primary terpene"><span class="terp-symbol">'+m[0]+'</span><span><span class="terp-entry-name">'+esc(n)+'</span><span class="terp-entry-info">'+esc(m[1])+' · '+count+' reports</span></span></button>';
+    }).join('')||'<p class="library-caption">No matching analytes found.</p>';
+    document.querySelector('#terpLibraryCount').textContent=TERPENE_LABELS.length+' identified terpene analytes across '+PRODUCTS.length.toLocaleString()+' profiles';
+    document.querySelector('#libraryExpand').textContent=state.libraryExpanded?'Show fewer ↑':'Show all '+TERPENE_LABELS.length+' analytes ↓';
+    document.querySelector('#libraryExpand').style.display=term?'none':'';
   }
   function syncDiscoveryUI(){
     for(const x of document.querySelectorAll('[data-door]')){
       const on=x.dataset.door===state.door;x.classList.toggle('active',on);x.setAttribute('aria-selected',String(on));
     }
     for(const x of document.querySelectorAll('.door-panel'))x.classList.toggle('active',x.id==='door-'+state.door);
-    for(const x of document.querySelectorAll('[data-vibe]'))x.classList.toggle('active',state.discovery==='vibe'&&state.vibe===x.dataset.vibe);
-    for(const x of document.querySelectorAll('[data-aroma]'))x.classList.toggle('active',state.discovery==='aroma'&&state.aromas.includes(x.dataset.aroma));
-    const phrase=state.discovery==='vibe'&&state.vibe?'Searching '+state.vibe+'-associated terpene patterns':state.discovery==='aroma'&&state.aromas.length?'Searching '+state.aromas.join(' + ')+' aroma markers':state.discovery==='studio'?'Custom measured chemistry profile active':'Choose a preference to see matching batches.';
+    for(const x of document.querySelectorAll('[data-vibe]')){const on=state.discovery==='vibe'&&state.vibe===x.dataset.vibe;x.classList.toggle('active',on);x.setAttribute('aria-pressed',String(on));}
+    for(const x of document.querySelectorAll('[data-aroma]')){const on=state.discovery==='aroma'&&state.aromas.includes(x.dataset.aroma);x.classList.toggle('active',on);x.setAttribute('aria-pressed',String(on));}
+    const phrase=state.discovery==='vibe'&&state.vibe?'✦ Exploring '+state.vibe+'-associated chemistry':
+      state.discovery==='aroma'&&state.aromas.length?'✿ '+state.aromas.length+' aroma preference'+(state.aromas.length===1?'':'s')+' active':
+      state.discovery==='studio'?'⚗ Custom chemistry profile active':'Choose a preference to see matching batches.';
     document.querySelector('#discoveryStatus').textContent=phrase;
     document.querySelector('#studioMinValue').textContent=Number(document.querySelector('#studioMin').value).toFixed(2)+'%';
   }
   function setDiscovery(mode){
-    state.discovery=mode;
-    state.visible=20;
-    state.query='';document.querySelector('#query').value='';
-    state.sort='name';document.querySelector('#sortOrder').value='name';
-    syncDiscoveryUI();renderExplore();
+    state.discovery=mode;state.visible=20;state.query='';document.querySelector('#query').value='';
+    state.sort='name';document.querySelector('#sortOrder').value='name';syncDiscoveryUI();renderExplore();
   }
+  const primary=document.querySelector('#studioPrimary'),secondary=document.querySelector('#studioSecondary');
+  primary.innerHTML=TERPENE_LABELS.map(n=>'<option value="'+esc(n)+'">'+esc(n)+'</option>').join('');
+  secondary.innerHTML='<option value="none">None — just primary</option>'+TERPENE_LABELS.map(n=>'<option value="'+esc(n)+'">'+esc(n)+'</option>').join('');
+  primary.value=TERPENE_LABELS.includes('Limonene')?'Limonene':TERPENE_LABELS[0];
+  secondary.value=TERPENE_LABELS.includes('Linalool')?'Linalool':'none';
   for(const btn of document.querySelectorAll('[data-door]'))btn.addEventListener('click',()=>{
     state.door=btn.dataset.door;
     if(state.door==='studio')setDiscovery('studio');
-    else if(state.discovery!==state.door){state.discovery=null;syncDiscoveryUI();renderExplore();}
+    else if(state.discovery!==state.door){state.discovery=null;renderExplore();}
     syncDiscoveryUI();
   });
   for(const btn of document.querySelectorAll('[data-vibe]'))btn.addEventListener('click',()=>{
-    state.vibe=state.vibe===btn.dataset.vibe&&state.discovery==='vibe'?null:btn.dataset.vibe;
+    state.vibe=state.discovery==='vibe'&&state.vibe===btn.dataset.vibe?null:btn.dataset.vibe;
     setDiscovery(state.vibe?'vibe':null);
   });
   for(const btn of document.querySelectorAll('[data-aroma]'))btn.addEventListener('click',()=>{
-    state.aromas=state.aromas.includes(btn.dataset.aroma)?state.aromas.filter(v=>v!==btn.dataset.aroma):[...state.aromas,btn.dataset.aroma];
+    state.aromas=state.aromas.includes(btn.dataset.aroma)?state.aromas.filter(x=>x!==btn.dataset.aroma):[...state.aromas,btn.dataset.aroma];
     setDiscovery(state.aromas.length?'aroma':null);
   });
   for(const el of document.querySelectorAll('#studioPrimary,#studioSecondary,#studioFormat,#studioMin'))el.addEventListener('input',()=>{
     state.door='studio';setDiscovery('studio');
   });
   document.querySelector('#clearDiscovery').addEventListener('click',()=>{
-    state.discovery=null;state.vibe=null;state.aromas=[];state.visible=windowSize();
-    syncDiscoveryUI();renderExplore();
+    state.discovery=null;state.vibe=null;state.aromas=[];state.visible=windowSize();syncDiscoveryUI();renderExplore();
   });
-  syncDiscoveryUI();
+  document.querySelector('#terpSearch').addEventListener('input',renderTerpeneLibrary);
+  document.querySelector('#libraryExpand').addEventListener('click',()=>{state.libraryExpanded=!state.libraryExpanded;renderTerpeneLibrary();});
+  document.querySelector('#terpLibraryGrid').addEventListener('click',e=>{
+    const btn=e.target.closest('[data-terp-choose]');if(!btn)return;
+    primary.value=btn.dataset.terpChoose;secondary.value='none';state.door='studio';setDiscovery('studio');
+    document.querySelector('#productsGrid').scrollIntoView({behavior:'smooth',block:'start'});
+  });
+  renderTerpeneLibrary();syncDiscoveryUI();
 
-  function productCard(p){let tt=tops(p).slice(0,2).map(([n])=>`<span class="pill">${esc(shortTerp(n))}</span>`).join('');return `<article class="product-card" role="button" tabindex="0" data-open="${p.id}" aria-label="View ${esc(p.name)} batch profile"><button class="fav-button ${state.saved.has(p.id)?'saved':''}" type="button" data-fav="${p.id}" aria-label="${state.saved.has(p.id)?'Remove favorite':'Save favorite'}" title="Save product">${state.saved.has(p.id)?'★':'☆'}</button><div class="card-kicker"><span class="source-dot ${p.coverage==='partial'?'partial':''}"></span>${esc(p.brand)} <span style="color:#668a70">/</span> ${esc(p.category)}</div><h3 class="card-title">${esc(p.name)}</h3><div class="mini-line">BATCH ${esc(p.batch)} · ${esc(fmtDate(p.date))} · ${p.thc==null?'THC NOT REPORTED':num(p.thc)+'% THC'}<br>${p.brand==='Head Change'?(p.cannabinoid_verified?'✓ COA CANNABINOIDS VERIFIED':'PHARMACOPEIA / PARTIAL COA'):p.cannabinoids?'✓ CANNABINOIDS VERIFIED':'CANNABINOID PANEL PENDING'}</div>${discoveryCardInfo(p)}<div class="card-lower"><div><div class="big-metric">${p.total==null?"—":num(p.total)}<span>${p.total==null?"":"%"}</span></div><div class="metric-caption">Total terpenes</div></div><div class="card-pills">${tt}</div></div></article>`}
+  function productCard(p){let tt=tops(p).slice(0,2).map(([n])=>`<span class="pill">${esc(shortTerp(n))}</span>`).join('');return `<article class="product-card" role="button" tabindex="0" data-open="${p.id}" aria-label="View ${esc(p.name)} batch profile"><button class="fav-button ${state.saved.has(p.id)?'saved':''}" type="button" data-fav="${p.id}" aria-label="${state.saved.has(p.id)?'Remove favorite':'Save favorite'}" title="Save product">${state.saved.has(p.id)?'★':'☆'}</button><div class="card-kicker"><span class="format-badge" aria-hidden="true">${formatGlyph(p)}</span><span class="source-dot ${p.coverage==='partial'?'partial':''}"></span>${esc(p.brand)} <span style="color:#668a70">/</span> ${esc(p.category)}</div><h3 class="card-title">${esc(p.name)}</h3><div class="mini-line">BATCH ${esc(p.batch)} · ${esc(fmtDate(p.date))} · ${p.thc==null?'THC NOT REPORTED':num(p.thc)+'% THC'}<br>${p.brand==='Head Change'?(p.cannabinoid_verified?'✓ COA CANNABINOIDS VERIFIED':'PHARMACOPEIA / PARTIAL COA'):p.cannabinoids?'✓ CANNABINOIDS VERIFIED':'CANNABINOID PANEL PENDING'}</div>${discoveryCardInfo(p)}<div class="card-lower"><div><div class="big-metric">${p.total==null?"—":num(p.total)}<span>${p.total==null?"":"%"}</span></div><div class="metric-caption">Total terpenes</div></div><div class="card-pills">${tt}</div></div></article>`}
   function sortedFiltered(list){
     const q=state.query.toLowerCase().trim(),active=!!currentTargets();
     const r=list.filter(p=>(state.brand==='all'||p.brand===state.brand)
