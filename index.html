@@ -197,6 +197,13 @@
     .experience-cannabinoids{display:flex;gap:6px;flex-wrap:wrap;margin-top:10px}
     .experience-cannabinoid{padding:5px 8px;border:1px solid #4a664f;background:#203227;border-radius:6px;color:#b5d59e;font:650 10px var(--mono)}
     @media(max-width:980px){.take-read{grid-template-columns:1fr}.experience-panel{padding:16px}}
+
+    .experience-axis-top strong{display:inline-flex;align-items:center;gap:7px;position:relative}
+    .experience-info{display:inline-block;position:relative;z-index:5;font-family:var(--sans)}
+    .experience-info summary{list-style:none;display:grid;place-items:center;border:1px solid #658568;border-radius:50%;width:18px;height:18px;font-size:12px;color:#c7f0b1;cursor:pointer;background:#28402c}
+    .experience-info summary::-webkit-details-marker{display:none}
+    .experience-info-popup{position:absolute;z-index:12;top:25px;left:-5px;width:min(275px,70vw);padding:12px 13px;background:#24382c;border:1px solid #68866a;border-radius:10px;color:#e0eedc;font-size:11px;font-weight:450;line-height:1.6;box-shadow:0 12px 32px #0008}
+    .experience-axis-top .experience-info-popup{font-family:var(--sans)}
   </style>
 </head>
 <body>
@@ -536,7 +543,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     const tendency=known?(bright-settled)/(bright+settled):null;
     // Restrict the display to broad bands; small differences should look undetermined.
     const pos=known?Math.max(24,Math.min(76,50+tendency*24)):null;
-    const direction=!known?'Not enough data':pos>60?'Brighter-leaning pattern':pos<40?'More mellow-leaning pattern':'Mixed / no clear lean';
+    const direction=!known?'Insufficient data':pos>60?'Lively-leaning':pos<40?'Mellow-leaning':'Balanced / Mixed';
     const can=p.cannabinoids||{};
     const thc=typeof p.thc==='number'&&Number.isFinite(p.thc)?p.thc:
       typeof can.TOTAL_THC==='number'&&Number.isFinite(can.TOTAL_THC)?can.TOTAL_THC:null;
@@ -550,7 +557,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     const valid=position!==null&&Number.isFinite(position);
     const label=valid?valueText:'Not established from this COA';
     return '<div class="experience-axis '+(!valid?'experience-axis-missing':'')+'">'+
-      '<div class="experience-axis-top"><strong>'+esc(title)+'</strong><span>'+esc(label)+'</span></div>'+
+      '<div class="experience-axis-top"><strong>'+esc(title)+(kind==='style'?'<details class="experience-info"><summary aria-label="About this experience estimate" title="About this estimate">ⓘ</summary><div class="experience-info-popup">A preliminary, low-confidence comparison of measured terpene patterns. It does not reliably predict mood, energy, relaxation or how you will feel.</div></details>':'')+'</strong><span>'+esc(label)+'</span></div>'+
       '<div class="experience-track '+(kind==='thc'?'experience-thc':'experience-style')+'" role="img" aria-label="'+esc(title+': '+(valid?valueText:'not established'))+'">'+
       (valid?'<span class="experience-pin" style="left:'+position.toFixed(1)+'%"><span class="experience-pin-dot"></span></span>':'<span class="experience-unknown">?</span>')+
       '</div><div class="experience-labels"><span>'+esc(left)+'</span><span>'+esc(right)+'</span></div></div>';
@@ -563,10 +570,10 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
       .map(([n,key])=>'<span class="experience-cannabinoid">'+n+' '+num(c[key],2)+'% measured</span>').join('');
     return '<section class="experience-panel" aria-label="Lab-informed experience spectrum">'+
       '<div class="experience-heading"><span class="experience-heading-icon" aria-hidden="true">◉</span><div><strong>What the high might feel like</strong><small>Visual guide to the measured chemistry — not a promised effect</small></div></div>'+
-      takeMeter({title:'Terpene Profile Tendency',left:'More mellow',right:'More lively',position:x.pos,valueText:x.direction,kind:'style'})+
+      takeMeter({title:'Expected Experience',left:'More mellow',right:'More lively',position:x.pos,valueText:x.direction,kind:'style'})+
       takeMeter({title:'THC concentration · measured',left:'Lower within format',right:'Higher within format',position:x.potency,valueText:x.thc!==null?num(x.thc,2)+'% THC':'Not reported',kind:'thc'})+
       '<div class="experience-context">'+
-        '<div><strong>How to read this:</strong> The first position is a low-confidence terpene-based hypothesis, not a clinically validated predictor of energy, relaxation or body effects. The second is measured THC by mass, scaled for '+format+' (0–'+x.max+'%); it is <strong>not</strong> your dose or a prediction of how intoxicated you will feel.</div>'+
+        '<div>Experience is an exploratory terpene pattern (ⓘ for details). THC is the measured concentration, scaled for '+format+' (0–'+x.max+'%); it does not determine the dose or how intoxicated you will feel.</div>'+
         (cIndicators?'<div class="experience-cannabinoids">'+cIndicators+'</div>':'')+
       '</div></section>';
   }
