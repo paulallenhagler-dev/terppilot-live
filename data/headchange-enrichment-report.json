@@ -1,12 +1,12 @@
 {
-  "retrieved_at": "2026-10-30T16:01:46.984007+00:00",
-  "catalog_entries": 553,
-  "pdfs_linked": 549,
-  "pdfs_parsed": 549,
+  "retrieved_at": "2026-11-09T14:36:32.461241+00:00",
+  "catalog_entries": 564,
+  "pdfs_linked": 560,
+  "pdfs_parsed": 560,
   "pdf_download_or_parse_errors": {},
-  "cannabinoid_panels_verified": 549,
-  "terp_panels_verified_from_pdf": 530,
-  "terp_panels_full_or_reconciled": 533,
+  "cannabinoid_panels_verified": 560,
+  "terp_panels_verified_from_pdf": 540,
+  "terp_panels_full_or_reconciled": 544,
   "terp_panels_partial": 20,
   "audit_flags": [
     {
@@ -70,6 +70,12 @@
     {
       "product": "Hawaiian JellyRoll · Sauce Cart",
       "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Last Stop · Live Badder",
+      "reason": "terp_panel_not_reconciled",
+      "coa_total": null,
+      "coa_sum": 5.736
     },
     {
       "product": "Mexican Chocolate Cake · Sauce Cart",
