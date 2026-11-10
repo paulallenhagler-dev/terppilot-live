@@ -204,6 +204,36 @@
     .experience-info summary::-webkit-details-marker{display:none}
     .experience-info-popup{position:absolute;z-index:12;top:25px;left:-5px;width:min(275px,70vw);padding:12px 13px;background:#24382c;border:1px solid #68866a;border-radius:10px;color:#e0eedc;font-size:11px;font-weight:450;line-height:1.6;box-shadow:0 12px 32px #0008}
     .experience-axis-top .experience-info-popup{font-family:var(--sans)}
+
+
+/* Ask Terp Pilot — mobile-first, accessible conversation styling. */
+.tp-chat{margin:30px 0 36px;padding:25px 26px;border:1px solid #436249;border-radius:21px;background:linear-gradient(145deg,#15241c 0%,#101a15 68%,#12211a 100%);box-shadow:0 15px 52px rgba(0,0,0,.18)}
+.tp-chat-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.tp-chat h2{font-size:clamp(24px,3.3vw,35px);letter-spacing:-.035em;margin:9px 0 8px;color:#eef8eb}
+.tp-chat p{margin:0;color:#b0c6b5;font-size:13px;line-height:1.65}
+.tp-chat-status{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;font:10px var(--mono);color:#a8d6ab;border:1px solid #3c6544;border-radius:999px;padding:8px 10px;letter-spacing:.055em}
+.tp-chat-status:before{content:"";width:6px;height:6px;border-radius:50%;background:#baf081}
+.tp-chat-log{max-height:420px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;margin:0 0 16px;padding:4px 3px 8px;scrollbar-color:#385b3b transparent}
+.tp-msg{max-width:min(100%,710px);padding:13px 15px;border-radius:15px;background:#1d2d22;border:1px solid #34513a;color:#e3f2df;font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+.tp-msg.tp-user{align-self:flex-end;background:#263b2b;border-color:#587f53}
+.tp-msg.tp-bot{align-self:flex-start}
+.tp-msg strong{color:#eaffdc}
+.tp-msg-small{display:block;margin-top:9px;font-size:11px;color:#96b09a}
+.tp-chat-form{display:flex;gap:10px;align-items:stretch;padding:8px;border:1px solid #56745a;border-radius:14px;background:#09120d}
+.tp-chat-input{display:block;flex:1;min-width:0;min-height:54px;max-height:160px;resize:vertical;border:0;outline:0;padding:10px 11px;background:transparent;color:#eaf6e8;font:14px/1.5 var(--sans)}
+.tp-chat-input::placeholder{color:#799180}
+.tp-chat-send{align-self:flex-end;border:0;border-radius:10px;background:#b8ee83;color:#162019;font-weight:750;padding:13px 18px;min-height:43px;cursor:pointer}
+.tp-chat-send:hover{background:#cefba5}
+.tp-chat-examples{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 8px}
+.tp-chat-examples button,.tp-chat-reset{border:1px solid #47654b;border-radius:999px;background:#1a2a1d;color:#c6dfc7;font-size:11px;line-height:1.3;padding:9px 12px;cursor:pointer}
+.tp-chat-examples button:hover,.tp-chat-reset:hover{border-color:#98d78e;color:#eaffde}
+.tp-chat-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;color:#84a48c;font:10px/1.55 var(--mono)}
+.tp-chat-hit{border-top:1px solid #456448;margin-top:12px;padding-top:10px}
+.tp-chat-hit button{border:0;background:none;color:#d9f8c7;font-weight:750;font-size:13px;text-align:left;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:#7b996c}
+.tp-chat-hit small{display:block;color:#a9c4af;font-size:11px;margin-top:3px;line-height:1.65}
+.tp-chat-hit a{color:#b8ea8e;text-decoration:underline}
+@media(max-width:690px){.tp-chat{margin:22px 0 26px;padding:18px 14px}.tp-chat-head{flex-direction:column;gap:8px}.tp-chat-status{font-size:9px}.tp-chat-form{gap:5px}.tp-chat-send{padding:11px 12px}.tp-chat-foot{align-items:flex-start;flex-direction:column}.tp-msg{padding:11px 12px}}
+
   </style>
 </head>
 <body>
@@ -218,6 +248,21 @@
   <div class="hero-signal" aria-hidden="true"><div class="orbit"><svg viewBox="0 0 270 270" fill="none"><g transform="translate(135 135)" stroke="#659265"><circle r="128" stroke-dasharray="2 8" opacity=".4"/><circle r="102" opacity=".3"/><circle r="78" stroke="#9bce89" opacity=".4"/><circle r="55" stroke="#678e71" opacity=".5"/><circle r="30" stroke="#a4e58d" opacity=".75"/><path d="M-128 0 C-115 0-113-16-101-16S-87 19-74 19-58-37-44-37-29 53-14 53 0-66 15-66 29 44 43 44 57-22 71-22 85 12 98 12 112 0 128 0" stroke="#b9f58d" stroke-width="2" opacity=".95"/><circle cx="0" cy="0" r="5" fill="#b5f78b"/><path d="M-135 0H135M0-135V135" opacity=".13"/></g></svg><span class="orb-label label-a">BIOCHEM / SIGNAL</span><span class="orb-label label-b">NO HYPE · JUST DATA</span></div></div></div>
   <div class="stats"><div class="stat"><strong id="statRecords">1252</strong><span>Historical product profiles</span></div><div class="stat"><strong>3 <small>brands</small></strong><span>Vivid + Robust + Head Change</span></div><div class="stat"><strong id="statFull">1215</strong><span>Detailed terpene profiles</span></div><div class="stat"><strong id="statCanna">1248</strong><span>Verified cannabinoid panels</span></div></div>
 
+
+  <section class="tp-chat" id="pilotChat" aria-label="Ask Terp Pilot">
+    <div class="tp-chat-head"><div><div class="eyebrow">00 / CONVERSATIONAL DISCOVERY</div><h2>Ask Terp Pilot.</h2><p>Tell us what you like: a flavor, a favorite product, a format, or exact terpene percentages. Your conversation drives the same chemistry filters below.</p></div><span class="tp-chat-status">BATCH-DATA GUIDE · BETA</span></div>
+    <div class="tp-chat-log" id="pilotChatLog" role="log" aria-label="Terp Pilot conversation" aria-live="polite"><div class="tp-msg tp-bot">What kind of chemistry are you looking for? Try describing an aroma, a preferred format, or a specific compound. I'll search the historical batch catalog and show what the COAs support.</div></div>
+    <form class="tp-chat-form" id="pilotChatForm">
+      <textarea class="tp-chat-input" id="pilotChatInput" rows="2" maxlength="500" aria-label="Ask Terp Pilot" placeholder="e.g. Find a citrus-forward cart with plenty of pinene and low myrcene…"></textarea>
+      <button class="tp-chat-send" type="submit">Explore ↗</button>
+    </form>
+    <div class="tp-chat-examples" aria-label="Try a query">
+      <button type="button" data-chat-prompt="Find citrus and pine-forward vape cartridges">🍋 Citrus + pine carts</button>
+      <button type="button" data-chat-prompt="Show me mellow earthy flower with high myrcene">🌿 Earthy flower</button>
+      <button type="button" data-chat-prompt="Find batches with limonene and at least 4% total terpenes">⚗ Limonene + 4% terps</button>
+    </div>
+    <div class="tp-chat-foot"><span>Source-grounded search, not generative AI yet. Historical COAs; not live inventory or medical advice.</span><button class="tp-chat-reset" id="pilotChatReset" type="button">Clear conversation + filters</button></div>
+  </section>
   <section class="discovery" id="discovery" aria-label="Discover products by chemistry">
     <div class="discovery-header"><div><div class="eyebrow">01 / YOUR CHEMISTRY COMPASS</div><h2>Find something that fits.</h2>
     <p class="discovery-intro">Not sure what trans-nerolidol is? You don't need to be. Start with a direction, follow the aroma, or explore every measured terpene.</p></div>
@@ -300,7 +345,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
   const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   for(const p of PRODUCTS)p.cannabinoids=(typeof CANNABINOID_PANELS==='object'?CANNABINOID_PANELS[p.id]:null)||p.cannabinoids||null;
   const byId=new Map(PRODUCTS.map(d=>[d.id,d]));
-  const state={view:'explore',query:'',brand:'all',category:'all',sort:'name',visible:24,selected:null,compare:null,matchSame:true,saved:new Set(),discovery:null,door:'vibe',vibe:null,aromas:[],libraryExpanded:false};
+  const state={view:'explore',query:'',brand:'all',category:'all',sort:'name',visible:24,selected:null,compare:null,matchSame:true,saved:new Set(),discovery:null,door:'vibe',vibe:null,aromas:[],libraryExpanded:false,chat:null,chatPrevious:null};
   try{state.saved=new Set(JSON.parse(localStorage.getItem('terppilot.saved.v1')||'[]').filter(id=>byId.has(id)))}catch{}
   const num=(n,d=2)=>Number(n??0).toFixed(d);
   const fmtDate=iso=>{if(!/^\d{4}-\d{2}-\d{2}$/.test(iso))return iso||'Unknown';let [y,m,d]=iso.split('-');return `${Number(m)}/${Number(d)}/${y}`;};
@@ -403,6 +448,7 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     return {items,total,families:Object.entries(f).sort((a,b)=>b[1]-a[1])};
   }
   function currentTargets(){
+    if(state.discovery==='chat'&&state.chat?.target&&Object.keys(state.chat.target).length)return state.chat.target;
     if(state.discovery==='vibe'&&state.vibe)return VIBE_TARGETS[state.vibe];
     if(state.discovery==='aroma'&&state.aromas.length){
       const out={};for(const a of state.aromas)for(const [k,v] of Object.entries(AROMA_TARGETS[a]))out[k]=(out[k]||0)+v;
@@ -429,6 +475,12 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     return pa>0&&ta>0?Math.round(100*dot/Math.sqrt(pa*ta)):null;
   }
   function discoveryEligible(p){
+    if(state.discovery==='chat'&&state.chat){
+      const c=state.chat;
+      if(c.minTerps!==null&&(p.total==null||Number(p.total)<c.minTerps))return false;
+      if(c.maxMyrcene!==null&&(p.coverage!=='full'||!Object.prototype.hasOwnProperty.call(p.terps||{},'β-Myrcene')||Number(p.terps['β-Myrcene'])>c.maxMyrcene))return false;
+      if(c.referenceId===p.id)return false;
+    }
     if(state.discovery==='studio'){
       if(p.total==null||Number(p.total)<Number(document.querySelector('#studioMin').value))return false;
       const fmt=document.querySelector('#studioFormat').value;
@@ -626,11 +678,13 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     for(const x of document.querySelectorAll('[data-aroma]')){const on=state.discovery==='aroma'&&state.aromas.includes(x.dataset.aroma);x.classList.toggle('active',on);x.setAttribute('aria-pressed',String(on));}
     const phrase=state.discovery==='vibe'&&state.vibe?'✦ Exploring '+state.vibe+'-associated chemistry':
       state.discovery==='aroma'&&state.aromas.length?'✿ '+state.aromas.length+' aroma preference'+(state.aromas.length===1?'':'s')+' active':
-      state.discovery==='studio'?(currentTargets()?'⚗ Custom chemistry profile active':'⚗ Select a terpene to match, or browse with both blank'):'Choose a preference to see matching batches.';
+      state.discovery==='studio'?(currentTargets()?'⚗ Custom chemistry profile active':'⚗ Select a terpene to match, or browse with both blank'):
+      state.discovery==='chat'?'✦ Ask Terp Pilot filters active — refine below or keep talking.':'Choose a preference to see matching batches.';
     document.querySelector('#discoveryStatus').textContent=phrase;
     document.querySelector('#studioMinValue').textContent=Number(document.querySelector('#studioMin').value).toFixed(2)+'%';
   }
   function setDiscovery(mode){
+    if(mode!=='chat')state.chat=null;
     state.discovery=mode;state.visible=20;state.query='';document.querySelector('#query').value='';
     state.sort='name';document.querySelector('#sortOrder').value='name';syncDiscoveryUI();renderExplore();
   }
@@ -727,6 +781,147 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
   function refresh(){if(state.view==='explore')renderExplore();else if(state.view==='matches')renderMatches();else if(state.view==='compare')renderCompare();else if(state.view==='saved')renderSaved()}
   function setView(view,keepScroll=false){if(!['explore','matches','compare','saved'].includes(view))return;state.view=view;document.querySelectorAll('section.view').forEach(s=>s.classList.toggle('hidden',s.id!==view));document.querySelectorAll('.nav-button').forEach(n=>n.classList.toggle('active',n.dataset.view===view||(view==='compare'&&n.dataset.view==='matches')));refresh();if(!keepScroll)window.scrollTo({top:0,behavior:'instant'});history.replaceState(null,'',view==='explore'?'#explore':'#'+view)}
   function setSelected(id){let p=byId.get(Number(id));if(!p)return;state.selected=p.id;state.compare=null;setView('matches')}
+// Embedded into index.html for Render static deployment.
+
+  /* Ask Terp Pilot v1: transparent natural-language filtering over existing COA data. */
+  const chatLog=$('#pilotChatLog'),chatInput=$('#pilotChatInput');
+  const chatTerps=[
+    [/limonene/i,['Limonene']],[/myrcene/i,['β-Myrcene']],
+    [/\bpinene/i,['α-Pinene','β-Pinene']],
+    [/linalool/i,['Linalool']],[/terpinolene/i,['Terpinolene']],
+    [/caryophyllene/i,['β-Caryophyllene']],[/humulene/i,['α-Humulene']],
+    [/ocimene/i,['Trans-Ocimene','Ocimene']]
+  ];
+  const chatVibes=[
+    [/sleep|unwind|evening|night|relax/i,'unwind'],
+    [/focus|bright|daytime|energ|uplift/i,'focus'],
+    [/creativ|expressiv|euphor/i,'creative'],
+    [/calm|mellow|grounded|anxiety/i,'calm']
+  ];
+  const chatAromas=[
+    [/citrus|lemon|lime|orange|zest/i,'citrus'],[/pine|resinous|forest/i,'pine'],
+    [/floral|rose|lavender/i,'floral'],[/pepper|spicy|spice/i,'spice'],
+    [/earthy|musky|herbal/i,'earthy'],[/woody|wood/i,'wood'],
+    [/fresh|eucalyptus|cool/i,'fresh']
+  ];
+  function chatAdd(role,html){
+    const el=document.createElement('div');el.className='tp-msg tp-'+role;el.innerHTML=html;
+    chatLog.appendChild(el);
+    while(chatLog.children.length>24)chatLog.removeChild(chatLog.firstElementChild);
+    chatLog.scrollTop=chatLog.scrollHeight;
+  }
+  function chatBlend(target,source){
+    for(const [key,value] of Object.entries(source))target[key]=(target[key]||0)+Number(value);
+  }
+  function chatReset(){
+    state.discovery=null;state.vibe=null;state.aromas=[];state.chat=null;state.chatPrevious=null;
+    state.brand='all';state.category='all';state.query='';state.sort='name';state.visible=windowSize();
+    $('#query').value='';$('#brandFilter').value='all';$('#categoryFilter').value='all';$('#sortOrder').value='name';
+    chatLog.innerHTML='';chatAdd('bot','Conversation and filters cleared. What chemistry would you like to explore?');
+    chatInput.value='';syncDiscoveryUI();renderExplore();
+  }
+  function chatReference(q){
+    const m=q.match(/(?:similar to|just like|liked|loved|favorite|like)\s+(.+?)(?:\s+(?:but|with|that|and|except)\b|[,.!?]|$)/i);
+    if(!m||m[1].trim().length<4)return {asked:false,record:null,name:''};
+    const name=m[1].trim().toLowerCase();
+    const found=PRODUCTS.filter(p=>p.name.toLowerCase().includes(name));
+    found.sort((a,b)=>(b.coverage==='full')-(a.coverage==='full')||(b.date||'').localeCompare(a.date||''));
+    return {asked:true,record:found[0]||null,name:m[1].trim()};
+  }
+  function chatCeiling(q){
+    const a=q.match(/(?:under|below|less than|no more than)\s*(\d+(?:\.\d+)?)\s*%?\s*(?:of\s*)?(?:β[\s-]*)?myrcene/i);
+    const b=q.match(/myrcene\s*(?:under|below|less than|<)\s*(\d+(?:\.\d+)?)\s*%?/i);
+    return a||b?Number((a||b)[1]):null;
+  }
+  function chatCategory(q){
+    if(/\b(vapes?|carts?|cartridges?|disposables?)\b/i.test(q))return 'Vape';
+    if(/\b(flowers?|buds?)\b/i.test(q))return 'Flower';
+    if(/\b(pre[\s-]?rolls?|joints?)\b/i.test(q))return 'Pre-roll';
+    if(/\b(concentrates?|dabs?|rosin|badder|wax)\b/i.test(q))return 'Concentrate';
+    return null;
+  }
+  function chatRun(raw){
+    const q=raw.trim().slice(0,500);if(!q)return;
+    chatAdd('user',esc(q));
+    if(/^(clear|reset|start over|new search)\b/i.test(q)){chatReset();return}
+    if(/what changed|why (?:this|that|these) (?:result|match)/i.test(q)&&state.chat){
+      const first=byId.get(state.chat.lastIds?.[0]),prior=state.chatPrevious;
+      let message=prior?'The previous search returned '+prior.count+' batches, compared with '+state.chat.lastCount+' now.':'The current results follow the filters above.';
+      if(first)message+=' The leading batch, '+first.name+', measures '+tops(first).slice(0,3).map(([n,v])=>n+' '+num(v,2)+'%').join(', ')+'.';
+      chatAdd('bot',esc(message));return;
+    }
+    if(/what (?:is|are)|explain|what does/i.test(q)){
+      const mention=chatTerps.find(([re])=>re.test(q));
+      if(mention){
+        const name=mention[1][0],info=TERPENE_META[name];
+        chatAdd('bot','<strong>'+esc(name)+'</strong> is a reported terpene, commonly associated with '+esc(info?.[1]||'aromatic')+' notes. Lab concentrations do not establish effects. Ask me to find batches containing it to see measured examples.');
+        return;
+      }
+      if(/match|score/i.test(q)){chatAdd('bot','Chemistry match scores compare measured terpene patterns, not subjective effects or product quality. They are exploratory and unvalidated as predictors of experience.');return}
+    }
+    const follow=/^(more|less|only|instead|also|what about|but|and|with|make it|keep|remove|without)\b/i.test(q);
+    const previous=follow&&state.discovery==='chat'?state.chat:null;
+    const matchBrand=q.match(/\b(head change|vivid|robust)\b/i);
+    const brand=matchBrand?({'head change':'Head Change',vivid:'Vivid',robust:'Robust'})[matchBrand[1].toLowerCase()]:previous?state.brand:'all';
+    const category=chatCategory(q)|| (previous?state.category:'all');
+    const ref=chatReference(q);
+    let target=previous?Object.assign({},previous.target):{};
+    const notes=[];
+    if(ref.asked&&ref.record&&ref.record.coverage==='full'){
+      target={};
+      for(const [k,v] of tops(ref.record).slice(0,9))target[k]=v;
+      notes.push('Reference fingerprint: '+ref.record.brand+' '+ref.record.name+'.');
+    }else if(ref.asked)notes.push('I could not verify a matching historical batch named '+ref.name+'. I will not invent its chemistry.');
+    for(const [pattern,vibe] of chatVibes)if(pattern.test(q)){
+      chatBlend(target,VIBE_TARGETS[vibe]);
+      notes.push('The '+vibe+' direction is a browsing label, not a proven effect.');
+      break;
+    }
+    for(const [pattern,aroma] of chatAromas)if(pattern.test(q)){
+      chatBlend(target,AROMA_TARGETS[aroma]);notes.push('Aroma direction: '+aroma+'.');
+    }
+    const lowerMyrcene=/(?:low|less|lower|without|no)\s+(?:β[\s-]*)?myrcene|myrcene\s+(?:low|less|lower|under|below)/i.test(q);
+    for(const [re,keys] of chatTerps)if(re.test(q)&&!(lowerMyrcene&&keys.includes('β-Myrcene'))){
+      for(const name of keys)target[name]=(target[name]||0)+1;
+    }
+    let maxMyrcene=chatCeiling(q);
+    if(maxMyrcene===null)maxMyrcene=previous?previous.maxMyrcene:null;
+    if(lowerMyrcene&&maxMyrcene===null)maxMyrcene=0.5;
+    const m=q.match(/(?:at least|above|over|more than)\s*(\d+(?:\.\d+)?)\s*%?\s*(?:total\s*)?terp(?:enes?)?/i)||
+      q.match(/(?:total\s*)?terp(?:enes?)?\s*(?:above|over|at least)\s*(\d+(?:\.\d+)?)/i);
+    const minTerps=m?Number(m[1]):previous?previous.minTerps:null;
+    if(!Object.keys(target).length&&brand==='all'&&category==='all'&&maxMyrcene===null&&minTerps===null){
+      chatAdd('bot','I can search verified batch records by <strong>flavor direction, terpene concentrations, brand, and format.</strong> Try “piney cart with low myrcene” or “Vivid flower with at least 4% terpenes.” I cannot reliably infer gas, fruit or subjective effects from terpene panels alone.');
+      return;
+    }
+    const last=state.chat;
+    state.chatPrevious=last?{count:last.lastCount}:null;
+    state.chat={target,minTerps,maxMyrcene,referenceId:ref.record?.id||previous?.referenceId||null,lastCount:0,lastIds:[]};
+    state.discovery='chat';state.brand=brand;state.category=category;state.query='';state.sort='name';state.visible=20;
+    $('#query').value='';$('#brandFilter').value=brand;$('#categoryFilter').value=category;$('#sortOrder').value='name';
+    syncDiscoveryUI();renderExplore();
+    const found=sortedFiltered(PRODUCTS);
+    state.chat.lastCount=found.length;state.chat.lastIds=found.slice(0,4).map(p=>p.id);
+    if(/\bgas|gassy|diesel|fuel\b/i.test(q))notes.push('Gas/fuel notes cannot be established from the terpene panel alone.');
+    const conditions=[brand!=='all'?brand:null,category!=='all'?category:null,Object.keys(target).length?'terpene fingerprint':null,minTerps!==null?'≥'+num(minTerps)+'% terpenes':null,maxMyrcene!==null?'reported myrcene ≤'+num(maxMyrcene)+'%':null].filter(Boolean);
+    let reply='<strong>'+found.length+' matching historical batch'+(found.length===1?'':'es')+'.</strong>';
+    reply+='<span class="tp-msg-small">'+esc(conditions.join(' · '))+'</span>';
+    if(notes.length)reply+='<span class="tp-msg-small">'+esc(notes.join(' '))+'</span>';
+    if(!found.length)reply+='<span class="tp-msg-small">No batch meets all these conditions. Try broadening a format or chemical threshold.</span>';
+    for(const p of found.slice(0,3)){
+      const src=p.coa_url||(p.brand==='Head Change'?null:p.source);
+      const link=/^https:\/\//.test(src||'')?'<a target="_blank" rel="noopener noreferrer" href="'+esc(src)+'">Original COA ↗</a>':'No indexed COA PDF';
+      const similarity=Object.keys(target).length?' · '+profileScore(p)+'% chemical profile fit':'';
+      reply+='<div class="tp-chat-hit"><button type="button" data-open="'+p.id+'">'+esc(p.brand+' · '+p.name)+'</button><small>'+esc(p.category)+' · '+(p.total==null?'Total terpenes not reported':num(p.total)+'% total terpenes')+esc(similarity)+'<br>'+tops(p).slice(0,3).map(([n,v])=>esc(n)+' '+num(v,2)+'%').join(' · ')+'<br>'+link+'</small></div>';
+    }
+    reply+='<span class="tp-msg-small">Measured chemistry, not a prediction of effects, safety, quality, or current stock. The catalog below uses these same filters. You can refine either way.</span>';
+    chatAdd('bot',reply);
+  }
+  $('#pilotChatForm').addEventListener('submit',event=>{event.preventDefault();const q=chatInput.value;chatInput.value='';chatRun(q)});
+  chatInput.addEventListener('keydown',event=>{if(event.key==='Enter'&&!event.shiftKey){event.preventDefault();$('#pilotChatForm').requestSubmit()}});
+  for(const btn of document.querySelectorAll('[data-chat-prompt]'))btn.addEventListener('click',()=>chatRun(btn.dataset.chatPrompt));
+  $('#pilotChatReset').addEventListener('click',chatReset);
+
   document.addEventListener('click',e=>{
     if(e.target.closest('a[data-external]')){e.stopPropagation();return}
     let fav=e.target.closest('[data-fav]');if(fav){e.preventDefault();e.stopPropagation();toggleFav(Number(fav.dataset.fav));return}
