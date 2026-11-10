@@ -11,3 +11,12 @@ Batch-specific cannabis chemistry research prototype for Vivid and Robust.
 Site: `index.html` (product catalog and UI), `cannabinoids.js` (COA-verified cannabinoid profiles), `robots.txt`.
 
 Data snapshot: October 19, 2026. These are historical lab records, not real-time dispensary stock.
+
+
+## Ask Terp Pilot (beta)
+
+The Explore dashboard includes a conversational chemistry-search interface above the three existing doors (Vibe, Flavor, Science). It parses supported natural-language constraints (aroma families, named measured terpenes, product category, brand, minimum total terpenes, and a measured-myrcene ceiling), applies them through the existing catalog filter and match-score functions, and presents linked historical batch evidence.
+
+The chat does **not** call a generative language model yet. Its source logic is in \`chat-discovery.js\`, its styling is in \`chat-discovery.css\`, and both are embedded into \`index.html\` because the Render static build publishes a single HTML file. If updating either source, also sync the embedded copy.
+
+The measured-chemistry comparison must never be presented as an effect prediction or live inventory. A future language-model backend would require a separate authenticated/rate-limited server endpoint and an API key stored only server-side, not in HTML or client JavaScript.
