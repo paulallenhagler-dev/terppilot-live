@@ -901,10 +901,11 @@ window.HEADCHANGE_RECORDS=HEADCHANGE_PACKED.map((d,i)=>{const format=HEADCHANGE_
     $('#query').value='';$('#brandFilter').value=brand;$('#categoryFilter').value=category;$('#sortOrder').value='name';
     syncDiscoveryUI();renderExplore();
     const found=sortedFiltered(PRODUCTS);
-    state.chat.lastCount=found.length;state.chat.lastIds=found.slice(0,4).map(p=>p.id);
+    const totalCount=PRODUCTS.filter(p=>(state.brand==='all'||p.brand===state.brand)&&(state.category==='all'||p.category===state.category)&&discoveryEligible(p)).length;
+    state.chat.lastCount=totalCount;state.chat.lastIds=found.slice(0,4).map(p=>p.id);
     if(/\bgas|gassy|diesel|fuel\b/i.test(q))notes.push('Gas/fuel notes cannot be established from the terpene panel alone.');
     const conditions=[brand!=='all'?brand:null,category!=='all'?category:null,Object.keys(target).length?'terpene fingerprint':null,minTerps!==null?'≥'+num(minTerps)+'% terpenes':null,maxMyrcene!==null?'reported myrcene ≤'+num(maxMyrcene)+'%':null].filter(Boolean);
-    let reply='<strong>'+found.length+' matching historical batch'+(found.length===1?'':'es')+'.</strong>';
+    let reply='<strong>'+totalCount+' matching historical batch'+(totalCount===1?'':'es')+'.</strong>';
     reply+='<span class="tp-msg-small">'+esc(conditions.join(' · '))+'</span>';
     if(notes.length)reply+='<span class="tp-msg-small">'+esc(notes.join(' '))+'</span>';
     if(!found.length)reply+='<span class="tp-msg-small">No batch meets all these conditions. Try broadening a format or chemical threshold.</span>';
