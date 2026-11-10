@@ -1,0 +1,28 @@
+
+/* Ask Terp Pilot — mobile-first, accessible conversation styling. */
+.tp-chat{margin:30px 0 36px;padding:25px 26px;border:1px solid #436249;border-radius:21px;background:linear-gradient(145deg,#15241c 0%,#101a15 68%,#12211a 100%);box-shadow:0 15px 52px rgba(0,0,0,.18)}
+.tp-chat-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;margin-bottom:18px}
+.tp-chat h2{font-size:clamp(24px,3.3vw,35px);letter-spacing:-.035em;margin:9px 0 8px;color:#eef8eb}
+.tp-chat p{margin:0;color:#b0c6b5;font-size:13px;line-height:1.65}
+.tp-chat-status{display:inline-flex;align-items:center;gap:7px;flex-shrink:0;font:10px var(--mono);color:#a8d6ab;border:1px solid #3c6544;border-radius:999px;padding:8px 10px;letter-spacing:.055em}
+.tp-chat-status:before{content:"";width:6px;height:6px;border-radius:50%;background:#baf081}
+.tp-chat-log{max-height:420px;overflow-y:auto;display:flex;flex-direction:column;gap:12px;margin:0 0 16px;padding:4px 3px 8px;scrollbar-color:#385b3b transparent}
+.tp-msg{max-width:min(100%,710px);padding:13px 15px;border-radius:15px;background:#1d2d22;border:1px solid #34513a;color:#e3f2df;font-size:13px;line-height:1.65;overflow-wrap:anywhere}
+.tp-msg.tp-user{align-self:flex-end;background:#263b2b;border-color:#587f53}
+.tp-msg.tp-bot{align-self:flex-start}
+.tp-msg strong{color:#eaffdc}
+.tp-msg-small{display:block;margin-top:9px;font-size:11px;color:#96b09a}
+.tp-chat-form{display:flex;gap:10px;align-items:stretch;padding:8px;border:1px solid #56745a;border-radius:14px;background:#09120d}
+.tp-chat-input{display:block;flex:1;min-width:0;min-height:54px;max-height:160px;resize:vertical;border:0;outline:0;padding:10px 11px;background:transparent;color:#eaf6e8;font:14px/1.5 var(--sans)}
+.tp-chat-input::placeholder{color:#799180}
+.tp-chat-send{align-self:flex-end;border:0;border-radius:10px;background:#b8ee83;color:#162019;font-weight:750;padding:13px 18px;min-height:43px;cursor:pointer}
+.tp-chat-send:hover{background:#cefba5}
+.tp-chat-examples{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0 8px}
+.tp-chat-examples button,.tp-chat-reset{border:1px solid #47654b;border-radius:999px;background:#1a2a1d;color:#c6dfc7;font-size:11px;line-height:1.3;padding:9px 12px;cursor:pointer}
+.tp-chat-examples button:hover,.tp-chat-reset:hover{border-color:#98d78e;color:#eaffde}
+.tp-chat-foot{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-top:12px;color:#84a48c;font:10px/1.55 var(--mono)}
+.tp-chat-hit{border-top:1px solid #456448;margin-top:12px;padding-top:10px}
+.tp-chat-hit button{border:0;background:none;color:#d9f8c7;font-weight:750;font-size:13px;text-align:left;padding:0;cursor:pointer;text-decoration:underline;text-decoration-color:#7b996c}
+.tp-chat-hit small{display:block;color:#a9c4af;font-size:11px;margin-top:3px;line-height:1.65}
+.tp-chat-hit a{color:#b8ea8e;text-decoration:underline}
+@media(max-width:690px){.tp-chat{margin:22px 0 26px;padding:18px 14px}.tp-chat-head{flex-direction:column;gap:8px}.tp-chat-status{font-size:9px}.tp-chat-form{gap:5px}.tp-chat-send{padding:11px 12px}.tp-chat-foot{align-items:flex-start;flex-direction:column}.tp-msg{padding:11px 12px}}
