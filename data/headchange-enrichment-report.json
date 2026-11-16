@@ -1,12 +1,12 @@
 {
-  "retrieved_at": "2026-11-09T14:36:32.461241+00:00",
-  "catalog_entries": 564,
-  "pdfs_linked": 560,
-  "pdfs_parsed": 560,
+  "retrieved_at": "2026-11-16T23:06:27.185197+00:00",
+  "catalog_entries": 567,
+  "pdfs_linked": 563,
+  "pdfs_parsed": 563,
   "pdf_download_or_parse_errors": {},
-  "cannabinoid_panels_verified": 560,
-  "terp_panels_verified_from_pdf": 540,
-  "terp_panels_full_or_reconciled": 544,
+  "cannabinoid_panels_verified": 563,
+  "terp_panels_verified_from_pdf": 543,
+  "terp_panels_full_or_reconciled": 547,
   "terp_panels_partial": 20,
   "audit_flags": [
     {
@@ -28,6 +28,12 @@
     {
       "product": "ChemChi 3.0 · Sauce Cart",
       "reason": "terp_profile_incomplete"
+    },
+    {
+      "product": "Cosmic Garbage · Live Rosin Cart",
+      "reason": "thc_discrepancy",
+      "website_thc": 71.8,
+      "coa_thc": 74.1685
     },
     {
       "product": "Dabatomic · Live Badder",
