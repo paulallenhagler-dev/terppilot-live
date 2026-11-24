@@ -1,7 +1,7 @@
 {
   "source": "https://headchange710.com/pharmacopeia/a-z",
-  "retrieved_at": "2026-11-16T23:06:26.311667+00:00",
-  "entry_count": 567,
+  "retrieved_at": "2026-11-24T01:16:09.119757+00:00",
+  "entry_count": 571,
   "records": [
     {
       "id": 100001,
@@ -5837,7 +5837,7 @@
       "id": 100107,
       "brand": "Head Change",
       "name": "Cosmic Garbage · Live Rosin Cart",
-      "batch": "1A40C0300002906000171610",
+      "batch": "1A40C0300002906000171900",
       "date": "2026-11-12",
       "category": "Vape",
       "format": "Live Rosin Cart",
@@ -5846,7 +5846,7 @@
       "notes": "Sweet trash, dumpster funk",
       "description": "Sweet chem, earthy kush and space funk come together in a rich, greasy hash with plenty of character.",
       "thc": 74.1685,
-      "tac": 77.7,
+      "tac": 79.8,
       "total": 9.608,
       "terps": {
         "β-Caryophyllene": 3.938,
@@ -5860,8 +5860,8 @@
         "Nerolidol": 0.22,
         "Terpineol": 0.233
       },
-      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/f7ae7ffa-bac1-43f5-a790-8963176ba115.pdf",
-      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/f7ae7ffa-bac1-43f5-a790-8963176ba115.pdf",
+      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/1004e034-8c41-413f-be2c-3e5cfcdc9be2.pdf",
+      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/1004e034-8c41-413f-be2c-3e5cfcdc9be2.pdf",
       "landing_url": "https://headchange710.com/pharmacopeia/cosmic-garbage",
       "coverage": "full",
       "data_quality": "original-coa-quantitative",
@@ -5999,6 +5999,59 @@
     {
       "id": 100110,
       "brand": "Head Change",
+      "name": "Cosmic Garbage · Live Rosin AIO",
+      "batch": "1A40C0300002906000171898",
+      "date": "2026-11-12",
+      "category": "Vape",
+      "format": "Live Rosin AIO",
+      "dominance": "",
+      "genetics": "Chem Gem x Diamond Glands",
+      "notes": "Sweet trash, dumpster funk",
+      "description": "Sweet chem, earthy kush and space funk come together in a rich, greasy hash with plenty of character.",
+      "thc": 75.0604,
+      "tac": 80.8,
+      "total": 10.05,
+      "terps": {
+        "β-Caryophyllene": 3.96,
+        "Limonene": 2.064,
+        "α-Humulene": 1.083,
+        "β-Myrcene": 0.806,
+        "Linalool": 0.615,
+        "α-Bisabolol": 0.541,
+        "α-Pinene": 0.319,
+        "Fenchol": 0.154,
+        "Camphene": 0.057,
+        "Nerolidol": 0.218,
+        "Terpineol": 0.232
+      },
+      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/7b198275-4df6-4e9f-97ec-47c3f38e75fb.pdf",
+      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/7b198275-4df6-4e9f-97ec-47c3f38e75fb.pdf",
+      "landing_url": "https://headchange710.com/pharmacopeia/cosmic-garbage-4",
+      "coverage": "full",
+      "data_quality": "original-coa-quantitative",
+      "cannabinoids": {
+        "THCA": 5.2,
+        "D9THC": 70.5,
+        "D8THC": "ND",
+        "THCV": "ND",
+        "CBDA": "ND",
+        "CBD": "ND",
+        "CBDV": "ND",
+        "CBN": "ND",
+        "CBGA": 2.66,
+        "CBG": 2.48,
+        "CBC": "ND",
+        "TOTAL_THC": 75.0604,
+        "TOTAL_CBD": "ND"
+      },
+      "coa_extraction": "original_pdf_parsed",
+      "coa_pages": 5,
+      "cannabinoid_verified": true,
+      "terp_verified": true
+    },
+    {
+      "id": 100111,
+      "brand": "Head Change",
       "name": "Coughman Stadium · Sauce Cart",
       "batch": "4893",
       "date": "2023-05-22",
@@ -6055,7 +6108,7 @@
       "terp_verified": true
     },
     {
-      "id": 100111,
+      "id": 100112,
       "brand": "Head Change",
       "name": "Crambrulee · Live Sugar",
       "batch": "8803",
@@ -6108,7 +6161,7 @@
       "terp_verified": true
     },
     {
-      "id": 100112,
+      "id": 100113,
       "brand": "Head Change",
       "name": "Cranberry Cough · Live Badder",
       "batch": "10998",
@@ -6163,7 +6216,7 @@
       "terp_verified": true
     },
     {
-      "id": 100113,
+      "id": 100114,
       "brand": "Head Change",
       "name": "Cranberry Cough · Live Sugar",
       "batch": "10999",
@@ -6220,7 +6273,7 @@
       "terp_verified": true
     },
     {
-      "id": 100114,
+      "id": 100115,
       "brand": "Head Change",
       "name": "Crem · Live Badder",
       "batch": "8363",
@@ -6274,7 +6327,7 @@
       "terp_verified": true
     },
     {
-      "id": 100115,
+      "id": 100116,
       "brand": "Head Change",
       "name": "Crepes · Live Badder",
       "batch": "10811",
@@ -6330,7 +6383,7 @@
       "terp_verified": true
     },
     {
-      "id": 100116,
+      "id": 100117,
       "brand": "Head Change",
       "name": "Crepes · Live Sugar",
       "batch": "10843",
@@ -6387,7 +6440,7 @@
       "terp_verified": true
     },
     {
-      "id": 100117,
+      "id": 100118,
       "brand": "Head Change",
       "name": "Crumbreath · Live Sugar",
       "batch": "4757",
@@ -6446,7 +6499,7 @@
       "terp_verified": true
     },
     {
-      "id": 100118,
+      "id": 100119,
       "brand": "Head Change",
       "name": "Crumbreath · Sauce Cart",
       "batch": "4770",
@@ -6505,7 +6558,7 @@
       "terp_verified": true
     },
     {
-      "id": 100119,
+      "id": 100120,
       "brand": "Head Change",
       "name": "Crunch Wrapped · Live Slush",
       "batch": "10984",
@@ -6559,7 +6612,7 @@
       "terp_verified": true
     },
     {
-      "id": 100120,
+      "id": 100121,
       "brand": "Head Change",
       "name": "CrypDoh · Live Rosin",
       "batch": "11894",
@@ -6613,7 +6666,7 @@
       "terp_verified": true
     },
     {
-      "id": 100121,
+      "id": 100122,
       "brand": "Head Change",
       "name": "Crystal Vision · Live Rosin Cart",
       "batch": "11487",
@@ -6668,7 +6721,7 @@
       "terp_verified": true
     },
     {
-      "id": 100122,
+      "id": 100123,
       "brand": "Head Change",
       "name": "Cyborgello · Live Rosin",
       "batch": "Saint Louis, MO 63147",
@@ -6724,7 +6777,7 @@
       "terp_verified": true
     },
     {
-      "id": 100123,
+      "id": 100124,
       "brand": "Head Change",
       "name": "Dabatomic · Live Badder",
       "batch": "1A40C0300002906000091585",
@@ -6760,7 +6813,7 @@
       "cannabinoids": null
     },
     {
-      "id": 100124,
+      "id": 100125,
       "brand": "Head Change",
       "name": "Dabby Yankee · Live Resin AIO",
       "batch": "1A40C0300002906000171840",
@@ -6817,7 +6870,7 @@
       "terp_verified": true
     },
     {
-      "id": 100125,
+      "id": 100126,
       "brand": "Head Change",
       "name": "Dabby Yankee · Sauce Cart",
       "batch": "1A40C0300002906000171839",
@@ -6874,7 +6927,7 @@
       "terp_verified": true
     },
     {
-      "id": 100126,
+      "id": 100127,
       "brand": "Head Change",
       "name": "Dabby Yankee · Live Badder",
       "batch": "1A40C0300002906000211310",
@@ -6930,7 +6983,7 @@
       "terp_verified": true
     },
     {
-      "id": 100127,
+      "id": 100128,
       "brand": "Head Change",
       "name": "Daily Bread · Sauce Cart",
       "batch": "Unlisted",
@@ -6977,7 +7030,7 @@
       "terp_verified": false
     },
     {
-      "id": 100128,
+      "id": 100129,
       "brand": "Head Change",
       "name": "Dancin' Dog OG · Sauce Cart",
       "batch": "8027",
@@ -7030,7 +7083,7 @@
       "terp_verified": true
     },
     {
-      "id": 100129,
+      "id": 100130,
       "brand": "Head Change",
       "name": "Dang O' Kush · Live Badder",
       "batch": "10123",
@@ -7085,7 +7138,7 @@
       "terp_verified": true
     },
     {
-      "id": 100130,
+      "id": 100131,
       "brand": "Head Change",
       "name": "Dang O' Kush · Live Sugar",
       "batch": "10206",
@@ -7139,7 +7192,7 @@
       "terp_verified": true
     },
     {
-      "id": 100131,
+      "id": 100132,
       "brand": "Head Change",
       "name": "Dank Dessert · Live Badder",
       "batch": "10205",
@@ -7192,7 +7245,7 @@
       "terp_verified": true
     },
     {
-      "id": 100132,
+      "id": 100133,
       "brand": "Head Change",
       "name": "Dank Dessert · Live Sugar",
       "batch": "10355",
@@ -7249,7 +7302,7 @@
       "terp_verified": true
     },
     {
-      "id": 100133,
+      "id": 100134,
       "brand": "Head Change",
       "name": "Dank Nebula · Sauce Cart",
       "batch": "8702",
@@ -7303,7 +7356,7 @@
       "terp_verified": true
     },
     {
-      "id": 100134,
+      "id": 100135,
       "brand": "Head Change",
       "name": "Dawns Cherry Limeade #44 · Live Badder",
       "batch": "12121",
@@ -7357,7 +7410,7 @@
       "terp_verified": true
     },
     {
-      "id": 100135,
+      "id": 100136,
       "brand": "Head Change",
       "name": "Day Dreamz · Mini Hash Hole",
       "batch": "1A40C0300002906000171662",
@@ -7405,7 +7458,7 @@
       "terp_verified": true
     },
     {
-      "id": 100136,
+      "id": 100137,
       "brand": "Head Change",
       "name": "Dead Tour · Live Badder",
       "batch": "10685",
@@ -7460,7 +7513,7 @@
       "terp_verified": true
     },
     {
-      "id": 100137,
+      "id": 100138,
       "brand": "Head Change",
       "name": "Dead Tour · Live Resin AIO",
       "batch": "10673",
@@ -7516,7 +7569,7 @@
       "terp_verified": true
     },
     {
-      "id": 100138,
+      "id": 100139,
       "brand": "Head Change",
       "name": "Dead Tour · Live Sugar",
       "batch": "10684",
@@ -7572,7 +7625,7 @@
       "terp_verified": true
     },
     {
-      "id": 100139,
+      "id": 100140,
       "brand": "Head Change",
       "name": "Dead Tour '23 · Sauce Cart",
       "batch": "4041",
@@ -7629,7 +7682,7 @@
       "terp_verified": true
     },
     {
-      "id": 100140,
+      "id": 100141,
       "brand": "Head Change",
       "name": "Dead Tour '23 · Live Sugar",
       "batch": "4414",
@@ -7688,7 +7741,7 @@
       "terp_verified": true
     },
     {
-      "id": 100141,
+      "id": 100142,
       "brand": "Head Change",
       "name": "Diaper Funk · Sauce Cart",
       "batch": "8201",
@@ -7740,7 +7793,7 @@
       "terp_verified": true
     },
     {
-      "id": 100142,
+      "id": 100143,
       "brand": "Head Change",
       "name": "Diesel Dojo · Live Badder",
       "batch": "1A40C0300002906000181892",
@@ -7794,7 +7847,7 @@
       "terp_verified": true
     },
     {
-      "id": 100143,
+      "id": 100144,
       "brand": "Head Change",
       "name": "Diesel Dojo · Sauce Cart",
       "batch": "1A40C0300002906000171578",
@@ -7847,7 +7900,7 @@
       "terp_verified": true
     },
     {
-      "id": 100144,
+      "id": 100145,
       "brand": "Head Change",
       "name": "Diesel Weasel · Live Badder",
       "batch": "12583",
@@ -7903,7 +7956,7 @@
       "terp_verified": true
     },
     {
-      "id": 100145,
+      "id": 100146,
       "brand": "Head Change",
       "name": "Disco Funk · Live Rosin Cart",
       "batch": "11145",
@@ -7957,7 +8010,7 @@
       "terp_verified": true
     },
     {
-      "id": 100146,
+      "id": 100147,
       "brand": "Head Change",
       "name": "Drip Drop · Live Badder",
       "batch": "10928",
@@ -8012,7 +8065,7 @@
       "terp_verified": true
     },
     {
-      "id": 100147,
+      "id": 100148,
       "brand": "Head Change",
       "name": "Drip Drop · Live Sugar",
       "batch": "10927",
@@ -8067,7 +8120,7 @@
       "terp_verified": true
     },
     {
-      "id": 100148,
+      "id": 100149,
       "brand": "Head Change",
       "name": "Dub Trop · Live Rosin",
       "batch": "11715",
@@ -8119,7 +8172,7 @@
       "terp_verified": true
     },
     {
-      "id": 100149,
+      "id": 100150,
       "brand": "Head Change",
       "name": "Dumpsta Doves · Live Sugar",
       "batch": "8091",
@@ -8171,7 +8224,7 @@
       "terp_verified": true
     },
     {
-      "id": 100150,
+      "id": 100151,
       "brand": "Head Change",
       "name": "Durban Boogaloo · Live Rosin Cart",
       "batch": "1A40C0300002906000171222",
@@ -8225,7 +8278,7 @@
       "terp_verified": true
     },
     {
-      "id": 100151,
+      "id": 100152,
       "brand": "Head Change",
       "name": "Durban Boogaloo · Live Rosin",
       "batch": "1A40C0300002906000188231",
@@ -8281,7 +8334,7 @@
       "terp_verified": true
     },
     {
-      "id": 100152,
+      "id": 100153,
       "brand": "Head Change",
       "name": "Electric Slide · Live Slush",
       "batch": "11080",
@@ -8335,7 +8388,7 @@
       "terp_verified": true
     },
     {
-      "id": 100153,
+      "id": 100154,
       "brand": "Head Change",
       "name": "Elusive · Live Rosin",
       "batch": "Saint Louis, MO 63147",
@@ -8391,7 +8444,7 @@
       "terp_verified": true
     },
     {
-      "id": 100154,
+      "id": 100155,
       "brand": "Head Change",
       "name": "Emmaginary Grapes · Live Badder",
       "batch": "10122",
@@ -8447,7 +8500,7 @@
       "terp_verified": true
     },
     {
-      "id": 100155,
+      "id": 100156,
       "brand": "Head Change",
       "name": "Emmaginary Grapes · Live Sugar",
       "batch": "10207",
@@ -8502,7 +8555,7 @@
       "terp_verified": true
     },
     {
-      "id": 100156,
+      "id": 100157,
       "brand": "Head Change",
       "name": "Enforcer · Live Rosin",
       "batch": "11201",
@@ -8555,7 +8608,7 @@
       "terp_verified": true
     },
     {
-      "id": 100157,
+      "id": 100158,
       "brand": "Head Change",
       "name": "Evergreen Reefer · Live Badder",
       "batch": "11122",
@@ -8612,7 +8665,7 @@
       "terp_verified": true
     },
     {
-      "id": 100158,
+      "id": 100159,
       "brand": "Head Change",
       "name": "Evergreen Reefer · Live Sugar",
       "batch": "11212",
@@ -8671,7 +8724,7 @@
       "terp_verified": true
     },
     {
-      "id": 100159,
+      "id": 100160,
       "brand": "Head Change",
       "name": "FaceMelt · Sauce Cart",
       "batch": "8190",
@@ -8723,7 +8776,7 @@
       "terp_verified": true
     },
     {
-      "id": 100160,
+      "id": 100161,
       "brand": "Head Change",
       "name": "Family Affair · Live Badder",
       "batch": "Unlisted",
@@ -8770,7 +8823,7 @@
       "terp_verified": false
     },
     {
-      "id": 100161,
+      "id": 100162,
       "brand": "Head Change",
       "name": "Fat Kids Cake · Live Badder",
       "batch": "10929",
@@ -8824,7 +8877,7 @@
       "terp_verified": true
     },
     {
-      "id": 100162,
+      "id": 100163,
       "brand": "Head Change",
       "name": "Fat Kids Cake · Live Sugar",
       "batch": "10930",
@@ -8877,7 +8930,7 @@
       "terp_verified": true
     },
     {
-      "id": 100163,
+      "id": 100164,
       "brand": "Head Change",
       "name": "Fee Fi Fo · Live Rosin",
       "batch": "11436",
@@ -8931,7 +8984,7 @@
       "terp_verified": true
     },
     {
-      "id": 100164,
+      "id": 100165,
       "brand": "Head Change",
       "name": "Fermented Fruit · Mini Hash Hole",
       "batch": "1A40C0300002906000171828",
@@ -8984,7 +9037,7 @@
       "terp_verified": true
     },
     {
-      "id": 100165,
+      "id": 100166,
       "brand": "Head Change",
       "name": "Flan-Berry · Sauce Cart",
       "batch": "7948",
@@ -9035,7 +9088,7 @@
       "terp_verified": true
     },
     {
-      "id": 100166,
+      "id": 100167,
       "brand": "Head Change",
       "name": "Flavor God · Live Badder",
       "batch": "10502",
@@ -9087,7 +9140,7 @@
       "terp_verified": true
     },
     {
-      "id": 100167,
+      "id": 100168,
       "brand": "Head Change",
       "name": "Flavor God · Live Sugar",
       "batch": "10526",
@@ -9141,7 +9194,7 @@
       "terp_verified": true
     },
     {
-      "id": 100168,
+      "id": 100169,
       "brand": "Head Change",
       "name": "Flex Fuel · Live Rosin Cart",
       "batch": "1A40C0300002906000172199",
@@ -9195,7 +9248,7 @@
       "terp_verified": true
     },
     {
-      "id": 100169,
+      "id": 100170,
       "brand": "Head Change",
       "name": "Flip Flop Haze · Live Sugar",
       "batch": "8158",
@@ -9249,7 +9302,7 @@
       "terp_verified": true
     },
     {
-      "id": 100170,
+      "id": 100171,
       "brand": "Head Change",
       "name": "FlipFlop Haze · Sauce Cart",
       "batch": "8680",
@@ -9305,7 +9358,7 @@
       "terp_verified": true
     },
     {
-      "id": 100171,
+      "id": 100172,
       "brand": "Head Change",
       "name": "FLO · Live Badder",
       "batch": "8770",
@@ -9360,7 +9413,7 @@
       "terp_verified": true
     },
     {
-      "id": 100172,
+      "id": 100173,
       "brand": "Head Change",
       "name": "Florida Purple · Live Rosin",
       "batch": "3888",
@@ -9418,7 +9471,7 @@
       "terp_verified": true
     },
     {
-      "id": 100173,
+      "id": 100174,
       "brand": "Head Change",
       "name": "Florider Zkurple · Live Badder",
       "batch": "3699",
@@ -9474,7 +9527,7 @@
       "terp_verified": true
     },
     {
-      "id": 100174,
+      "id": 100175,
       "brand": "Head Change",
       "name": "Forbidden Fanta · Live Resin AIO",
       "batch": "1A40C0300002906000171300",
@@ -9535,7 +9588,7 @@
       "terp_verified": true
     },
     {
-      "id": 100175,
+      "id": 100176,
       "brand": "Head Change",
       "name": "Forbidden Fanta · Live Badder",
       "batch": "1A40C0300002906000181264",
@@ -9596,7 +9649,7 @@
       "terp_verified": true
     },
     {
-      "id": 100176,
+      "id": 100177,
       "brand": "Head Change",
       "name": "French 42 · Live Rosin",
       "batch": "12326",
@@ -9651,7 +9704,7 @@
       "terp_verified": true
     },
     {
-      "id": 100177,
+      "id": 100178,
       "brand": "Head Change",
       "name": "Fresh Produce · Sauce Cart",
       "batch": "Unlisted",
@@ -9698,7 +9751,7 @@
       "terp_verified": false
     },
     {
-      "id": 100178,
+      "id": 100179,
       "brand": "Head Change",
       "name": "Fresh Produce #11 · Sauce Cart",
       "batch": "1A40C0300002906000171534",
@@ -9754,7 +9807,7 @@
       "terp_verified": true
     },
     {
-      "id": 100179,
+      "id": 100180,
       "brand": "Head Change",
       "name": "Fresh Produce #15 · Sauce Cart",
       "batch": "1A40C0300002906000171534",
@@ -9810,7 +9863,7 @@
       "terp_verified": true
     },
     {
-      "id": 100180,
+      "id": 100181,
       "brand": "Head Change",
       "name": "Fresh Produce #16 · Sauce Cart",
       "batch": "8737",
@@ -9865,7 +9918,7 @@
       "terp_verified": true
     },
     {
-      "id": 100181,
+      "id": 100182,
       "brand": "Head Change",
       "name": "Fresh Produce #18 · Live Rosin Cart",
       "batch": "9010",
@@ -9922,7 +9975,7 @@
       "terp_verified": true
     },
     {
-      "id": 100182,
+      "id": 100183,
       "brand": "Head Change",
       "name": "Fresh Produce #2 · Live Rosin",
       "batch": "4336",
@@ -9978,7 +10031,7 @@
       "terp_verified": true
     },
     {
-      "id": 100183,
+      "id": 100184,
       "brand": "Head Change",
       "name": "Fresh Produce #20 · Live Rosin Cart",
       "batch": "9082",
@@ -10032,7 +10085,7 @@
       "terp_verified": true
     },
     {
-      "id": 100184,
+      "id": 100185,
       "brand": "Head Change",
       "name": "Fresh Produce #23 · Live Rosin",
       "batch": "10353",
@@ -10088,7 +10141,7 @@
       "terp_verified": true
     },
     {
-      "id": 100185,
+      "id": 100186,
       "brand": "Head Change",
       "name": "Fresh Produce #24 · Live Rosin Cart",
       "batch": "10747",
@@ -10133,7 +10186,7 @@
       "terp_verified": true
     },
     {
-      "id": 100186,
+      "id": 100187,
       "brand": "Head Change",
       "name": "Fresh Produce #26 · Live Rosin Cart",
       "batch": "11987",
@@ -10184,7 +10237,7 @@
       "terp_verified": true
     },
     {
-      "id": 100187,
+      "id": 100188,
       "brand": "Head Change",
       "name": "Fresh Produce #3 · Live Rosin",
       "batch": "1A40C0300002906000171534",
@@ -10240,7 +10293,7 @@
       "terp_verified": true
     },
     {
-      "id": 100188,
+      "id": 100189,
       "brand": "Head Change",
       "name": "Fresh Produce #30 · Live Rosin Cart",
       "batch": "1A40C0300002906000171152",
@@ -10295,7 +10348,7 @@
       "terp_verified": true
     },
     {
-      "id": 100189,
+      "id": 100190,
       "brand": "Head Change",
       "name": "Fresh Produce #32 · Live Rosin",
       "batch": "1A40C0300002906000152855",
@@ -10351,7 +10404,7 @@
       "terp_verified": true
     },
     {
-      "id": 100190,
+      "id": 100191,
       "brand": "Head Change",
       "name": "Fresh Produce #33 · Live Badder",
       "batch": "1A40C0300002906000181774",
@@ -10406,7 +10459,7 @@
       "terp_verified": true
     },
     {
-      "id": 100191,
+      "id": 100192,
       "brand": "Head Change",
       "name": "Fresh Produce #33 · Sauce Cart",
       "batch": "1A40C0300002906000171674",
@@ -10461,7 +10514,7 @@
       "terp_verified": true
     },
     {
-      "id": 100192,
+      "id": 100193,
       "brand": "Head Change",
       "name": "FrootRot · Live Badder",
       "batch": "10725",
@@ -10515,7 +10568,7 @@
       "terp_verified": true
     },
     {
-      "id": 100193,
+      "id": 100194,
       "brand": "Head Change",
       "name": "FrootRot · Live Sugar",
       "batch": "10726",
@@ -10569,7 +10622,7 @@
       "terp_verified": true
     },
     {
-      "id": 100194,
+      "id": 100195,
       "brand": "Head Change",
       "name": "FrootShine · Live Rosin",
       "batch": "4505",
@@ -10627,7 +10680,7 @@
       "terp_verified": true
     },
     {
-      "id": 100195,
+      "id": 100196,
       "brand": "Head Change",
       "name": "FrootShine · Live Badder",
       "batch": "4505",
@@ -10685,7 +10738,7 @@
       "terp_verified": true
     },
     {
-      "id": 100196,
+      "id": 100197,
       "brand": "Head Change",
       "name": "Frootylicious OG · Live Badder",
       "batch": "4388",
@@ -10738,7 +10791,7 @@
       "terp_verified": true
     },
     {
-      "id": 100197,
+      "id": 100198,
       "brand": "Head Change",
       "name": "Frootylicious OG · Live Sugar",
       "batch": "4388",
@@ -10791,7 +10844,7 @@
       "terp_verified": true
     },
     {
-      "id": 100198,
+      "id": 100199,
       "brand": "Head Change",
       "name": "Frootylicious OG · Sauce Cart",
       "batch": "4388",
@@ -10844,7 +10897,7 @@
       "terp_verified": true
     },
     {
-      "id": 100199,
+      "id": 100200,
       "brand": "Head Change",
       "name": "Frosted Kush Loops · Mini Hash Hole",
       "batch": "1A40C0300002906000171643",
@@ -10897,7 +10950,7 @@
       "terp_verified": true
     },
     {
-      "id": 100200,
+      "id": 100201,
       "brand": "Head Change",
       "name": "Frosted LemonHeads · Live Sugar",
       "batch": "10683",
@@ -10956,7 +11009,7 @@
       "terp_verified": true
     },
     {
-      "id": 100201,
+      "id": 100202,
       "brand": "Head Change",
       "name": "Frosted LemonHeads · Live Badder",
       "batch": "10531",
@@ -11013,7 +11066,7 @@
       "terp_verified": true
     },
     {
-      "id": 100202,
+      "id": 100203,
       "brand": "Head Change",
       "name": "Frosted LemonHeads · Sauce Cart",
       "batch": "10675",
@@ -11071,7 +11124,7 @@
       "terp_verified": true
     },
     {
-      "id": 100203,
+      "id": 100204,
       "brand": "Head Change",
       "name": "Fruit Snackz · Live Badder",
       "batch": "1A40C0300002906000115334",
@@ -11107,7 +11160,7 @@
       "cannabinoids": null
     },
     {
-      "id": 100204,
+      "id": 100205,
       "brand": "Head Change",
       "name": "Funkenstein · Live Rosin",
       "batch": "12002",
@@ -11162,7 +11215,7 @@
       "terp_verified": true
     },
     {
-      "id": 100205,
+      "id": 100206,
       "brand": "Head Change",
       "name": "Funky Jelly · Sauce Cart",
       "batch": "Saint Louis, MO 63147",
@@ -11203,7 +11256,7 @@
       "terp_verified": false
     },
     {
-      "id": 100206,
+      "id": 100207,
       "brand": "Head Change",
       "name": "Funky Monkey · Live Rosin",
       "batch": "4264",
@@ -11261,7 +11314,7 @@
       "terp_verified": true
     },
     {
-      "id": 100207,
+      "id": 100208,
       "brand": "Head Change",
       "name": "Funky Pajamas · Live Badder",
       "batch": "1A40C0300002906000174352",
@@ -11321,7 +11374,7 @@
       "terp_verified": true
     },
     {
-      "id": 100208,
+      "id": 100209,
       "brand": "Head Change",
       "name": "Galactic Funk · Mini Hash Hole",
       "batch": "1A40C0300002906000171396",
@@ -11382,7 +11435,7 @@
       "terp_verified": true
     },
     {
-      "id": 100209,
+      "id": 100210,
       "brand": "Head Change",
       "name": "Galaxy Gush · Live Rosin",
       "batch": "11970",
@@ -11435,7 +11488,7 @@
       "terp_verified": true
     },
     {
-      "id": 100210,
+      "id": 100211,
       "brand": "Head Change",
       "name": "Gangster Funk · Live Rosin",
       "batch": "9255",
@@ -11490,7 +11543,7 @@
       "terp_verified": true
     },
     {
-      "id": 100211,
+      "id": 100212,
       "brand": "Head Change",
       "name": "Garbage Pail Kush · Live Rosin",
       "batch": "8688",
@@ -11543,7 +11596,7 @@
       "terp_verified": true
     },
     {
-      "id": 100212,
+      "id": 100213,
       "brand": "Head Change",
       "name": "Garlic Breath · Live Rosin AIO",
       "batch": "1A40C0300002906000171489",
@@ -11601,7 +11654,7 @@
       "terp_verified": true
     },
     {
-      "id": 100213,
+      "id": 100214,
       "brand": "Head Change",
       "name": "Garlic Breath · Live Rosin Cart",
       "batch": "1A40C0300002906000171823",
@@ -11659,7 +11712,7 @@
       "terp_verified": true
     },
     {
-      "id": 100214,
+      "id": 100215,
       "brand": "Head Change",
       "name": "Garlic Breath · Live Rosin",
       "batch": "1A40C0300002906000222154",
@@ -11716,7 +11769,7 @@
       "terp_verified": true
     },
     {
-      "id": 100215,
+      "id": 100216,
       "brand": "Head Change",
       "name": "Gary Busey Breath · Live Badder",
       "batch": "3686",
@@ -11772,7 +11825,7 @@
       "terp_verified": true
     },
     {
-      "id": 100216,
+      "id": 100217,
       "brand": "Head Change",
       "name": "Gascotti Tint · Sauce Cart",
       "batch": "5302",
@@ -11830,7 +11883,7 @@
       "terp_verified": true
     },
     {
-      "id": 100217,
+      "id": 100218,
       "brand": "Head Change",
       "name": "Gaseroni & Cheeze · Sauce Cart",
       "batch": "4397",
@@ -11889,7 +11942,7 @@
       "terp_verified": true
     },
     {
-      "id": 100218,
+      "id": 100219,
       "brand": "Head Change",
       "name": "Gaseroni & Cheeze · Live Sugar",
       "batch": "4397",
@@ -11948,7 +12001,7 @@
       "terp_verified": true
     },
     {
-      "id": 100219,
+      "id": 100220,
       "brand": "Head Change",
       "name": "Gas Leak · Live Badder",
       "batch": "1A40C0300002906000211253",
@@ -12005,7 +12058,7 @@
       "terp_verified": true
     },
     {
-      "id": 100220,
+      "id": 100221,
       "brand": "Head Change",
       "name": "Gas Leak · Sauce Cart",
       "batch": "1A40C0300002906000171798",
@@ -12062,7 +12115,7 @@
       "terp_verified": true
     },
     {
-      "id": 100221,
+      "id": 100222,
       "brand": "Head Change",
       "name": "Gas Orchid · Live Rosin",
       "batch": "9978",
@@ -12116,7 +12169,7 @@
       "terp_verified": true
     },
     {
-      "id": 100222,
+      "id": 100223,
       "brand": "Head Change",
       "name": "Gasquatch · Live Rosin",
       "batch": "10134",
@@ -12170,7 +12223,7 @@
       "terp_verified": true
     },
     {
-      "id": 100223,
+      "id": 100224,
       "brand": "Head Change",
       "name": "Ghost Train Haze · Live Rosin",
       "batch": "1A40C0300002906000175734",
@@ -12228,7 +12281,7 @@
       "terp_verified": true
     },
     {
-      "id": 100224,
+      "id": 100225,
       "brand": "Head Change",
       "name": "Gluecoma · Live Badder",
       "batch": "6440",
@@ -12283,7 +12336,7 @@
       "terp_verified": true
     },
     {
-      "id": 100225,
+      "id": 100226,
       "brand": "Head Change",
       "name": "Gobstopper Gas · Sauce Cart",
       "batch": "1A40C0300002906000171304",
@@ -12344,7 +12397,7 @@
       "terp_verified": true
     },
     {
-      "id": 100226,
+      "id": 100227,
       "brand": "Head Change",
       "name": "GodSmack #3 · Sauce Cart",
       "batch": "4783",
@@ -12404,7 +12457,7 @@
       "terp_verified": true
     },
     {
-      "id": 100227,
+      "id": 100228,
       "brand": "Head Change",
       "name": "Golden Goat Trip · Sauce Cart",
       "batch": "4278",
@@ -12465,7 +12518,7 @@
       "terp_verified": true
     },
     {
-      "id": 100228,
+      "id": 100229,
       "brand": "Head Change",
       "name": "Golden Goat Trip · Live Badder",
       "batch": "4441",
@@ -12526,7 +12579,7 @@
       "terp_verified": true
     },
     {
-      "id": 100229,
+      "id": 100230,
       "brand": "Head Change",
       "name": "GooglyMoogly · Live Sugar",
       "batch": "9037",
@@ -12582,7 +12635,7 @@
       "terp_verified": true
     },
     {
-      "id": 100230,
+      "id": 100231,
       "brand": "Head Change",
       "name": "GrandDaddy Dial Up · Live Sugar",
       "batch": "4458",
@@ -12642,7 +12695,7 @@
       "terp_verified": true
     },
     {
-      "id": 100231,
+      "id": 100232,
       "brand": "Head Change",
       "name": "Grand Pied (BIGFOOT) · Live Sugar",
       "batch": "9506",
@@ -12697,7 +12750,7 @@
       "terp_verified": true
     },
     {
-      "id": 100232,
+      "id": 100233,
       "brand": "Head Change",
       "name": "GrapeBeard's Bounty · Sauce Cart",
       "batch": "5649",
@@ -12754,7 +12807,7 @@
       "terp_verified": true
     },
     {
-      "id": 100233,
+      "id": 100234,
       "brand": "Head Change",
       "name": "Graped Out · Live Rosin",
       "batch": "10111",
@@ -12808,7 +12861,7 @@
       "terp_verified": true
     },
     {
-      "id": 100234,
+      "id": 100235,
       "brand": "Head Change",
       "name": "Grape Escape · Live Badder",
       "batch": "1A40C0300002906000181574",
@@ -12867,7 +12920,7 @@
       "terp_verified": true
     },
     {
-      "id": 100235,
+      "id": 100236,
       "brand": "Head Change",
       "name": "Grape Escape · Live Resin AIO",
       "batch": "1A40C0300002906000171830",
@@ -12922,7 +12975,7 @@
       "terp_verified": true
     },
     {
-      "id": 100236,
+      "id": 100237,
       "brand": "Head Change",
       "name": "Grape Escape · Live Sugar",
       "batch": "1A40C0300002906000181588",
@@ -12983,7 +13036,7 @@
       "terp_verified": true
     },
     {
-      "id": 100237,
+      "id": 100238,
       "brand": "Head Change",
       "name": "Grape Galaxy Gridlock · Live Rosin",
       "batch": "1A40C0300002906000188946",
@@ -13037,7 +13090,7 @@
       "terp_verified": true
     },
     {
-      "id": 100238,
+      "id": 100239,
       "brand": "Head Change",
       "name": "Grape Galaxy Gridlock · Live Rosin AIO",
       "batch": "1A40C0300002906000171574",
@@ -13092,7 +13145,7 @@
       "terp_verified": true
     },
     {
-      "id": 100239,
+      "id": 100240,
       "brand": "Head Change",
       "name": "Grape Gas · Live Rosin",
       "batch": "1A40C0300002906000175412",
@@ -13148,7 +13201,7 @@
       "terp_verified": true
     },
     {
-      "id": 100240,
+      "id": 100241,
       "brand": "Head Change",
       "name": "Grape Junky #7 · Live Rosin",
       "batch": "1A40C0300002906000175513",
@@ -13198,7 +13251,7 @@
       "terp_verified": true
     },
     {
-      "id": 100241,
+      "id": 100242,
       "brand": "Head Change",
       "name": "Grape Nebula · Live Badder",
       "batch": "4808",
@@ -13259,7 +13312,7 @@
       "terp_verified": true
     },
     {
-      "id": 100242,
+      "id": 100243,
       "brand": "Head Change",
       "name": "Grape Nebula · Sauce Cart",
       "batch": "4782",
@@ -13318,7 +13371,7 @@
       "terp_verified": true
     },
     {
-      "id": 100243,
+      "id": 100244,
       "brand": "Head Change",
       "name": "Grape Pudding · Live Sugar",
       "batch": "8639",
@@ -13373,7 +13426,7 @@
       "terp_verified": true
     },
     {
-      "id": 100244,
+      "id": 100245,
       "brand": "Head Change",
       "name": "Grape Scott! · Sauce Cart",
       "batch": "Saint Louis, MO 63147",
@@ -13414,7 +13467,7 @@
       "terp_verified": false
     },
     {
-      "id": 100245,
+      "id": 100246,
       "brand": "Head Change",
       "name": "Grape Space Wrangler · Live Badder",
       "batch": "4506",
@@ -13473,7 +13526,7 @@
       "terp_verified": true
     },
     {
-      "id": 100246,
+      "id": 100247,
       "brand": "Head Change",
       "name": "Grape Space Wrangler · Sauce Cart",
       "batch": "4506",
@@ -13532,7 +13585,7 @@
       "terp_verified": true
     },
     {
-      "id": 100247,
+      "id": 100248,
       "brand": "Head Change",
       "name": "Grape Zing Pop · Mini Hash Hole",
       "batch": "1A40C0300002906000171458",
@@ -13583,7 +13636,7 @@
       "terp_verified": true
     },
     {
-      "id": 100248,
+      "id": 100249,
       "brand": "Head Change",
       "name": "Grateful Funk · Live Rosin",
       "batch": "8601",
@@ -13636,7 +13689,7 @@
       "terp_verified": true
     },
     {
-      "id": 100249,
+      "id": 100250,
       "brand": "Head Change",
       "name": "Gravy Robber · Live Sugar",
       "batch": "11200",
@@ -13693,7 +13746,7 @@
       "terp_verified": true
     },
     {
-      "id": 100250,
+      "id": 100251,
       "brand": "Head Change",
       "name": "Grease Cloud · Mini Hash Hole",
       "batch": "1A40C0300002906000171530",
@@ -13743,7 +13796,7 @@
       "terp_verified": true
     },
     {
-      "id": 100251,
+      "id": 100252,
       "brand": "Head Change",
       "name": "Grease Lightning · Live Rosin",
       "batch": "9508",
@@ -13797,7 +13850,7 @@
       "terp_verified": true
     },
     {
-      "id": 100252,
+      "id": 100253,
       "brand": "Head Change",
       "name": "Grease Monkey · Live Rosin",
       "batch": "9406",
@@ -13850,7 +13903,7 @@
       "terp_verified": true
     },
     {
-      "id": 100253,
+      "id": 100254,
       "brand": "Head Change",
       "name": "Grease Trap · Sauce Cart",
       "batch": "1A40C0300002906000195276",
@@ -13873,7 +13926,7 @@
       "cannabinoids": null
     },
     {
-      "id": 100254,
+      "id": 100255,
       "brand": "Head Change",
       "name": "Grimace Gas · Sauce Cart",
       "batch": "3502",
@@ -13933,7 +13986,7 @@
       "terp_verified": true
     },
     {
-      "id": 100255,
+      "id": 100256,
       "brand": "Head Change",
       "name": "Grizzle Drizzle #11 · Live Rosin",
       "batch": "5558",
@@ -13988,7 +14041,7 @@
       "terp_verified": true
     },
     {
-      "id": 100256,
+      "id": 100257,
       "brand": "Head Change",
       "name": "Guavalution · Live Rosin",
       "batch": "11001",
@@ -14043,7 +14096,7 @@
       "terp_verified": true
     },
     {
-      "id": 100257,
+      "id": 100258,
       "brand": "Head Change",
       "name": "Guavation · Live Badder",
       "batch": "11397",
@@ -14097,7 +14150,7 @@
       "terp_verified": true
     },
     {
-      "id": 100258,
+      "id": 100259,
       "brand": "Head Change",
       "name": "Guavation · Live Sugar",
       "batch": "11395",
@@ -14152,7 +14205,7 @@
       "terp_verified": true
     },
     {
-      "id": 100259,
+      "id": 100260,
       "brand": "Head Change",
       "name": "Hashburger 'n' Paradise · Live Badder",
       "batch": "11072",
@@ -14204,7 +14257,7 @@
       "terp_verified": true
     },
     {
-      "id": 100260,
+      "id": 100261,
       "brand": "Head Change",
       "name": "HashHead Biggie OG (Vol. 5) · Live Sugar",
       "batch": "10049",
@@ -14259,7 +14312,7 @@
       "terp_verified": true
     },
     {
-      "id": 100261,
+      "id": 100262,
       "brand": "Head Change",
       "name": "HashHead Biggie OG (Vol. 5) · Live Badder",
       "batch": "9979",
@@ -14314,7 +14367,7 @@
       "terp_verified": true
     },
     {
-      "id": 100262,
+      "id": 100263,
       "brand": "Head Change",
       "name": "Hash Mouth · Mini Hash Hole",
       "batch": "1A40C0300002906000171623",
@@ -14366,7 +14419,7 @@
       "terp_verified": true
     },
     {
-      "id": 100263,
+      "id": 100264,
       "brand": "Head Change",
       "name": "Hash Sweat · Live Badder",
       "batch": "9006",
@@ -14423,7 +14476,7 @@
       "terp_verified": true
     },
     {
-      "id": 100264,
+      "id": 100265,
       "brand": "Head Change",
       "name": "Hawaiian JellyRoll · Sauce Cart",
       "batch": "Saint Louis, MO 63147",
@@ -14463,7 +14516,7 @@
       "terp_verified": false
     },
     {
-      "id": 100265,
+      "id": 100266,
       "brand": "Head Change",
       "name": "Hazy McLemon Face · Sauce Cart",
       "batch": "1A40C0300002906000171231",
@@ -14522,7 +14575,7 @@
       "terp_verified": true
     },
     {
-      "id": 100266,
+      "id": 100267,
       "brand": "Head Change",
       "name": "He Has Resin · Sauce Cart",
       "batch": "10746",
@@ -14578,7 +14631,7 @@
       "terp_verified": true
     },
     {
-      "id": 100267,
+      "id": 100268,
       "brand": "Head Change",
       "name": "High Wire Haze · Live Rosin",
       "batch": "12646",
@@ -14631,7 +14684,7 @@
       "terp_verified": true
     },
     {
-      "id": 100268,
+      "id": 100269,
       "brand": "Head Change",
       "name": "HREAMSICLE #710 · Live Badder",
       "batch": "10687",
@@ -14686,7 +14739,7 @@
       "terp_verified": true
     },
     {
-      "id": 100269,
+      "id": 100270,
       "brand": "Head Change",
       "name": "HREAMSICLE #710 · Live Sugar",
       "batch": "10728",
@@ -14742,7 +14795,7 @@
       "terp_verified": true
     },
     {
-      "id": 100270,
+      "id": 100271,
       "brand": "Head Change",
       "name": "HWY 70 · Sauce Cart",
       "batch": "1A40C0300002906000171703",
@@ -14799,7 +14852,7 @@
       "terp_verified": true
     },
     {
-      "id": 100271,
+      "id": 100272,
       "brand": "Head Change",
       "name": "HWY 70 · Live Badder",
       "batch": "1A40C0300002906000211132",
@@ -14856,7 +14909,7 @@
       "terp_verified": true
     },
     {
-      "id": 100272,
+      "id": 100273,
       "brand": "Head Change",
       "name": "HWY 70 · Live Sugar",
       "batch": "1A40C0300002906000181976",
@@ -14914,7 +14967,7 @@
       "terp_verified": true
     },
     {
-      "id": 100273,
+      "id": 100274,
       "brand": "Head Change",
       "name": "Ice Cream Paint Job #710 · Live Badder",
       "batch": "11044",
@@ -14967,7 +15020,7 @@
       "terp_verified": true
     },
     {
-      "id": 100274,
+      "id": 100275,
       "brand": "Head Change",
       "name": "Ice Cream Paint Job #710 · Live Sugar",
       "batch": "11010",
@@ -15021,7 +15074,7 @@
       "terp_verified": true
     },
     {
-      "id": 100275,
+      "id": 100276,
       "brand": "Head Change",
       "name": "Ice Z · Live Rosin",
       "batch": "10392",
@@ -15076,7 +15129,7 @@
       "terp_verified": true
     },
     {
-      "id": 100276,
+      "id": 100277,
       "brand": "Head Change",
       "name": "Isotropic · Live Rosin",
       "batch": "10530",
@@ -15131,7 +15184,7 @@
       "terp_verified": true
     },
     {
-      "id": 100277,
+      "id": 100278,
       "brand": "Head Change",
       "name": "JellyMoon · Live Rosin",
       "batch": "4333",
@@ -15189,7 +15242,7 @@
       "terp_verified": true
     },
     {
-      "id": 100278,
+      "id": 100279,
       "brand": "Head Change",
       "name": "JoeBlaze Breath · Live Sugar",
       "batch": "9665",
@@ -15241,7 +15294,7 @@
       "terp_verified": true
     },
     {
-      "id": 100279,
+      "id": 100280,
       "brand": "Head Change",
       "name": "Joshua Tree · Sauce Cart",
       "batch": "3842",
@@ -15298,7 +15351,7 @@
       "terp_verified": true
     },
     {
-      "id": 100280,
+      "id": 100281,
       "brand": "Head Change",
       "name": "Jumpin Jack Crash · Sauce Cart",
       "batch": "1A40C0300002906000171653",
@@ -15354,7 +15407,7 @@
       "terp_verified": true
     },
     {
-      "id": 100281,
+      "id": 100282,
       "brand": "Head Change",
       "name": "Jumpin Jack Crash · Live Resin AIO",
       "batch": "1A40C0300002906000171654",
@@ -15410,7 +15463,7 @@
       "terp_verified": true
     },
     {
-      "id": 100282,
+      "id": 100283,
       "brand": "Head Change",
       "name": "Jumpin Jack Crash · Live Badder",
       "batch": "1A40C0300002906000211108",
@@ -15465,7 +15518,7 @@
       "terp_verified": true
     },
     {
-      "id": 100283,
+      "id": 100284,
       "brand": "Head Change",
       "name": "Jupiter Jazz · Sauce Cart",
       "batch": "8833",
@@ -15518,7 +15571,7 @@
       "terp_verified": true
     },
     {
-      "id": 100284,
+      "id": 100285,
       "brand": "Head Change",
       "name": "KC Trap Stack · Live Rosin",
       "batch": "10603",
@@ -15572,7 +15625,7 @@
       "terp_verified": true
     },
     {
-      "id": 100285,
+      "id": 100286,
       "brand": "Head Change",
       "name": "King of The Trops · Live Rosin",
       "batch": "8978",
@@ -15628,7 +15681,7 @@
       "terp_verified": true
     },
     {
-      "id": 100286,
+      "id": 100287,
       "brand": "Head Change",
       "name": "King of the Will · Sauce Cart",
       "batch": "1A40C0300002906000171464",
@@ -15686,7 +15739,7 @@
       "terp_verified": true
     },
     {
-      "id": 100287,
+      "id": 100288,
       "brand": "Head Change",
       "name": "King of the Will · Live Badder",
       "batch": "1A40C0300002906000181683",
@@ -15744,7 +15797,7 @@
       "terp_verified": true
     },
     {
-      "id": 100288,
+      "id": 100289,
       "brand": "Head Change",
       "name": "King of the Will · Live Sugar",
       "batch": "1A40C0300002906000181696",
@@ -15802,7 +15855,7 @@
       "terp_verified": true
     },
     {
-      "id": 100289,
+      "id": 100290,
       "brand": "Head Change",
       "name": "KoCo Kisses · Live Badder",
       "batch": "10230",
@@ -15855,7 +15908,7 @@
       "terp_verified": true
     },
     {
-      "id": 100290,
+      "id": 100291,
       "brand": "Head Change",
       "name": "KoCo Kisses · Live Sugar",
       "batch": "10354",
@@ -15911,7 +15964,7 @@
       "terp_verified": true
     },
     {
-      "id": 100291,
+      "id": 100292,
       "brand": "Head Change",
       "name": "Koolade & Coladas · Live Resin AIO",
       "batch": "1A40C0300002906000171548",
@@ -15967,7 +16020,7 @@
       "terp_verified": true
     },
     {
-      "id": 100292,
+      "id": 100293,
       "brand": "Head Change",
       "name": "Kool Aid Terp Test · Sauce Cart",
       "batch": "1A40C0300002906000172136",
@@ -16022,7 +16075,7 @@
       "terp_verified": true
     },
     {
-      "id": 100293,
+      "id": 100294,
       "brand": "Head Change",
       "name": "Kool Aid Terp Test · Live Badder",
       "batch": "12509",
@@ -16074,7 +16127,7 @@
       "terp_verified": true
     },
     {
-      "id": 100294,
+      "id": 100295,
       "brand": "Head Change",
       "name": "Kool Cream Cake · Live Badder",
       "batch": "9859",
@@ -16128,7 +16181,7 @@
       "terp_verified": true
     },
     {
-      "id": 100295,
+      "id": 100296,
       "brand": "Head Change",
       "name": "Kool Cream Cake · Live Sugar",
       "batch": "9957",
@@ -16181,7 +16234,7 @@
       "terp_verified": true
     },
     {
-      "id": 100296,
+      "id": 100297,
       "brand": "Head Change",
       "name": "Krown Candy Mane · Live Sugar",
       "batch": "9666",
@@ -16234,7 +16287,7 @@
       "terp_verified": true
     },
     {
-      "id": 100297,
+      "id": 100298,
       "brand": "Head Change",
       "name": "Lady Tremaine · Sauce Cart",
       "batch": "4387",
@@ -16293,7 +16346,7 @@
       "terp_verified": true
     },
     {
-      "id": 100298,
+      "id": 100299,
       "brand": "Head Change",
       "name": "Lamontaloupe · Live Rosin",
       "batch": "1A40C0300002906000175546",
@@ -16348,7 +16401,7 @@
       "terp_verified": true
     },
     {
-      "id": 100299,
+      "id": 100300,
       "brand": "Head Change",
       "name": "Last Stop · Live Badder",
       "batch": "1A40C0300002906000211415",
@@ -16402,7 +16455,119 @@
       "terp_verified": false
     },
     {
-      "id": 100300,
+      "id": 100301,
+      "brand": "Head Change",
+      "name": "Last Stop · Sauce Cart",
+      "batch": "1A40C0300002906000171883",
+      "date": "2026-11-04",
+      "category": "Vape",
+      "format": "Sauce Cart",
+      "dominance": "",
+      "genetics": "Gas Leak × HWY70",
+      "notes": "Gassy, greasy and buttery",
+      "description": "Heavy gas and chem combine with a slightly sweet, buttery finish. Last Stop is a powerhouse featuring two Bat Country Farms strains, each bringing some uniqueness to the table.",
+      "thc": 68.7991,
+      "tac": 76.3,
+      "total": 16.282,
+      "terps": {
+        "Limonene": 2.298,
+        "β-Caryophyllene": 1.714,
+        "β-Myrcene": 1.484,
+        "Linalool": 0.899,
+        "α-Humulene": 0.471,
+        "α-Pinene": 0.432,
+        "α-Bisabolol": 0.255,
+        "Fenchol": 0.229,
+        "β-Pinene": 0.177,
+        "Guaiol": 0.111,
+        "Valencene": 0.085,
+        "Nerolidol": 0.198,
+        "Ocimene": 7.622,
+        "Terpineol": 0.307
+      },
+      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/8747ce73-66e9-40b3-b62b-1286053b0408.pdf",
+      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/8747ce73-66e9-40b3-b62b-1286053b0408.pdf",
+      "landing_url": "https://headchange710.com/pharmacopeia/last-stop-2",
+      "coverage": "full",
+      "data_quality": "original-coa-quantitative",
+      "cannabinoids": {
+        "THCA": 3.91,
+        "D9THC": 65.37,
+        "D8THC": "ND",
+        "THCV": "ND",
+        "CBDA": "ND",
+        "CBD": "ND",
+        "CBDV": "ND",
+        "CBN": "ND",
+        "CBGA": 4.19,
+        "CBG": 2.86,
+        "CBC": "ND",
+        "TOTAL_THC": 68.7991,
+        "TOTAL_CBD": "ND"
+      },
+      "coa_extraction": "original_pdf_parsed",
+      "coa_pages": 5,
+      "cannabinoid_verified": true,
+      "terp_verified": true
+    },
+    {
+      "id": 100302,
+      "brand": "Head Change",
+      "name": "Last Stop · Live Resin AIO",
+      "batch": "1A40C0300002906000171880",
+      "date": "2026-11-04",
+      "category": "Vape",
+      "format": "Live Resin AIO",
+      "dominance": "",
+      "genetics": "Gas Leak × HWY70",
+      "notes": "Gassy, greasy and buttery",
+      "description": "Heavy gas and chem combine with a slightly sweet, buttery finish. Last Stop is a powerhouse featuring two Bat Country Farms strains, each bringing some uniqueness to the table.",
+      "thc": 69.3025,
+      "tac": 76.9,
+      "total": 13.622,
+      "terps": {
+        "Limonene": 1.898,
+        "β-Caryophyllene": 1.631,
+        "β-Myrcene": 1.188,
+        "Linalool": 0.89,
+        "α-Humulene": 0.449,
+        "α-Pinene": 0.383,
+        "α-Bisabolol": 0.26,
+        "Fenchol": 0.229,
+        "β-Pinene": 0.143,
+        "Guaiol": 0.11,
+        "Valencene": 0.078,
+        "Nerolidol": 0.192,
+        "Ocimene": 5.873,
+        "Terpineol": 0.297
+      },
+      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/79367c7d-5c3e-4f26-9389-6f6de99a7d58.pdf",
+      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/79367c7d-5c3e-4f26-9389-6f6de99a7d58.pdf",
+      "landing_url": "https://headchange710.com/pharmacopeia/last-stop-3",
+      "coverage": "full",
+      "data_quality": "original-coa-quantitative",
+      "cannabinoids": {
+        "THCA": 4.37,
+        "D9THC": 65.47,
+        "D8THC": "ND",
+        "THCV": "ND",
+        "CBDA": "ND",
+        "CBD": "ND",
+        "CBDV": "ND",
+        "CBN": "ND",
+        "CBGA": 4.28,
+        "CBG": 2.82,
+        "CBC": "ND",
+        "TOTAL_THC": 69.3025,
+        "TOTAL_CBD": "ND"
+      },
+      "coa_extraction": "original_pdf_parsed",
+      "coa_pages": 5,
+      "cannabinoid_verified": true,
+      "terp_verified": true
+    },
+    {
+      "id": 100303,
       "brand": "Head Change",
       "name": "Lazy Dude Kush · Live Badder",
       "batch": "10066",
@@ -16457,7 +16622,7 @@
       "terp_verified": true
     },
     {
-      "id": 100301,
+      "id": 100304,
       "brand": "Head Change",
       "name": "Lazy Dude Kush · Live Sugar",
       "batch": "10067",
@@ -16512,7 +16677,7 @@
       "terp_verified": true
     },
     {
-      "id": 100302,
+      "id": 100305,
       "brand": "Head Change",
       "name": "Legend of FatMandu · Live Sugar",
       "batch": "4207",
@@ -16571,7 +16736,7 @@
       "terp_verified": true
     },
     {
-      "id": 100303,
+      "id": 100306,
       "brand": "Head Change",
       "name": "Lemonji · Live Badder",
       "batch": "11428",
@@ -16629,7 +16794,7 @@
       "terp_verified": true
     },
     {
-      "id": 100304,
+      "id": 100307,
       "brand": "Head Change",
       "name": "Lemonji · Live Sugar",
       "batch": "11477",
@@ -16688,7 +16853,7 @@
       "terp_verified": true
     },
     {
-      "id": 100305,
+      "id": 100308,
       "brand": "Head Change",
       "name": "Lemon Laws · Live Resin AIO",
       "batch": "1A40C0300002906000171234",
@@ -16746,7 +16911,7 @@
       "terp_verified": true
     },
     {
-      "id": 100306,
+      "id": 100309,
       "brand": "Head Change",
       "name": "Lemon Lunar Bliss · Live Badder",
       "batch": "11400",
@@ -16801,7 +16966,7 @@
       "terp_verified": true
     },
     {
-      "id": 100307,
+      "id": 100310,
       "brand": "Head Change",
       "name": "Lemon Lunar Bliss · Live Sugar",
       "batch": "11295",
@@ -16856,7 +17021,7 @@
       "terp_verified": true
     },
     {
-      "id": 100308,
+      "id": 100311,
       "brand": "Head Change",
       "name": "Lemon Peelout · Mini Hash Hole",
       "batch": "1A40C0300002906000171872",
@@ -16909,7 +17074,7 @@
       "terp_verified": true
     },
     {
-      "id": 100309,
+      "id": 100312,
       "brand": "Head Change",
       "name": "Lemon Rain · Mini Hash Hole",
       "batch": "1A40C0300002906000171685",
@@ -16963,7 +17128,7 @@
       "terp_verified": true
     },
     {
-      "id": 100310,
+      "id": 100313,
       "brand": "Head Change",
       "name": "Lemon Skunk · Sauce Cart",
       "batch": "1A40C0300002906000171885",
@@ -17019,7 +17184,7 @@
       "terp_verified": true
     },
     {
-      "id": 100311,
+      "id": 100314,
       "brand": "Head Change",
       "name": "Lemon Skunk · Live Resin AIO",
       "batch": "1A40C0300002906000171884",
@@ -17075,7 +17240,7 @@
       "terp_verified": true
     },
     {
-      "id": 100312,
+      "id": 100315,
       "brand": "Head Change",
       "name": "Limeade Scoops · Live Sugar",
       "batch": "8484",
@@ -17127,7 +17292,7 @@
       "terp_verified": true
     },
     {
-      "id": 100313,
+      "id": 100316,
       "brand": "Head Change",
       "name": "Local Fire #4 · Sauce Cart",
       "batch": "4016",
@@ -17185,7 +17350,7 @@
       "terp_verified": true
     },
     {
-      "id": 100314,
+      "id": 100317,
       "brand": "Head Change",
       "name": "Loch Ness Breath · Live Badder",
       "batch": "1A40C0300002906000181864",
@@ -17238,7 +17403,7 @@
       "terp_verified": true
     },
     {
-      "id": 100315,
+      "id": 100318,
       "brand": "Head Change",
       "name": "London SmashFruit · Live Sugar",
       "batch": "8738",
@@ -17292,7 +17457,7 @@
       "terp_verified": true
     },
     {
-      "id": 100316,
+      "id": 100319,
       "brand": "Head Change",
       "name": "Lords of Dogtown · Sauce Cart",
       "batch": "4036",
@@ -17349,7 +17514,7 @@
       "terp_verified": true
     },
     {
-      "id": 100317,
+      "id": 100320,
       "brand": "Head Change",
       "name": "Lot Talk · Live Rosin Cart",
       "batch": "8547",
@@ -17402,7 +17567,7 @@
       "terp_verified": true
     },
     {
-      "id": 100318,
+      "id": 100321,
       "brand": "Head Change",
       "name": "Louie MAC XIII · Sauce Cart",
       "batch": "4785",
@@ -17462,7 +17627,7 @@
       "terp_verified": true
     },
     {
-      "id": 100319,
+      "id": 100322,
       "brand": "Head Change",
       "name": "Louie MAC XIII · Live Sugar",
       "batch": "4811",
@@ -17523,7 +17688,7 @@
       "terp_verified": true
     },
     {
-      "id": 100320,
+      "id": 100323,
       "brand": "Head Change",
       "name": "Mafioso · Live Rosin",
       "batch": "4262",
@@ -17580,7 +17745,7 @@
       "terp_verified": true
     },
     {
-      "id": 100321,
+      "id": 100324,
       "brand": "Head Change",
       "name": "Magic Z · Live Badder",
       "batch": "4983",
@@ -17636,7 +17801,7 @@
       "terp_verified": true
     },
     {
-      "id": 100322,
+      "id": 100325,
       "brand": "Head Change",
       "name": "Magic Z · Sauce Cart",
       "batch": "4769",
@@ -17695,7 +17860,7 @@
       "terp_verified": true
     },
     {
-      "id": 100323,
+      "id": 100326,
       "brand": "Head Change",
       "name": "Mandie's Peach · Live Sugar",
       "batch": "8976",
@@ -17749,7 +17914,7 @@
       "terp_verified": true
     },
     {
-      "id": 100324,
+      "id": 100327,
       "brand": "Head Change",
       "name": "MASH · Live Badder",
       "batch": "8342",
@@ -17804,7 +17969,7 @@
       "terp_verified": true
     },
     {
-      "id": 100325,
+      "id": 100328,
       "brand": "Head Change",
       "name": "MeatWadasay · Live Rosin",
       "batch": "8822",
@@ -17856,7 +18021,7 @@
       "terp_verified": true
     },
     {
-      "id": 100326,
+      "id": 100329,
       "brand": "Head Change",
       "name": "Melted Rainbow · Mini Hash Hole",
       "batch": "1A40C0300002906000171545",
@@ -17910,7 +18075,7 @@
       "terp_verified": true
     },
     {
-      "id": 100327,
+      "id": 100330,
       "brand": "Head Change",
       "name": "Melt Mode · Live Badder",
       "batch": "1A40C0300002906000181717",
@@ -17968,7 +18133,7 @@
       "terp_verified": true
     },
     {
-      "id": 100328,
+      "id": 100331,
       "brand": "Head Change",
       "name": "Melt Mode · Live Resin AIO",
       "batch": "1A40C0300002906000171724",
@@ -18025,7 +18190,7 @@
       "terp_verified": true
     },
     {
-      "id": 100329,
+      "id": 100332,
       "brand": "Head Change",
       "name": "Melt Mode · Sauce Cart",
       "batch": "1A40C0300002906000171723",
@@ -18082,7 +18247,7 @@
       "terp_verified": true
     },
     {
-      "id": 100330,
+      "id": 100333,
       "brand": "Head Change",
       "name": "Mexican Chocolate Cake · Sauce Cart",
       "batch": "Saint Louis, MO 63147",
@@ -18123,7 +18288,7 @@
       "terp_verified": false
     },
     {
-      "id": 100331,
+      "id": 100334,
       "brand": "Head Change",
       "name": "Mezcaline · Live Badder",
       "batch": "12036",
@@ -18175,7 +18340,7 @@
       "terp_verified": true
     },
     {
-      "id": 100332,
+      "id": 100335,
       "brand": "Head Change",
       "name": "Midnight Snax · Live Badder",
       "batch": "4495",
@@ -18231,7 +18396,7 @@
       "terp_verified": true
     },
     {
-      "id": 100333,
+      "id": 100336,
       "brand": "Head Change",
       "name": "Midnight Snax · Live Sugar",
       "batch": "4495",
@@ -18287,7 +18452,7 @@
       "terp_verified": true
     },
     {
-      "id": 100334,
+      "id": 100337,
       "brand": "Head Change",
       "name": "Midnight Snax · Sauce Cart",
       "batch": "4398",
@@ -18343,7 +18508,7 @@
       "terp_verified": true
     },
     {
-      "id": 100335,
+      "id": 100338,
       "brand": "Head Change",
       "name": "Minimum Fade · Live Rosin",
       "batch": "1A40C0300002906000175404",
@@ -18399,7 +18564,7 @@
       "terp_verified": true
     },
     {
-      "id": 100336,
+      "id": 100339,
       "brand": "Head Change",
       "name": "Modified Grapes · Live Rosin",
       "batch": "1A40C0300002906000188542",
@@ -18459,7 +18624,7 @@
       "terp_verified": true
     },
     {
-      "id": 100337,
+      "id": 100340,
       "brand": "Head Change",
       "name": "Monster Breath · Live Resin AIO",
       "batch": "1A40C0300002906000171778",
@@ -18515,7 +18680,7 @@
       "terp_verified": true
     },
     {
-      "id": 100338,
+      "id": 100341,
       "brand": "Head Change",
       "name": "Monster Breath · Live Badder",
       "batch": "1A40C0300002906000211271",
@@ -18569,7 +18734,7 @@
       "terp_verified": true
     },
     {
-      "id": 100339,
+      "id": 100342,
       "brand": "Head Change",
       "name": "Monster Breath · Sauce Cart",
       "batch": "1A40C0300002906000171826",
@@ -18624,7 +18789,7 @@
       "terp_verified": true
     },
     {
-      "id": 100340,
+      "id": 100343,
       "brand": "Head Change",
       "name": "Muffin Top · Live Badder",
       "batch": "8805",
@@ -18678,7 +18843,7 @@
       "terp_verified": true
     },
     {
-      "id": 100341,
+      "id": 100344,
       "brand": "Head Change",
       "name": "Nebula Nectar · Live Rosin",
       "batch": "11963",
@@ -18731,7 +18896,7 @@
       "terp_verified": true
     },
     {
-      "id": 100342,
+      "id": 100345,
       "brand": "Head Change",
       "name": "No Hash No Cry · Live Resin AIO",
       "batch": "1A40C0300002906000171214",
@@ -18788,7 +18953,7 @@
       "terp_verified": true
     },
     {
-      "id": 100343,
+      "id": 100346,
       "brand": "Head Change",
       "name": "No Hash No Cry · Live Sugar",
       "batch": "11427",
@@ -18843,7 +19008,7 @@
       "terp_verified": true
     },
     {
-      "id": 100344,
+      "id": 100347,
       "brand": "Head Change",
       "name": "No Hash, No Cry · Live Badder",
       "batch": "11394",
@@ -18896,7 +19061,7 @@
       "terp_verified": true
     },
     {
-      "id": 100345,
+      "id": 100348,
       "brand": "Head Change",
       "name": "Nollie Kush · Live Badder",
       "batch": "11475",
@@ -18950,7 +19115,7 @@
       "terp_verified": true
     },
     {
-      "id": 100346,
+      "id": 100349,
       "brand": "Head Change",
       "name": "Nollie Kush · Sauce Cart",
       "batch": "1A40C0300002906000171409",
@@ -19011,7 +19176,7 @@
       "terp_verified": true
     },
     {
-      "id": 100347,
+      "id": 100350,
       "brand": "Head Change",
       "name": "Nollie Kush · Live Resin AIO",
       "batch": "1A40C0300002906000171196",
@@ -19072,7 +19237,7 @@
       "terp_verified": true
     },
     {
-      "id": 100348,
+      "id": 100351,
       "brand": "Head Change",
       "name": "Nollie Kush · Live Sugar",
       "batch": "11478",
@@ -19125,7 +19290,7 @@
       "terp_verified": true
     },
     {
-      "id": 100349,
+      "id": 100352,
       "brand": "Head Change",
       "name": "North Side Grease · Live Rosin",
       "batch": "10051",
@@ -19181,7 +19346,7 @@
       "terp_verified": true
     },
     {
-      "id": 100350,
+      "id": 100353,
       "brand": "Head Change",
       "name": "Octane Breath · Mini Hash Hole",
       "batch": "1A40C0300002906000171565",
@@ -19233,7 +19398,7 @@
       "terp_verified": true
     },
     {
-      "id": 100351,
+      "id": 100354,
       "brand": "Head Change",
       "name": "Off the Trop-Rope · Live Sugar",
       "batch": "9036",
@@ -19286,7 +19451,7 @@
       "terp_verified": true
     },
     {
-      "id": 100352,
+      "id": 100355,
       "brand": "Head Change",
       "name": "OG Blush · Live Badder",
       "batch": "3561",
@@ -19342,7 +19507,7 @@
       "terp_verified": true
     },
     {
-      "id": 100353,
+      "id": 100356,
       "brand": "Head Change",
       "name": "OG ChemCake · Live Rosin",
       "batch": "5561",
@@ -19394,7 +19559,7 @@
       "terp_verified": true
     },
     {
-      "id": 100354,
+      "id": 100357,
       "brand": "Head Change",
       "name": "OGKB314 · Live Rosin",
       "batch": "8817",
@@ -19447,7 +19612,7 @@
       "terp_verified": true
     },
     {
-      "id": 100355,
+      "id": 100358,
       "brand": "Head Change",
       "name": "Old School Drip · Live Rosin",
       "batch": "9222",
@@ -19498,7 +19663,7 @@
       "terp_verified": true
     },
     {
-      "id": 100356,
+      "id": 100359,
       "brand": "Head Change",
       "name": "Orange Brain Freeze · Sauce Cart",
       "batch": "3503",
@@ -19553,7 +19718,7 @@
       "terp_verified": true
     },
     {
-      "id": 100357,
+      "id": 100360,
       "brand": "Head Change",
       "name": "Orange Kush Theory · Live Badder",
       "batch": "1A40C030000291A40C030000290600017216506000148733",
@@ -19612,7 +19777,7 @@
       "terp_verified": true
     },
     {
-      "id": 100358,
+      "id": 100361,
       "brand": "Head Change",
       "name": "Orange Orbit · Live Badder",
       "batch": "8658",
@@ -19668,7 +19833,7 @@
       "terp_verified": true
     },
     {
-      "id": 100359,
+      "id": 100362,
       "brand": "Head Change",
       "name": "Orange Velvet (4.0) · Sauce Cart",
       "batch": "Unlisted",
@@ -19715,7 +19880,7 @@
       "terp_verified": false
     },
     {
-      "id": 100360,
+      "id": 100363,
       "brand": "Head Change",
       "name": "Orange Velvlatto · Sauce Cart",
       "batch": "3501",
@@ -19770,7 +19935,7 @@
       "terp_verified": true
     },
     {
-      "id": 100361,
+      "id": 100364,
       "brand": "Head Change",
       "name": "Orange Z · Live Rosin Cart",
       "batch": "8548",
@@ -19822,7 +19987,7 @@
       "terp_verified": true
     },
     {
-      "id": 100362,
+      "id": 100365,
       "brand": "Head Change",
       "name": "Oranja · Live Rosin Cart",
       "batch": "9518",
@@ -19877,7 +20042,7 @@
       "terp_verified": true
     },
     {
-      "id": 100363,
+      "id": 100366,
       "brand": "Head Change",
       "name": "Papa Burger · Live Rosin",
       "batch": "12640",
@@ -19928,7 +20093,7 @@
       "terp_verified": true
     },
     {
-      "id": 100364,
+      "id": 100367,
       "brand": "Head Change",
       "name": "Papa Burger · Live Rosin Cart",
       "batch": "Saint Louis, MO 63147",
@@ -19983,7 +20148,7 @@
       "terp_verified": true
     },
     {
-      "id": 100365,
+      "id": 100368,
       "brand": "Head Change",
       "name": "Papayallamo · Live Rosin",
       "batch": "8972",
@@ -20040,7 +20205,7 @@
       "terp_verified": true
     },
     {
-      "id": 100366,
+      "id": 100369,
       "brand": "Head Change",
       "name": "Phizzle · Live Rosin",
       "batch": "12428",
@@ -20094,7 +20259,7 @@
       "terp_verified": true
     },
     {
-      "id": 100367,
+      "id": 100370,
       "brand": "Head Change",
       "name": "Pienana · Live Badder",
       "batch": "11521",
@@ -20149,7 +20314,7 @@
       "terp_verified": true
     },
     {
-      "id": 100368,
+      "id": 100371,
       "brand": "Head Change",
       "name": "Pienana · Live Sugar",
       "batch": "11476",
@@ -20205,7 +20370,7 @@
       "terp_verified": true
     },
     {
-      "id": 100369,
+      "id": 100372,
       "brand": "Head Change",
       "name": "PigPen's Push Pop · Live Sugar",
       "batch": "8832",
@@ -20256,7 +20421,7 @@
       "terp_verified": true
     },
     {
-      "id": 100370,
+      "id": 100373,
       "brand": "Head Change",
       "name": "Pineapple Butter Cookie · Live Badder",
       "batch": "8584",
@@ -20311,7 +20476,7 @@
       "terp_verified": true
     },
     {
-      "id": 100371,
+      "id": 100374,
       "brand": "Head Change",
       "name": "Pineapple Dolewhip · Live Badder",
       "batch": "11198",
@@ -20366,7 +20531,7 @@
       "terp_verified": true
     },
     {
-      "id": 100372,
+      "id": 100375,
       "brand": "Head Change",
       "name": "Pineapple Dolewhip · Live Sugar",
       "batch": "11211",
@@ -20423,7 +20588,7 @@
       "terp_verified": true
     },
     {
-      "id": 100373,
+      "id": 100376,
       "brand": "Head Change",
       "name": "Pink Microdot · Sauce Cart",
       "batch": "3397",
@@ -20478,7 +20643,62 @@
       "terp_verified": true
     },
     {
-      "id": 100374,
+      "id": 100377,
+      "brand": "Head Change",
+      "name": "Pizza Planet · Live Rosin",
+      "batch": "1A40C0300002906000222586",
+      "date": "2026-11-13",
+      "category": "Concentrate",
+      "format": "Live Rosin",
+      "dominance": "",
+      "genetics": "Cosmic Garbage × Garlic Breath",
+      "notes": "Garlic knots and gasoline",
+      "description": "Pizza Planet dishes out savory garlic, sweet chem and earthy kush. The combination of Cosmic Garbage and Garlic Breath bring enough funk to go to infinity and beyond!",
+      "thc": 71.9329,
+      "tac": 86.1,
+      "total": 9.627,
+      "terps": {
+        "β-Caryophyllene": 3.151,
+        "Limonene": 2.578,
+        "α-Humulene": 0.832,
+        "β-Myrcene": 0.694,
+        "Linalool": 0.49,
+        "α-Bisabolol": 0.437,
+        "α-Pinene": 0.308,
+        "β-Pinene": 0.276,
+        "Fenchol": 0.178,
+        "Camphene": 0.054,
+        "Nerolidol": 0.15,
+        "Ocimene": 0.261,
+        "Terpineol": 0.218
+      },
+      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/eccfff6b-84d9-437d-a33b-695a7a1604ba.pdf",
+      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/eccfff6b-84d9-437d-a33b-695a7a1604ba.pdf",
+      "landing_url": "https://headchange710.com/pharmacopeia/pizza-planet",
+      "coverage": "full",
+      "data_quality": "original-coa-quantitative",
+      "cannabinoids": {
+        "THCA": 77.7,
+        "D9THC": 3.79,
+        "D8THC": "ND",
+        "THCV": "ND",
+        "CBDA": "ND",
+        "CBD": "ND",
+        "CBDV": "ND",
+        "CBN": "ND",
+        "CBGA": 4.58,
+        "CBG": "ND",
+        "CBC": "ND",
+        "TOTAL_THC": 71.9329,
+        "TOTAL_CBD": "ND"
+      },
+      "coa_extraction": "original_pdf_parsed",
+      "coa_pages": 5,
+      "cannabinoid_verified": true,
+      "terp_verified": true
+    },
+    {
+      "id": 100378,
       "brand": "Head Change",
       "name": "Plastic Pineapple · Sauce Cart",
       "batch": "9091",
@@ -20531,7 +20751,7 @@
       "terp_verified": true
     },
     {
-      "id": 100375,
+      "id": 100379,
       "brand": "Head Change",
       "name": "Platinum Jabroni · Live Sugar",
       "batch": "4389",
@@ -20586,7 +20806,7 @@
       "terp_verified": true
     },
     {
-      "id": 100376,
+      "id": 100380,
       "brand": "Head Change",
       "name": "Platinum Jabroni · Sauce Cart",
       "batch": "4389",
@@ -20641,7 +20861,7 @@
       "terp_verified": true
     },
     {
-      "id": 100377,
+      "id": 100381,
       "brand": "Head Change",
       "name": "Poisonberry Slushie · Live Badder",
       "batch": "4494",
@@ -20702,7 +20922,7 @@
       "terp_verified": true
     },
     {
-      "id": 100378,
+      "id": 100382,
       "brand": "Head Change",
       "name": "Poisonberry Slushie · Live Sugar",
       "batch": "4504",
@@ -20763,7 +20983,7 @@
       "terp_verified": true
     },
     {
-      "id": 100379,
+      "id": 100383,
       "brand": "Head Change",
       "name": "Poisonberry Slushie · Sauce Cart",
       "batch": "4487",
@@ -20824,7 +21044,7 @@
       "terp_verified": true
     },
     {
-      "id": 100380,
+      "id": 100384,
       "brand": "Head Change",
       "name": "Poke Punch · Live Badder",
       "batch": "10867",
@@ -20879,7 +21099,7 @@
       "terp_verified": true
     },
     {
-      "id": 100381,
+      "id": 100385,
       "brand": "Head Change",
       "name": "Poke Punch · Live Sugar",
       "batch": "10866",
@@ -20935,7 +21155,7 @@
       "terp_verified": true
     },
     {
-      "id": 100382,
+      "id": 100386,
       "brand": "Head Change",
       "name": "Puff Goblin · Mini Hash Hole",
       "batch": "1A40C0300002906000171687",
@@ -20988,7 +21208,7 @@
       "terp_verified": true
     },
     {
-      "id": 100383,
+      "id": 100387,
       "brand": "Head Change",
       "name": "Purkle-Pie · Sauce Cart",
       "batch": "Unlisted",
@@ -21035,7 +21255,7 @@
       "terp_verified": false
     },
     {
-      "id": 100384,
+      "id": 100388,
       "brand": "Head Change",
       "name": "Purple Circus · Live Sugar",
       "batch": "6439",
@@ -21090,7 +21310,7 @@
       "terp_verified": true
     },
     {
-      "id": 100385,
+      "id": 100389,
       "brand": "Head Change",
       "name": "Purple Donkey Sauce · Sauce Cart",
       "batch": "Saint Louis, MO 63147",
@@ -21131,7 +21351,7 @@
       "terp_verified": false
     },
     {
-      "id": 100386,
+      "id": 100390,
       "brand": "Head Change",
       "name": "Purple Haze · Live Rosin Cart",
       "batch": "1A40C0300002906000171611",
@@ -21184,7 +21404,7 @@
       "terp_verified": true
     },
     {
-      "id": 100387,
+      "id": 100391,
       "brand": "Head Change",
       "name": "Purple Haze · Live Badder",
       "batch": "1A40C0300002906000211003",
@@ -21238,7 +21458,7 @@
       "terp_verified": true
     },
     {
-      "id": 100388,
+      "id": 100392,
       "brand": "Head Change",
       "name": "Purple Haze · Sauce Cart",
       "batch": "1A40C0300002906000171887",
@@ -21293,7 +21513,7 @@
       "terp_verified": true
     },
     {
-      "id": 100389,
+      "id": 100393,
       "brand": "Head Change",
       "name": "Purple Haze · Live Resin AIO",
       "batch": "1A40C0300002906000171886",
@@ -21348,7 +21568,7 @@
       "terp_verified": true
     },
     {
-      "id": 100390,
+      "id": 100394,
       "brand": "Head Change",
       "name": "Purple Swag · Live Badder",
       "batch": "3603",
@@ -21404,7 +21624,7 @@
       "terp_verified": true
     },
     {
-      "id": 100391,
+      "id": 100395,
       "brand": "Head Change",
       "name": "Purple Whistle · Live Badder",
       "batch": "9507",
@@ -21462,7 +21682,7 @@
       "terp_verified": true
     },
     {
-      "id": 100392,
+      "id": 100396,
       "brand": "Head Change",
       "name": "Purple Zookies · Sauce Cart",
       "batch": "Unlisted",
@@ -21509,7 +21729,7 @@
       "terp_verified": false
     },
     {
-      "id": 100393,
+      "id": 100397,
       "brand": "Head Change",
       "name": "Quartz Killa · Live Rosin",
       "batch": "1A40C0300002906000188598",
@@ -21567,7 +21787,7 @@
       "terp_verified": true
     },
     {
-      "id": 100394,
+      "id": 100398,
       "brand": "Head Change",
       "name": "Queen Tea · Sauce Cart",
       "batch": "1A40C0300002906000171366",
@@ -21626,7 +21846,7 @@
       "terp_verified": true
     },
     {
-      "id": 100395,
+      "id": 100399,
       "brand": "Head Change",
       "name": "Queen Tea · Live Sugar",
       "batch": "1A40C0300002906000181502",
@@ -21682,7 +21902,7 @@
       "terp_verified": true
     },
     {
-      "id": 100396,
+      "id": 100400,
       "brand": "Head Change",
       "name": "Queen Tea · Live Badder",
       "batch": "1A40C0300002906000181500",
@@ -21739,7 +21959,7 @@
       "terp_verified": true
     },
     {
-      "id": 100397,
+      "id": 100401,
       "brand": "Head Change",
       "name": "Queen Tea · Live Resin AIO",
       "batch": "1A40C0300002906000171367",
@@ -21796,7 +22016,7 @@
       "terp_verified": true
     },
     {
-      "id": 100398,
+      "id": 100402,
       "brand": "Head Change",
       "name": "Rainberry · Live Rosin",
       "batch": "1A40C0300002906000222584",
@@ -21850,7 +22070,7 @@
       "terp_verified": true
     },
     {
-      "id": 100399,
+      "id": 100403,
       "brand": "Head Change",
       "name": "RainbOGee · Live Sugar",
       "batch": "5021",
@@ -21909,7 +22129,7 @@
       "terp_verified": true
     },
     {
-      "id": 100400,
+      "id": 100404,
       "brand": "Head Change",
       "name": "RainbOGee · Sauce Cart",
       "batch": "5021",
@@ -21968,7 +22188,7 @@
       "terp_verified": true
     },
     {
-      "id": 100401,
+      "id": 100405,
       "brand": "Head Change",
       "name": "Rainbow Belts 3.0 · Live Rosin",
       "batch": "9181",
@@ -22024,7 +22244,7 @@
       "terp_verified": true
     },
     {
-      "id": 100402,
+      "id": 100406,
       "brand": "Head Change",
       "name": "Rainbow Belts 7.10 · Live Sugar",
       "batch": "8873",
@@ -22080,7 +22300,7 @@
       "terp_verified": true
     },
     {
-      "id": 100403,
+      "id": 100407,
       "brand": "Head Change",
       "name": "Rainbow Drip · Mini Hash Hole",
       "batch": "1A40C0300002906000171707",
@@ -22131,7 +22351,7 @@
       "terp_verified": true
     },
     {
-      "id": 100404,
+      "id": 100408,
       "brand": "Head Change",
       "name": "Rainbow Push Pop · Live Rosin",
       "batch": "1A40C0300002906000203873",
@@ -22186,7 +22406,7 @@
       "terp_verified": true
     },
     {
-      "id": 100405,
+      "id": 100409,
       "brand": "Head Change",
       "name": "Rainbow Push Pop · Live Rosin AIO",
       "batch": "1A40C0300002906000171820",
@@ -22240,7 +22460,7 @@
       "terp_verified": true
     },
     {
-      "id": 100406,
+      "id": 100410,
       "brand": "Head Change",
       "name": "Rainbow Push Pop · Live Badder",
       "batch": "1A40C0300002906000211453",
@@ -22269,8 +22489,8 @@
         "Ocimene": 0.329,
         "Terpineol": 0.363
       },
-      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/7b52fb71-220b-44f2-8e08-f50f707b55b9.pdf",
-      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/7b52fb71-220b-44f2-8e08-f50f707b55b9.pdf",
+      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/b62c37f9-d3b2-4635-b078-ff12646d9cab.pdf",
+      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/b62c37f9-d3b2-4635-b078-ff12646d9cab.pdf",
       "landing_url": "https://headchange710.com/pharmacopeia/rainbow-push-pop-4",
       "coverage": "full",
       "data_quality": "original-coa-quantitative",
@@ -22295,7 +22515,7 @@
       "terp_verified": true
     },
     {
-      "id": 100407,
+      "id": 100411,
       "brand": "Head Change",
       "name": "Rainbow Push Pop · Live Rosin Cart",
       "batch": "1A40C0300002906000171705",
@@ -22351,53 +22571,55 @@
       "terp_verified": true
     },
     {
-      "id": 100408,
+      "id": 100412,
       "brand": "Head Change",
       "name": "Rainbow Push Pop · Live Resin AIO",
-      "batch": "1A40C0300002906000171856",
-      "date": "2026-10-19",
+      "batch": "1A40C0300002906000171908",
+      "date": "2026-11-15",
       "category": "Vape",
       "format": "Live Resin AIO",
       "dominance": "",
       "genetics": "Orange Mints x TMZ (Too Much Z)",
       "notes": "Candy store floor",
       "description": "Rainbow Push Pop opens with loud fruit candy shell and creamy rainbow sherbet before melting into layers of tropical citrus, sweet cream, and a soft candy funk.",
-      "thc": 75.7955,
-      "tac": 79.3,
-      "total": 8.033,
+      "thc": 76.4175,
+      "tac": 79.2,
+      "total": 9.651,
       "terps": {
-        "β-Caryophyllene": 2.298,
-        "Limonene": 1.835,
-        "Linalool": 1.451,
-        "α-Humulene": 0.51,
-        "β-Myrcene": 0.392,
-        "α-Pinene": 0.225,
-        "α-Bisabolol": 0.185,
-        "Fenchol": 0.149,
-        "β-Pinene": 0.11,
-        "Valencene": 0.069,
-        "Nerolidol": 0.437,
-        "Ocimene": 0.175,
-        "Terpineol": 0.196
+        "Limonene": 2.538,
+        "β-Caryophyllene": 2.457,
+        "Linalool": 0.922,
+        "β-Myrcene": 0.771,
+        "α-Humulene": 0.67,
+        "α-Pinene": 0.385,
+        "Fenchol": 0.29,
+        "β-Pinene": 0.267,
+        "α-Bisabolol": 0.149,
+        "Valencene": 0.102,
+        "α-Cedrene": 0.078,
+        "Camphene": 0.061,
+        "Nerolidol": 0.305,
+        "Ocimene": 0.284,
+        "Terpineol": 0.371
       },
-      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/7b061b5f-ec9b-4139-b172-9aaa79341bf8.pdf",
-      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/7b061b5f-ec9b-4139-b172-9aaa79341bf8.pdf",
+      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/b78142ba-e4d9-49c3-94f2-5a0672a69305.pdf",
+      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/b78142ba-e4d9-49c3-94f2-5a0672a69305.pdf",
       "landing_url": "https://headchange710.com/pharmacopeia/rainbow-push-pop-6",
       "coverage": "full",
       "data_quality": "original-coa-quantitative",
       "cannabinoids": {
-        "THCA": 2.15,
-        "D9THC": 73.91,
+        "THCA": 3.11,
+        "D9THC": 73.69,
         "D8THC": "ND",
         "THCV": "ND",
         "CBDA": "ND",
         "CBD": "ND",
         "CBDV": "ND",
         "CBN": "ND",
-        "CBGA": 1.58,
-        "CBG": 1.63,
+        "CBGA": 0.8,
+        "CBG": 1.62,
         "CBC": "ND",
-        "TOTAL_THC": 75.7955,
+        "TOTAL_THC": 76.4175,
         "TOTAL_CBD": "ND"
       },
       "coa_extraction": "original_pdf_parsed",
@@ -22406,53 +22628,54 @@
       "terp_verified": true
     },
     {
-      "id": 100409,
+      "id": 100413,
       "brand": "Head Change",
       "name": "Rainbow Push Pop · Sauce Cart",
-      "batch": "1A40C0300002906000171857",
-      "date": "2026-10-19",
+      "batch": "1A40C0300002906000171910",
+      "date": "2026-11-18",
       "category": "Vape",
       "format": "Sauce Cart",
       "dominance": "",
       "genetics": "Orange Mints x TMZ (Too Much Z)",
       "notes": "Candy store floor",
       "description": "Rainbow Push Pop opens with loud fruit candy shell and creamy rainbow sherbet before melting into layers of tropical citrus, sweet cream, and a soft candy funk.",
-      "thc": 75.7168,
-      "tac": 79.2,
-      "total": 7.903,
+      "thc": 75.0635,
+      "tac": 77.1,
+      "total": 10.923,
       "terps": {
-        "β-Caryophyllene": 2.263,
-        "Limonene": 1.798,
-        "Linalool": 1.442,
-        "α-Humulene": 0.505,
-        "β-Myrcene": 0.379,
-        "α-Pinene": 0.217,
-        "α-Bisabolol": 0.183,
-        "Fenchol": 0.14,
-        "β-Pinene": 0.105,
-        "Valencene": 0.069,
-        "Nerolidol": 0.431,
-        "Ocimene": 0.18,
-        "Terpineol": 0.191
+        "Limonene": 2.903,
+        "β-Caryophyllene": 2.728,
+        "Linalool": 1.016,
+        "β-Myrcene": 0.994,
+        "α-Humulene": 0.764,
+        "α-Pinene": 0.44,
+        "Fenchol": 0.323,
+        "β-Pinene": 0.296,
+        "α-Bisabolol": 0.161,
+        "Valencene": 0.121,
+        "Camphene": 0.071,
+        "Nerolidol": 0.318,
+        "Ocimene": 0.329,
+        "Terpineol": 0.459
       },
-      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/b3c6fc5b-0997-4775-8363-e8f9f810a005.pdf",
-      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/b3c6fc5b-0997-4775-8363-e8f9f810a005.pdf",
+      "source": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/58dccf30-2497-447e-93fc-1f642b403d99.pdf",
+      "coa_url": "https://pub-61ef41875b544d43b32a7a157829a6c1.r2.dev/pharmacopeia/headchange/coa_pdf/58dccf30-2497-447e-93fc-1f642b403d99.pdf",
       "landing_url": "https://headchange710.com/pharmacopeia/rainbow-push-pop-7",
       "coverage": "full",
       "data_quality": "original-coa-quantitative",
       "cannabinoids": {
-        "THCA": 2.14,
-        "D9THC": 73.84,
+        "THCA": 2.98,
+        "D9THC": 72.45,
         "D8THC": "ND",
         "THCV": "ND",
         "CBDA": "ND",
         "CBD": "ND",
         "CBDV": "ND",
         "CBN": "ND",
-        "CBGA": 1.56,
-        "CBG": 1.62,
+        "CBGA": "ND",
+        "CBG": 1.65,
         "CBC": "ND",
-        "TOTAL_THC": 75.7168,
+        "TOTAL_THC": 75.0635,
         "TOTAL_CBD": "ND"
       },
       "coa_extraction": "original_pdf_parsed",
@@ -22461,7 +22684,7 @@
       "terp_verified": true
     },
     {
-      "id": 100410,
+      "id": 100414,
       "brand": "Head Change",
       "name": "Rainbow Push Pop · Live Sugar",
       "batch": "1A40C0300002906000211457",
@@ -22516,7 +22739,7 @@
       "terp_verified": true
     },
     {
-      "id": 100411,
+      "id": 100415,
       "brand": "Head Change",
       "name": "Rainbow Push Pop + Too Much Starburst · Live Rosin",
       "batch": "1A40C0300002906000188507",
@@ -22573,7 +22796,7 @@
       "terp_verified": true
     },
     {
-      "id": 100412,
+      "id": 100416,
       "brand": "Head Change",
       "name": "Rainbow Resin Rush · Live Badder",
       "batch": "11656",
@@ -22631,7 +22854,7 @@
       "terp_verified": true
     },
     {
-      "id": 100413,
+      "id": 100417,
       "brand": "Head Change",
       "name": "Rainbow Resin Rush · Sauce Cart",
       "batch": "11821",
@@ -22694,7 +22917,7 @@
       "terp_verified": true
     },
     {
-      "id": 100414,
+      "id": 100418,
       "brand": "Head Change",
       "name": "Rainbow Resin Rush · Live Sugar",
       "batch": "11655",
@@ -22752,7 +22975,7 @@
       "terp_verified": true
     },
     {
-      "id": 100415,
+      "id": 100419,
       "brand": "Head Change",
       "name": "Rainbow Warrior · Live Rosin",
       "batch": "9254",
@@ -22806,7 +23029,7 @@
       "terp_verified": true
     },
     {
-      "id": 100416,
+      "id": 100420,
       "brand": "Head Change",
       "name": "Raspberry Cake Pop · Live Badder",
       "batch": "11842",
@@ -22860,7 +23083,7 @@
       "terp_verified": true
     },
     {
-      "id": 100417,
+      "id": 100421,
       "brand": "Head Change",
       "name": "Red Vestido · Live Badder",
       "batch": "Saint Louis, MO 63147",
@@ -22919,7 +23142,7 @@
       "terp_verified": true
     },
     {
-      "id": 100418,
+      "id": 100422,
       "brand": "Head Change",
       "name": "Rozzmatic · Live Rosin",
       "batch": "1A40C0300002906000188936",
@@ -22973,7 +23196,7 @@
       "terp_verified": true
     },
     {
-      "id": 100419,
+      "id": 100423,
       "brand": "Head Change",
       "name": "Rozzmatic · Live Rosin AIO",
       "batch": "1A40C0300002906000171583",
@@ -23026,7 +23249,7 @@
       "terp_verified": true
     },
     {
-      "id": 100420,
+      "id": 100424,
       "brand": "Head Change",
       "name": "Sesh Breath · Mini Hash Hole",
       "batch": "1A40C0300002906000171427",
@@ -23083,7 +23306,7 @@
       "terp_verified": true
     },
     {
-      "id": 100421,
+      "id": 100425,
       "brand": "Head Change",
       "name": "Shake n Bake · Live Sugar",
       "batch": "8638",
@@ -23138,7 +23361,7 @@
       "terp_verified": true
     },
     {
-      "id": 100422,
+      "id": 100426,
       "brand": "Head Change",
       "name": "Shangrilatto · Sauce Cart",
       "batch": "4437",
@@ -23197,7 +23420,7 @@
       "terp_verified": true
     },
     {
-      "id": 100423,
+      "id": 100427,
       "brand": "Head Change",
       "name": "Shangrilatto · Live Sugar",
       "batch": "4437",
@@ -23256,7 +23479,7 @@
       "terp_verified": true
     },
     {
-      "id": 100424,
+      "id": 100428,
       "brand": "Head Change",
       "name": "Sharpie Breath · Live Badder",
       "batch": "9860",
@@ -23312,7 +23535,7 @@
       "terp_verified": true
     },
     {
-      "id": 100425,
+      "id": 100429,
       "brand": "Head Change",
       "name": "Sharpie Breath · Live Sugar",
       "batch": "9958",
@@ -23367,7 +23590,7 @@
       "terp_verified": true
     },
     {
-      "id": 100426,
+      "id": 100430,
       "brand": "Head Change",
       "name": "SherbLime · Live Sugar",
       "batch": "5064",
@@ -23422,7 +23645,7 @@
       "terp_verified": true
     },
     {
-      "id": 100427,
+      "id": 100431,
       "brand": "Head Change",
       "name": "Sherbology 43 · Live Badder",
       "batch": "11199",
@@ -23477,7 +23700,7 @@
       "terp_verified": true
     },
     {
-      "id": 100428,
+      "id": 100432,
       "brand": "Head Change",
       "name": "Sherbology 43 · Live Resin AIO",
       "batch": "1A40C0300002906000171170",
@@ -23536,7 +23759,7 @@
       "terp_verified": true
     },
     {
-      "id": 100429,
+      "id": 100433,
       "brand": "Head Change",
       "name": "Sherbology 43 · Live Sugar",
       "batch": "11396",
@@ -23590,7 +23813,7 @@
       "terp_verified": true
     },
     {
-      "id": 100430,
+      "id": 100434,
       "brand": "Head Change",
       "name": "Sherb Stomper · Mini Hash Hole",
       "batch": "1A40C0300002906000171496",
@@ -23641,7 +23864,7 @@
       "terp_verified": true
     },
     {
-      "id": 100431,
+      "id": 100435,
       "brand": "Head Change",
       "name": "Shuurple Urkle · Live Badder",
       "batch": "5139",
@@ -23697,7 +23920,7 @@
       "terp_verified": true
     },
     {
-      "id": 100432,
+      "id": 100436,
       "brand": "Head Change",
       "name": "Sicilian Fruit Bath · Live Badder",
       "batch": "3789",
@@ -23755,7 +23978,7 @@
       "terp_verified": true
     },
     {
-      "id": 100433,
+      "id": 100437,
       "brand": "Head Change",
       "name": "Sig-Sour · Sauce Cart",
       "batch": "8695",
@@ -23810,7 +24033,7 @@
       "terp_verified": true
     },
     {
-      "id": 100434,
+      "id": 100438,
       "brand": "Head Change",
       "name": "Simply Grape · Live Rosin Cart",
       "batch": "1A40C0300002906000171609",
@@ -23865,7 +24088,7 @@
       "terp_verified": true
     },
     {
-      "id": 100435,
+      "id": 100439,
       "brand": "Head Change",
       "name": "Simply Grape · Live Badder",
       "batch": "1A40C0300002906000211167",
@@ -23920,7 +24143,7 @@
       "terp_verified": true
     },
     {
-      "id": 100436,
+      "id": 100440,
       "brand": "Head Change",
       "name": "Simply Grape · Live Resin AIO",
       "batch": "1A40C0300002906000171702",
@@ -23976,7 +24199,7 @@
       "terp_verified": true
     },
     {
-      "id": 100437,
+      "id": 100441,
       "brand": "Head Change",
       "name": "Simply Grape · Sauce Cart",
       "batch": "1A40C0300002906000171700",
@@ -24031,7 +24254,7 @@
       "terp_verified": true
     },
     {
-      "id": 100438,
+      "id": 100442,
       "brand": "Head Change",
       "name": "Skunk Man Jones · Live Badder",
       "batch": "10844",
@@ -24090,7 +24313,7 @@
       "terp_verified": true
     },
     {
-      "id": 100439,
+      "id": 100443,
       "brand": "Head Change",
       "name": "Skunk Man Jones · Live Sugar",
       "batch": "10865",
@@ -24148,7 +24371,7 @@
       "terp_verified": true
     },
     {
-      "id": 100440,
+      "id": 100444,
       "brand": "Head Change",
       "name": "Slack Line · Live Sugar",
       "batch": "4031",
@@ -24208,7 +24431,7 @@
       "terp_verified": true
     },
     {
-      "id": 100441,
+      "id": 100445,
       "brand": "Head Change",
       "name": "Slick Back's Muffin · Live Badder",
       "batch": "8804",
@@ -24262,7 +24485,7 @@
       "terp_verified": true
     },
     {
-      "id": 100442,
+      "id": 100446,
       "brand": "Head Change",
       "name": "Slingshott OG · Live Sugar",
       "batch": "8683",
@@ -24318,7 +24541,7 @@
       "terp_verified": true
     },
     {
-      "id": 100443,
+      "id": 100447,
       "brand": "Head Change",
       "name": "Slizzurp · Sauce Cart",
       "batch": "4330",
@@ -24378,7 +24601,7 @@
       "terp_verified": true
     },
     {
-      "id": 100444,
+      "id": 100448,
       "brand": "Head Change",
       "name": "Slizzurp · Live Badder",
       "batch": "4210",
@@ -24437,7 +24660,7 @@
       "terp_verified": true
     },
     {
-      "id": 100445,
+      "id": 100449,
       "brand": "Head Change",
       "name": "Slurp Juice · Live Rosin",
       "batch": "1A40C0300002906000152923",
@@ -24492,7 +24715,7 @@
       "terp_verified": true
     },
     {
-      "id": 100446,
+      "id": 100450,
       "brand": "Head Change",
       "name": "SlurriMac LTD · Sauce Cart",
       "batch": "9092",
@@ -24546,7 +24769,7 @@
       "terp_verified": true
     },
     {
-      "id": 100447,
+      "id": 100451,
       "brand": "Head Change",
       "name": "SlurriMac LTD 2.0 · Live Badder",
       "batch": "9092",
@@ -24600,7 +24823,7 @@
       "terp_verified": true
     },
     {
-      "id": 100448,
+      "id": 100452,
       "brand": "Head Change",
       "name": "SmashMouth · Sauce Cart",
       "batch": "4028",
@@ -24659,7 +24882,7 @@
       "terp_verified": true
     },
     {
-      "id": 100449,
+      "id": 100453,
       "brand": "Head Change",
       "name": "Smuckers · Live Badder",
       "batch": "4213",
@@ -24717,7 +24940,7 @@
       "terp_verified": true
     },
     {
-      "id": 100450,
+      "id": 100454,
       "brand": "Head Change",
       "name": "Snow Leopard · Live Sugar",
       "batch": "7993",
@@ -24770,7 +24993,7 @@
       "terp_verified": true
     },
     {
-      "id": 100451,
+      "id": 100455,
       "brand": "Head Change",
       "name": "Sour Dawg City · Sauce Cart",
       "batch": "4784",
@@ -24825,7 +25048,7 @@
       "terp_verified": true
     },
     {
-      "id": 100452,
+      "id": 100456,
       "brand": "Head Change",
       "name": "Sourdough · Live Rosin",
       "batch": "1A40C0300002906000188830",
@@ -24880,7 +25103,7 @@
       "terp_verified": true
     },
     {
-      "id": 100453,
+      "id": 100457,
       "brand": "Head Change",
       "name": "Sourdough · Live Rosin Cart",
       "batch": "1A40C0300002906000171575",
@@ -24935,7 +25158,7 @@
       "terp_verified": true
     },
     {
-      "id": 100454,
+      "id": 100458,
       "brand": "Head Change",
       "name": "Sour Space Suit · Live Rosin",
       "batch": "11576",
@@ -24989,7 +25212,7 @@
       "terp_verified": true
     },
     {
-      "id": 100455,
+      "id": 100459,
       "brand": "Head Change",
       "name": "Space Boots · Live Rosin",
       "batch": "4337",
@@ -25046,7 +25269,7 @@
       "terp_verified": true
     },
     {
-      "id": 100456,
+      "id": 100460,
       "brand": "Head Change",
       "name": "Space-Fog · Sauce Cart",
       "batch": "4826",
@@ -25106,7 +25329,7 @@
       "terp_verified": true
     },
     {
-      "id": 100457,
+      "id": 100461,
       "brand": "Head Change",
       "name": "SpaceWreck · Sauce Cart",
       "batch": "4824",
@@ -25166,7 +25389,7 @@
       "terp_verified": true
     },
     {
-      "id": 100458,
+      "id": 100462,
       "brand": "Head Change",
       "name": "SpaceWreck · Live Sugar",
       "batch": "4756",
@@ -25225,7 +25448,7 @@
       "terp_verified": true
     },
     {
-      "id": 100459,
+      "id": 100463,
       "brand": "Head Change",
       "name": "Spy Who Hashed Me · Sauce Cart",
       "batch": "3707",
@@ -25281,7 +25504,7 @@
       "terp_verified": true
     },
     {
-      "id": 100460,
+      "id": 100464,
       "brand": "Head Change",
       "name": "Stager Lee OG · Live Sugar",
       "batch": "8681",
@@ -25336,7 +25559,7 @@
       "terp_verified": true
     },
     {
-      "id": 100461,
+      "id": 100465,
       "brand": "Head Change",
       "name": "Stankfoot · Live Badder",
       "batch": "1A40C0300002906000181436",
@@ -25393,7 +25616,7 @@
       "terp_verified": true
     },
     {
-      "id": 100462,
+      "id": 100466,
       "brand": "Head Change",
       "name": "Stankfoot · Live Sugar",
       "batch": "1A40C0300002906000181438",
@@ -25453,7 +25676,7 @@
       "terp_verified": true
     },
     {
-      "id": 100463,
+      "id": 100467,
       "brand": "Head Change",
       "name": "Stankfruit · Live Badder",
       "batch": "10686",
@@ -25511,7 +25734,7 @@
       "terp_verified": true
     },
     {
-      "id": 100464,
+      "id": 100468,
       "brand": "Head Change",
       "name": "Stankfruit · Live Sugar",
       "batch": "10729",
@@ -25570,7 +25793,7 @@
       "terp_verified": true
     },
     {
-      "id": 100465,
+      "id": 100469,
       "brand": "Head Change",
       "name": "Stanky Leg Limit · Live Sugar",
       "batch": "Saint Louis, MO 63147",
@@ -25628,7 +25851,7 @@
       "terp_verified": true
     },
     {
-      "id": 100466,
+      "id": 100470,
       "brand": "Head Change",
       "name": "Starburst Rain · Mini Hash Hole",
       "batch": "1A40C0300002906000171644",
@@ -25679,7 +25902,7 @@
       "terp_verified": true
     },
     {
-      "id": 100467,
+      "id": 100471,
       "brand": "Head Change",
       "name": "Starzups · Live Rosin",
       "batch": "8549",
@@ -25732,7 +25955,7 @@
       "terp_verified": true
     },
     {
-      "id": 100468,
+      "id": 100472,
       "brand": "Head Change",
       "name": "STL GMO #2 · Live Rosin Cart",
       "batch": "10676",
@@ -25786,7 +26009,7 @@
       "terp_verified": true
     },
     {
-      "id": 100469,
+      "id": 100473,
       "brand": "Head Change",
       "name": "STL GMO #4 · Live Badder",
       "batch": "10727",
@@ -25844,7 +26067,7 @@
       "terp_verified": true
     },
     {
-      "id": 100470,
+      "id": 100474,
       "brand": "Head Change",
       "name": "STL GMO #4 · Live Sugar",
       "batch": "10846",
@@ -25899,7 +26122,7 @@
       "terp_verified": true
     },
     {
-      "id": 100471,
+      "id": 100475,
       "brand": "Head Change",
       "name": "STL Haze · Sauce Cart",
       "batch": "8973",
@@ -25954,7 +26177,7 @@
       "terp_verified": true
     },
     {
-      "id": 100472,
+      "id": 100476,
       "brand": "Head Change",
       "name": "St. Louie Lemonade · Live Sugar",
       "batch": "8596",
@@ -26010,7 +26233,7 @@
       "terp_verified": true
     },
     {
-      "id": 100473,
+      "id": 100477,
       "brand": "Head Change",
       "name": "Stoned Fruit · Mini Hash Hole",
       "batch": "1A40C0300002906000171364",
@@ -26068,7 +26291,7 @@
       "terp_verified": true
     },
     {
-      "id": 100474,
+      "id": 100478,
       "brand": "Head Change",
       "name": "Strawberry Candy · Live Rosin",
       "batch": "1A40C0300002906000175504",
@@ -26121,7 +26344,7 @@
       "terp_verified": true
     },
     {
-      "id": 100475,
+      "id": 100479,
       "brand": "Head Change",
       "name": "Strawberry Short Stack Lightning · Live Rosin",
       "batch": "3698",
@@ -26175,7 +26398,7 @@
       "terp_verified": true
     },
     {
-      "id": 100476,
+      "id": 100480,
       "brand": "Head Change",
       "name": "StrawBoofery · Live Rosin",
       "batch": "11202",
@@ -26231,7 +26454,7 @@
       "terp_verified": true
     },
     {
-      "id": 100477,
+      "id": 100481,
       "brand": "Head Change",
       "name": "StrawLava Pie · Live Sugar",
       "batch": "5065",
@@ -26285,7 +26508,7 @@
       "terp_verified": true
     },
     {
-      "id": 100478,
+      "id": 100482,
       "brand": "Head Change",
       "name": "Sugar Coat · Mini Hash Hole",
       "batch": "1A40C0300002906000171601",
@@ -26336,7 +26559,7 @@
       "terp_verified": true
     },
     {
-      "id": 100479,
+      "id": 100483,
       "brand": "Head Change",
       "name": "Sundae Skool · Sauce Cart",
       "batch": "Unlisted",
@@ -26383,7 +26606,7 @@
       "terp_verified": false
     },
     {
-      "id": 100480,
+      "id": 100484,
       "brand": "Head Change",
       "name": "Sunnyvale Swag · Live Rosin",
       "batch": "10435",
@@ -26437,7 +26660,7 @@
       "terp_verified": true
     },
     {
-      "id": 100481,
+      "id": 100485,
       "brand": "Head Change",
       "name": "Sunrise Sherb · Mini Hash Hole",
       "batch": "1A40C0300002906000171592",
@@ -26487,7 +26710,7 @@
       "terp_verified": true
     },
     {
-      "id": 100482,
+      "id": 100486,
       "brand": "Head Change",
       "name": "Sunset Slaps · Live Sugar",
       "batch": "1A40C0300002906000171311",
@@ -26548,7 +26771,7 @@
       "terp_verified": true
     },
     {
-      "id": 100483,
+      "id": 100487,
       "brand": "Head Change",
       "name": "Sunset Slaps · Sauce Cart",
       "batch": "1A40C0300002906000171305",
@@ -26610,7 +26833,7 @@
       "terp_verified": true
     },
     {
-      "id": 100484,
+      "id": 100488,
       "brand": "Head Change",
       "name": "Super Boof · Live Rosin",
       "batch": "10810",
@@ -26664,7 +26887,7 @@
       "terp_verified": true
     },
     {
-      "id": 100485,
+      "id": 100489,
       "brand": "Head Change",
       "name": "Super-Chello · Sauce Cart",
       "batch": "Unlisted",
@@ -26711,7 +26934,7 @@
       "terp_verified": false
     },
     {
-      "id": 100486,
+      "id": 100490,
       "brand": "Head Change",
       "name": "Super Gelato · Live Badder",
       "batch": "1A40C0300002906000181847",
@@ -26766,7 +26989,7 @@
       "terp_verified": true
     },
     {
-      "id": 100487,
+      "id": 100491,
       "brand": "Head Change",
       "name": "Super Gelato · Sauce Cart",
       "batch": "1A40C0300002906000171567",
@@ -26821,7 +27044,7 @@
       "terp_verified": true
     },
     {
-      "id": 100488,
+      "id": 100492,
       "brand": "Head Change",
       "name": "SuperHazey · Live Badder",
       "batch": "11009",
@@ -26878,7 +27101,7 @@
       "terp_verified": true
     },
     {
-      "id": 100489,
+      "id": 100493,
       "brand": "Head Change",
       "name": "SuperHazey · Live Sugar",
       "batch": "11008",
@@ -26935,7 +27158,7 @@
       "terp_verified": true
     },
     {
-      "id": 100490,
+      "id": 100494,
       "brand": "Head Change",
       "name": "Superman Punch · Live Badder",
       "batch": "12035",
@@ -26991,7 +27214,7 @@
       "terp_verified": true
     },
     {
-      "id": 100491,
+      "id": 100495,
       "brand": "Head Change",
       "name": "Surprise Valley Cough · Live Sugar",
       "batch": "8189",
@@ -27045,7 +27268,7 @@
       "terp_verified": true
     },
     {
-      "id": 100492,
+      "id": 100496,
       "brand": "Head Change",
       "name": "Tangerine Twilight · Sauce Cart",
       "batch": "8693",
@@ -27100,7 +27323,7 @@
       "terp_verified": true
     },
     {
-      "id": 100493,
+      "id": 100497,
       "brand": "Head Change",
       "name": "Tanjgo Tangie Banjo · Live Rosin",
       "batch": "8955",
@@ -27158,7 +27381,7 @@
       "terp_verified": true
     },
     {
-      "id": 100494,
+      "id": 100498,
       "brand": "Head Change",
       "name": "Tap Out · Live Sugar",
       "batch": "8864",
@@ -27214,7 +27437,7 @@
       "terp_verified": true
     },
     {
-      "id": 100495,
+      "id": 100499,
       "brand": "Head Change",
       "name": "Terp Guru · Live Badder",
       "batch": "11817",
@@ -27267,7 +27490,7 @@
       "terp_verified": true
     },
     {
-      "id": 100496,
+      "id": 100500,
       "brand": "Head Change",
       "name": "Terp Guru · Live Sugar",
       "batch": "11895",
@@ -27320,7 +27543,7 @@
       "terp_verified": true
     },
     {
-      "id": 100497,
+      "id": 100501,
       "brand": "Head Change",
       "name": "Terp Queens HWY · Live Badder",
       "batch": "8736",
@@ -27374,7 +27597,7 @@
       "terp_verified": true
     },
     {
-      "id": 100498,
+      "id": 100502,
       "brand": "Head Change",
       "name": "Terp Tickler · Live Rosin",
       "batch": "12586",
@@ -27425,7 +27648,7 @@
       "terp_verified": true
     },
     {
-      "id": 100499,
+      "id": 100503,
       "brand": "Head Change",
       "name": "Terpzilla · Mini Hash Hole",
       "batch": "1A40C0300002906000171426",
@@ -27483,7 +27706,7 @@
       "terp_verified": true
     },
     {
-      "id": 100500,
+      "id": 100504,
       "brand": "Head Change",
       "name": "Terrapin Lemonz · Live Badder",
       "batch": "8550",
@@ -27536,7 +27759,7 @@
       "terp_verified": true
     },
     {
-      "id": 100501,
+      "id": 100505,
       "brand": "Head Change",
       "name": "Thunderbird · Live Badder",
       "batch": "0181821",
@@ -27591,7 +27814,7 @@
       "terp_verified": true
     },
     {
-      "id": 100502,
+      "id": 100506,
       "brand": "Head Change",
       "name": "Too Much Starburst · Sauce Cart",
       "batch": "1A40C0300002906000171638",
@@ -27646,7 +27869,7 @@
       "terp_verified": true
     },
     {
-      "id": 100503,
+      "id": 100507,
       "brand": "Head Change",
       "name": "Too Much Starburst · Live Rosin Cart",
       "batch": "1A40C0300002906000171765",
@@ -27701,7 +27924,7 @@
       "terp_verified": true
     },
     {
-      "id": 100504,
+      "id": 100508,
       "brand": "Head Change",
       "name": "Too Much Starburst · Live Rosin",
       "batch": "1A40C0300002906000203864",
@@ -27754,7 +27977,7 @@
       "terp_verified": true
     },
     {
-      "id": 100505,
+      "id": 100509,
       "brand": "Head Change",
       "name": "Too Much Starburst · Live Rosin AIO",
       "batch": "1A40C0300002906000171766",
@@ -27809,7 +28032,7 @@
       "terp_verified": true
     },
     {
-      "id": 100506,
+      "id": 100510,
       "brand": "Head Change",
       "name": "Too Much Starburst · Live Badder",
       "batch": "1A40C0300002906000211029",
@@ -27864,7 +28087,7 @@
       "terp_verified": true
     },
     {
-      "id": 100507,
+      "id": 100511,
       "brand": "Head Change",
       "name": "Too Much Starburst · Live Resin AIO",
       "batch": "1A40C0300002906000171637",
@@ -27918,7 +28141,7 @@
       "terp_verified": true
     },
     {
-      "id": 100508,
+      "id": 100512,
       "brand": "Head Change",
       "name": "Topanga's Bag · Live Sugar",
       "batch": "8975",
@@ -27973,7 +28196,7 @@
       "terp_verified": true
     },
     {
-      "id": 100509,
+      "id": 100513,
       "brand": "Head Change",
       "name": "Tower Grove Grape · Live Rosin",
       "batch": "8486",
@@ -28025,7 +28248,7 @@
       "terp_verified": true
     },
     {
-      "id": 100510,
+      "id": 100514,
       "brand": "Head Change",
       "name": "Toy Boat · Live Rosin",
       "batch": "1A40C0300002906000203944",
@@ -28081,7 +28304,7 @@
       "terp_verified": true
     },
     {
-      "id": 100511,
+      "id": 100515,
       "brand": "Head Change",
       "name": "Traffic Jam · Live Badder",
       "batch": "12343",
@@ -28137,7 +28360,7 @@
       "terp_verified": true
     },
     {
-      "id": 100512,
+      "id": 100516,
       "brand": "Head Change",
       "name": "Trap Lemonade · Live Rosin Cart",
       "batch": "8701",
@@ -28190,7 +28413,7 @@
       "terp_verified": true
     },
     {
-      "id": 100513,
+      "id": 100517,
       "brand": "Head Change",
       "name": "Tréso · Sauce Cart",
       "batch": "5559",
@@ -28248,7 +28471,7 @@
       "terp_verified": true
     },
     {
-      "id": 100514,
+      "id": 100518,
       "brand": "Head Change",
       "name": "Triangle Kush · Live Rosin",
       "batch": "1A40C0300002906000188627",
@@ -28307,7 +28530,7 @@
       "terp_verified": true
     },
     {
-      "id": 100515,
+      "id": 100519,
       "brand": "Head Change",
       "name": "Triple Burger · Live Rosin",
       "batch": "4334",
@@ -28362,7 +28585,7 @@
       "terp_verified": true
     },
     {
-      "id": 100516,
+      "id": 100520,
       "brand": "Head Change",
       "name": "Trippy Belts · Live Badder",
       "batch": "5063",
@@ -28418,7 +28641,7 @@
       "terp_verified": true
     },
     {
-      "id": 100517,
+      "id": 100521,
       "brand": "Head Change",
       "name": "Trippy Belts · Sauce Cart",
       "batch": "5115",
@@ -28473,7 +28696,7 @@
       "terp_verified": true
     },
     {
-      "id": 100518,
+      "id": 100522,
       "brand": "Head Change",
       "name": "Tropaconda · Live Rosin",
       "batch": "10064",
@@ -28526,7 +28749,7 @@
       "terp_verified": true
     },
     {
-      "id": 100519,
+      "id": 100523,
       "brand": "Head Change",
       "name": "Tropaconda 2: Bites Back · Live Rosin",
       "batch": "10110",
@@ -28580,7 +28803,7 @@
       "terp_verified": true
     },
     {
-      "id": 100520,
+      "id": 100524,
       "brand": "Head Change",
       "name": "Tropaconda 3: Blood Orange · Live Rosin",
       "batch": "10124",
@@ -28634,7 +28857,7 @@
       "terp_verified": true
     },
     {
-      "id": 100521,
+      "id": 100525,
       "brand": "Head Change",
       "name": "Trop Cream Paint Job · Sauce Cart",
       "batch": "Unlisted",
@@ -28675,7 +28898,7 @@
       "terp_verified": false
     },
     {
-      "id": 100522,
+      "id": 100526,
       "brand": "Head Change",
       "name": "Trop Drop N' Roll · Mini Hash Hole",
       "batch": "1A40C0300002906000171340",
@@ -28734,7 +28957,7 @@
       "terp_verified": true
     },
     {
-      "id": 100523,
+      "id": 100527,
       "brand": "Head Change",
       "name": "Tropelation · Live Rosin",
       "batch": "11707",
@@ -28788,7 +29011,7 @@
       "terp_verified": true
     },
     {
-      "id": 100524,
+      "id": 100528,
       "brand": "Head Change",
       "name": "Trop Galaxy · Live Badder",
       "batch": "10204",
@@ -28841,7 +29064,7 @@
       "terp_verified": true
     },
     {
-      "id": 100525,
+      "id": 100529,
       "brand": "Head Change",
       "name": "Trop Galaxy · Live Sugar",
       "batch": "10288",
@@ -28894,7 +29117,7 @@
       "terp_verified": true
     },
     {
-      "id": 100526,
+      "id": 100530,
       "brand": "Head Change",
       "name": "Tropical Zerb · Mini Hash Hole",
       "batch": "1A40C0300002906000171261",
@@ -28952,7 +29175,7 @@
       "terp_verified": true
     },
     {
-      "id": 100527,
+      "id": 100531,
       "brand": "Head Change",
       "name": "Tropic Like It's Hot · Live Badder",
       "batch": "1A40C0300002906000211211",
@@ -29007,7 +29230,7 @@
       "terp_verified": true
     },
     {
-      "id": 100528,
+      "id": 100532,
       "brand": "Head Change",
       "name": "Tropic Like It's Hot · Live Sugar",
       "batch": "1A40C0300002906000181661",
@@ -29065,7 +29288,7 @@
       "terp_verified": true
     },
     {
-      "id": 100529,
+      "id": 100533,
       "brand": "Head Change",
       "name": "Tropillini · Sauce Cart",
       "batch": "3706",
@@ -29119,7 +29342,7 @@
       "terp_verified": true
     },
     {
-      "id": 100530,
+      "id": 100534,
       "brand": "Head Change",
       "name": "Trop Juice · Live Badder",
       "batch": "1A40C0300002906000181398",
@@ -29175,7 +29398,7 @@
       "terp_verified": true
     },
     {
-      "id": 100531,
+      "id": 100535,
       "brand": "Head Change",
       "name": "Trop Juice · Live Sugar",
       "batch": "1A40C0300002906000181400",
@@ -29232,7 +29455,7 @@
       "terp_verified": true
     },
     {
-      "id": 100532,
+      "id": 100536,
       "brand": "Head Change",
       "name": "Trop Mama · Live Rosin",
       "batch": "12582",
@@ -29284,7 +29507,7 @@
       "terp_verified": true
     },
     {
-      "id": 100533,
+      "id": 100537,
       "brand": "Head Change",
       "name": "Tropollonni · Live Badder",
       "batch": "10933",
@@ -29339,7 +29562,7 @@
       "terp_verified": true
     },
     {
-      "id": 100534,
+      "id": 100538,
       "brand": "Head Change",
       "name": "Tropollonni · Live Sugar",
       "batch": "11000",
@@ -29395,7 +29618,7 @@
       "terp_verified": true
     },
     {
-      "id": 100535,
+      "id": 100539,
       "brand": "Head Change",
       "name": "Troppleberry · Sauce Cart",
       "batch": "3929",
@@ -29452,7 +29675,7 @@
       "terp_verified": true
     },
     {
-      "id": 100536,
+      "id": 100540,
       "brand": "Head Change",
       "name": "TropTruffle MTN · Live Badder",
       "batch": "4496",
@@ -29510,7 +29733,7 @@
       "terp_verified": true
     },
     {
-      "id": 100537,
+      "id": 100541,
       "brand": "Head Change",
       "name": "TwoFace · Live Rosin",
       "batch": "8769",
@@ -29562,7 +29785,7 @@
       "terp_verified": true
     },
     {
-      "id": 100538,
+      "id": 100542,
       "brand": "Head Change",
       "name": "Umami Breath · Mini Hash Hole",
       "batch": "1A40C0300002906000171849",
@@ -29613,7 +29836,7 @@
       "terp_verified": true
     },
     {
-      "id": 100539,
+      "id": 100543,
       "brand": "Head Change",
       "name": "Unicorn Farts · Live Badder",
       "batch": "10786",
@@ -29668,7 +29891,7 @@
       "terp_verified": true
     },
     {
-      "id": 100540,
+      "id": 100544,
       "brand": "Head Change",
       "name": "Unicorn Farts · Live Sugar",
       "batch": "10845",
@@ -29723,7 +29946,7 @@
       "terp_verified": true
     },
     {
-      "id": 100541,
+      "id": 100545,
       "brand": "Head Change",
       "name": "Uppercut · Live Rosin",
       "batch": "8582",
@@ -29778,7 +30001,7 @@
       "terp_verified": true
     },
     {
-      "id": 100542,
+      "id": 100546,
       "brand": "Head Change",
       "name": "WatermelaChameleon · Live Badder",
       "batch": "8780",
@@ -29830,7 +30053,7 @@
       "terp_verified": true
     },
     {
-      "id": 100543,
+      "id": 100547,
       "brand": "Head Change",
       "name": "Wendigo · Live Badder",
       "batch": "1A40C0300002906000181890",
@@ -29884,7 +30107,7 @@
       "terp_verified": true
     },
     {
-      "id": 100544,
+      "id": 100548,
       "brand": "Head Change",
       "name": "Whit's Puffcake · Sauce Cart",
       "batch": "8694",
@@ -29939,7 +30162,7 @@
       "terp_verified": true
     },
     {
-      "id": 100545,
+      "id": 100549,
       "brand": "Head Change",
       "name": "Will Zonka Pop · Live Rosin",
       "batch": "10434",
@@ -29995,7 +30218,7 @@
       "terp_verified": true
     },
     {
-      "id": 100546,
+      "id": 100550,
       "brand": "Head Change",
       "name": "Wook Breath · Live Rosin",
       "batch": "4030",
@@ -30052,7 +30275,7 @@
       "terp_verified": true
     },
     {
-      "id": 100547,
+      "id": 100551,
       "brand": "Head Change",
       "name": "Wookie-Stones · Sauce Cart",
       "batch": "4035",
@@ -30110,7 +30333,7 @@
       "terp_verified": true
     },
     {
-      "id": 100548,
+      "id": 100552,
       "brand": "Head Change",
       "name": "Zandy Man · Mini Hash Hole",
       "batch": "1A40C0300002906000171861",
@@ -30163,7 +30386,7 @@
       "terp_verified": true
     },
     {
-      "id": 100549,
+      "id": 100553,
       "brand": "Head Change",
       "name": "Za-Za Li · Live Sugar",
       "batch": "8597",
@@ -30216,7 +30439,7 @@
       "terp_verified": true
     },
     {
-      "id": 100550,
+      "id": 100554,
       "brand": "Head Change",
       "name": "Za-Za Mountain · Sauce Cart",
       "batch": "4155",
@@ -30272,7 +30495,7 @@
       "terp_verified": true
     },
     {
-      "id": 100551,
+      "id": 100555,
       "brand": "Head Change",
       "name": "Za-Za Mountain · Live Sugar",
       "batch": "4208",
@@ -30331,7 +30554,7 @@
       "terp_verified": true
     },
     {
-      "id": 100552,
+      "id": 100556,
       "brand": "Head Change",
       "name": "Zee Hash · Live Rosin",
       "batch": "10125",
@@ -30384,7 +30607,7 @@
       "terp_verified": true
     },
     {
-      "id": 100553,
+      "id": 100557,
       "brand": "Head Change",
       "name": "Ze Lean · Live Badder",
       "batch": "11527",
@@ -30441,7 +30664,7 @@
       "terp_verified": true
     },
     {
-      "id": 100554,
+      "id": 100558,
       "brand": "Head Change",
       "name": "Ze Lean · Live Sugar",
       "batch": "11081",
@@ -30498,7 +30721,7 @@
       "terp_verified": true
     },
     {
-      "id": 100555,
+      "id": 100559,
       "brand": "Head Change",
       "name": "Zippy Ki Aye MOFKR · Live Sugar",
       "batch": "8487",
@@ -30551,7 +30774,7 @@
       "terp_verified": true
     },
     {
-      "id": 100556,
+      "id": 100560,
       "brand": "Head Change",
       "name": "Zkatalites · Live Badder",
       "batch": "12217",
@@ -30603,7 +30826,7 @@
       "terp_verified": true
     },
     {
-      "id": 100557,
+      "id": 100561,
       "brand": "Head Change",
       "name": "Zkitty Bop · Sauce Cart",
       "batch": "8167",
@@ -30657,7 +30880,7 @@
       "terp_verified": true
     },
     {
-      "id": 100558,
+      "id": 100562,
       "brand": "Head Change",
       "name": "Zlooshie · Live Badder",
       "batch": "8319",
@@ -30714,7 +30937,7 @@
       "terp_verified": true
     },
     {
-      "id": 100559,
+      "id": 100563,
       "brand": "Head Change",
       "name": "Zlush Blitz · Mini Hash Hole",
       "batch": "1A40C0300002906000171728",
@@ -30765,7 +30988,7 @@
       "terp_verified": true
     },
     {
-      "id": 100560,
+      "id": 100564,
       "brand": "Head Change",
       "name": "Zlush Rain · Live Rosin",
       "batch": "1A40C0300002906000203526",
@@ -30820,7 +31043,7 @@
       "terp_verified": true
     },
     {
-      "id": 100561,
+      "id": 100565,
       "brand": "Head Change",
       "name": "Zlush Rain · Live Rosin Cart",
       "batch": "1A40C0300002906000171737",
@@ -30877,7 +31100,7 @@
       "terp_verified": true
     },
     {
-      "id": 100562,
+      "id": 100566,
       "brand": "Head Change",
       "name": "Zlush Rain · Live Rosin AIO",
       "batch": "1A40C0300002906000171878",
@@ -30933,7 +31156,7 @@
       "terp_verified": true
     },
     {
-      "id": 100563,
+      "id": 100567,
       "brand": "Head Change",
       "name": "Zlush Rain · Live Resin AIO",
       "batch": "1A40C0300002906000171838",
@@ -30989,7 +31212,7 @@
       "terp_verified": true
     },
     {
-      "id": 100564,
+      "id": 100568,
       "brand": "Head Change",
       "name": "Zlush Rain · Sauce Cart",
       "batch": "1A40C0300002906000171837",
@@ -31045,7 +31268,7 @@
       "terp_verified": true
     },
     {
-      "id": 100565,
+      "id": 100569,
       "brand": "Head Change",
       "name": "Zlush Rain · Live Badder",
       "batch": "1A40C0300002906000211304",
@@ -31100,7 +31323,7 @@
       "terp_verified": true
     },
     {
-      "id": 100566,
+      "id": 100570,
       "brand": "Head Change",
       "name": "Zooshie Loops · Live Rosin",
       "batch": "4212",
@@ -31158,7 +31381,7 @@
       "terp_verified": true
     },
     {
-      "id": 100567,
+      "id": 100571,
       "brand": "Head Change",
       "name": "Zoo Trip · Sauce Cart",
       "batch": "Saint Louis, MO 63147",

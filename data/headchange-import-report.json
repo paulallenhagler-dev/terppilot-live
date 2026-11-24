@@ -1,11 +1,11 @@
 {
-  "retrieved_at": "2026-11-16T23:06:26.311667+00:00",
-  "discovered": 567,
-  "imported": 567,
-  "with_original_pdf": 563,
-  "with_measured_terpenes": 547,
-  "reconciled_profiles": 543,
+  "retrieved_at": "2026-11-24T01:16:09.119757+00:00",
+  "discovered": 571,
+  "imported": 571,
+  "with_original_pdf": 567,
+  "with_measured_terpenes": 551,
+  "reconciled_profiles": 547,
   "missing_or_partial": 24,
   "errors": [],
-  "elapsed_seconds": 377.27
+  "elapsed_seconds": 314.8
 }
